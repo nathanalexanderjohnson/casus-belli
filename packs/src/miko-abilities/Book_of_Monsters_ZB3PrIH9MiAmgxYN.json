@@ -1,0 +1,19 @@
+{
+  "_id": "ZB3PrIH9MiAmgxYN",
+  "_key": "!items!ZB3PrIH9MiAmgxYN",
+  "name": "Book of Monsters",
+  "type": "mikoAbility",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p><em>At Arcane Might V you may select one of the two options for your tradition.</em></p><p>You may bind a number of lesser creatures as your servants, willingly or unwillingly; these creatures, unlike your primary Shadow Servant, cannot benefit from any of the previous powers, but they must follow your will and may remain in your shadow. You may bind an extra servant for each level of Arcane Might below your maximum, with a Threat Rating equal to that level. For example at Arcane Might V you may bind a creature of Threat Rating IV, III, II and I in addition to your primary servant.</p>",
+    "tradition": "dosojin",
+    "minArcaneMight": 5
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

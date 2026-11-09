@@ -1,0 +1,19 @@
+{
+  "_id": "FgOxtTN5qEPSozAe",
+  "_key": "!items!FgOxtTN5qEPSozAe",
+  "name": "Kami Shrine",
+  "type": "mikoAbility",
+  "img": "icons/svg/tower.svg",
+  "system": {
+    "description": "<p>Miko may choose to operate as a member of a Shrine. Each member of a shrine may use Favor from the shrine’s pool so long as the head Miko allows them to do so. Multiple shrines may belong to a shrine network, providing connection through the Miko’s Path and allowing the head of the network to gain Favor based on the Favor income of those lower in the network. Each lower level shrine may belong to only one regional network, however the head of the regional network may belong to a national level network.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

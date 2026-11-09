@@ -1,0 +1,24 @@
+{
+  "_id": "zfoMBXe9kTqkYMAF",
+  "_key": "!items!zfoMBXe9kTqkYMAF",
+  "name": "Light of Faith",
+  "type": "talisman",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Create a glowing light that may be moved up to five yards per turn at a point within ten yards of you. The light may freely float or be tied to an object or item. A mortal may destroy the light by touching it with the desire to destroy it. The light may be created with variable brightness and may be brightened and dimmed at will (with reasonable frequency), but may provide a maximum illumination over an area of 10 * Arcane Might yards. This light is uncomfortable to spirits and monsters, but while it deters them it is not certain to stop them from attacking. This ability lasts for up to a day, but may be made permanent (or at least till it is destroyed) by tying it to an object and spending a point of Favor.</p>",
+    "ofuda": "<p>Create a light as with the previous level of this spell, however this light is imbued with soothing energy. All creatures of your choice gain bonus dice equal to your Arcane Might when making rolls against fear, magical effects to alter their mind, or effects that induce Stress. When this Ofuda is first cast, any creatures of your choice within its radius that are suffering any progression of the Terrified condition have the severity of their condition reduced by one. This effect does not last beyond a day even if the light is made permanent.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "5wwvkjl4YRHElRk6",
+  "_key": "!items!5wwvkjl4YRHElRk6",
+  "name": "Flexible Talismans",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Rather than needing to inscribe specific abilities into your Talismans, you may simply engrave them with a set of symbols that allow you at the time of casting to determine which ability is inscribed in each.</p>",
+    "type": "boon",
+    "cost": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

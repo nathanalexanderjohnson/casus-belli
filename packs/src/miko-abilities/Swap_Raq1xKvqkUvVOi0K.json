@@ -1,0 +1,19 @@
+{
+  "_id": "Raq1xKvqkUvVOi0K",
+  "_key": "!items!Raq1xKvqkUvVOi0K",
+  "name": "Swap",
+  "type": "mikoAbility",
+  "img": "icons/svg/invisible.svg",
+  "system": {
+    "description": "<p>As an action or reaction to an incoming attack either you or your Shadow Servant may elect to switch places with one another, so long as you are no more than a hundred yards apart.</p>",
+    "tradition": "dosojin",
+    "minArcaneMight": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

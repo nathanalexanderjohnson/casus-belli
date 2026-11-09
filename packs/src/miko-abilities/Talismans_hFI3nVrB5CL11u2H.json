@@ -1,0 +1,19 @@
+{
+  "_id": "hFI3nVrB5CL11u2H",
+  "_key": "!items!hFI3nVrB5CL11u2H",
+  "name": "Talismans",
+  "type": "mikoAbility",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Talismans are supernatural incantations engraved into paper and ink that a Miko may use to enact a number of supernatural abilities, a Miko cannot use a Talisman if they are unable to freely move their hands and they must have a free hand available (save for when using a bow).</p><p>Each Talisman has a lesser and greater variant, the lesser variant, known as Omamori, may be used freely by the Miko even without being inscribed in paper, while the greater power, Ofuda, must be etched into paper before it can be used. A Miko with access to paper and ink can prepare a number of etched Ofuda equal to 1 + Arcane Might after each rest, unused Ofuda lose their magical properties if another Talisman is etched within their slot, meaning a Miko of Arcane Might I could at most have two Ofuda etched at a time.</p><p>Once per rest you may spend ten Favor to etch a new set of Talismans without needing to wait for your next rest.</p><p>A Miko learns two Talisman abilities when they first gain their powers, and one Talisman each time they increase their Arcane Might. Additional Talismans may be learned by completing a project requiring a hundred progress. Each week a Miko spends learning the Talisman they may add their Arcane Might to the progress, if they have an appropriate teacher training them, then the teacher may also add their Arcane Might to the progress.</p><p>Unless stated otherwise all Talismans must be cast with a full action.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

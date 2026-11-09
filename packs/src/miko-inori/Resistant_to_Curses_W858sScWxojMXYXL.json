@@ -1,0 +1,19 @@
+{
+  "_id": "W858sScWxojMXYXL",
+  "_key": "!items!W858sScWxojMXYXL",
+  "name": "Resistant to Curses",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Add the bonus of two Unmei without needing to spend Unmei points to any roll made to resist a curse or Miasma effect.</p>",
+    "type": "boon",
+    "cost": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

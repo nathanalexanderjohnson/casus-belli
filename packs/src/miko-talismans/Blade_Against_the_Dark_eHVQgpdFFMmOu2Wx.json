@@ -1,0 +1,24 @@
+{
+  "_id": "eHVQgpdFFMmOu2Wx",
+  "_key": "!items!eHVQgpdFFMmOu2Wx",
+  "name": "Blade Against the Dark",
+  "type": "talisman",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Enchant a weapon you are touching (or if you are a Dosojin you may enchant your servant’s claws, teeth, etc) with divine energy. Whenever the weapon is used against a supernatural creature it may deal either its regular damage or Spirit damage, whichever would result in a better result. This enhancement lasts till your next rest, till you enchant another weapon that causes you to exceed your maximum number of enchantments, or till you are slain.</p><p>At Arcane Might I you may only enchant a single weapon with this effect with the effect on the previous weapon ending if you exchant another, at Arcane Might III you may enchant a maximum of ten weapons, at Arcane Might V you may enhance a hundred.</p>",
+    "ofuda": "<p>Grant the blessing described at the previous level and additionally these weapons deal an additional amount of Spirit damage equal to your Arcane Might when used against supernatural creatures.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

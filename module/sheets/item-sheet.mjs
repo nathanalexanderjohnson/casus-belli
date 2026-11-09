@@ -126,6 +126,24 @@ export class CasusBelliItemSheet extends ItemSheet {
       }
     }
 
+    // Miko item options, and the two Talisman variant texts
+    if (['talisman', 'rite', 'mikoAbility'].includes(this.item.type)) {
+      context.mikoOptions = {
+        riteKinds: CONFIG.CASUSBELLI.riteKinds,
+        abilityTraditions: CONFIG.CASUSBELLI.mikoAbilityTraditions,
+      };
+    }
+    if (this.item.type === 'talisman') {
+      const enrich = (text) => TextEditor.enrichHTML(text ?? '', {
+        secrets: this.document.isOwner,
+        async: true,
+        rollData: this.item.getRollData(),
+        relativeTo: this.item,
+      });
+      context.enrichedOmamori = await enrich(this.item.system.omamori);
+      context.enrichedOfuda = await enrich(this.item.system.ofuda);
+    }
+
     // Inject derived total complexity for gadget items
     if (this.item.type === 'gadget') {
       context.system.totalComplexity = this.item.system.totalComplexity;

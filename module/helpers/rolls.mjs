@@ -23,11 +23,17 @@ export function countSuccesses(roll) {
  * @param {Roll} roll
  * @param {number|null} [tn]            Target number (parsed from the formula when omitted)
  * @param {object} [options]
- * @param {number} [options.minSuccesses]  A floor on the success count (Sharingan foresight)
+ * @param {number} [options.minSuccesses]    A floor on the success count (Sharingan foresight)
+ * @param {number} [options.bonusSuccesses]  Automatic successes added to the roll (Unmei)
+ * @param {boolean} [options.bonusAreTens]   The automatic successes count as natural 10s when
+ *                                           pairing for crits (Beloved Above All)
  * @returns {string}
  */
-export function formatRollContent(roll, tn = null, { minSuccesses = 0 } = {}) {
-  const { successes, critCount, dice } = countSuccesses(roll);
+export function formatRollContent(roll, tn = null, { minSuccesses = 0, bonusSuccesses = 0, bonusAreTens = false } = {}) {
+  const { successes: baseSuccesses, dice } = countSuccesses(roll);
+  const extra = bonusSuccessTotal(roll, bonusSuccesses, bonusAreTens);
+  const critCount = Math.floor((dice.filter((r) => r === 10).length + (bonusAreTens ? bonusSuccesses : 0)) / 2);
+  const successes = baseSuccesses + extra - bonusSuccesses;
   const hasCrit = critCount > 0;
 
   let effectiveTn = tn;
@@ -47,9 +53,13 @@ export function formatRollContent(roll, tn = null, { minSuccesses = 0 } = {}) {
     ? ` <span class="crit-tag">+${critCount * 2} CRIT${critCount > 1 ? 'S' : ''}</span>`
     : '';
 
-  const total = Math.max(successes, minSuccesses);
-  const foresightHtml = minSuccesses > successes
-    ? `<div class="foresight-note">Foresight: raised from ${successes} to ${minSuccesses} (half the pool)</div>`
+  const rolled = successes + bonusSuccesses;
+  const total = Math.max(rolled, minSuccesses);
+  const bonusHtml = bonusSuccesses > 0
+    ? `<div class="foresight-note">Includes ${bonusSuccesses} automatic success${bonusSuccesses > 1 ? 'es' : ''}${bonusAreTens ? ' (counted as natural 10s)' : ''}</div>`
+    : '';
+  const foresightHtml = minSuccesses > rolled
+    ? `<div class="foresight-note">Foresight: raised from ${rolled} to ${minSuccesses} (half the pool)</div>`
     : '';
 
   return `
@@ -58,9 +68,26 @@ export function formatRollContent(roll, tn = null, { minSuccesses = 0 } = {}) {
       <div class="success-summary ${hasCrit ? 'crit' : ''}">
         <span class="success-count">${total}</span> Successes${critHtml}
       </div>
+      ${bonusHtml}
       ${foresightHtml}
     </div>
   `;
+}
+
+/**
+ * Successes added on top of the dice by automatic successes. Normally that is just their count;
+ * when they count as natural 10s they can also complete crit pairs (two bonus successes each).
+ * @param {Roll} roll
+ * @param {number} bonusSuccesses
+ * @param {boolean} bonusAreTens
+ * @returns {number}
+ */
+export function bonusSuccessTotal(roll, bonusSuccesses, bonusAreTens) {
+  if (!bonusAreTens || bonusSuccesses <= 0) return bonusSuccesses;
+  const { critCount, dice } = countSuccesses(roll);
+  const tens = dice.filter((r) => r === 10).length;
+  const critsWithBonus = Math.floor((tens + bonusSuccesses) / 2);
+  return bonusSuccesses + (critsWithBonus - critCount) * 2;
 }
 
 /**
@@ -71,22 +98,27 @@ export function formatRollContent(roll, tn = null, { minSuccesses = 0 } = {}) {
  * @param {number} options.tn
  * @param {string} options.flavor
  * @param {number} [options.minSuccesses]
+ * @param {number} [options.bonusSuccesses]  Automatic successes (Unmei)
+ * @param {boolean} [options.bonusAreTens]   Automatic successes count as natural 10s for crits
  * @param {string} [options.extraContent]  Extra HTML appended under the result
  * @returns {Promise<Roll>}
  */
-export async function rollPool(actor, { dice, tn, flavor, minSuccesses = 0, extraContent = '' }) {
+export async function rollPool(actor, { dice, tn, flavor, minSuccesses = 0, bonusSuccesses = 0, bonusAreTens = false, extraContent = '' }) {
   const formula = `${Math.max(1, dice)}d10cs>=${tn}`;
   const roll = new Roll(formula, actor.getRollData());
   await roll.evaluate();
   await roll.toMessage({
     speaker: ChatMessage.getSpeaker({ actor }),
     flavor,
-    content: formatRollContent(roll, tn, { minSuccesses }) + extraContent,
+    content: formatRollContent(roll, tn, { minSuccesses, bonusSuccesses, bonusAreTens }) + extraContent,
     rollMode: game.settings.get('core', 'rollMode'),
     flags: {
       'casus-belli': {
         actorId: actor.id,
         tn,
+        // Everything the automatic successes added (including crits they completed), so a
+        // Luck re-roll's combined total stays correct.
+        bonusSuccesses: bonusSuccessTotal(roll, bonusSuccesses, bonusAreTens),
       },
     },
   });
@@ -103,6 +135,7 @@ export function labelForKey(key) {
   if (config.attributes[key]) return game.i18n.localize(config.attributes[key]);
   if (config.skills[key]) return game.i18n.localize(config.skills[key]);
   if (config.ninjaSkills[key]) return config.ninjaSkills[key].label;
+  if (key === 'spiritualism') return 'Spiritualism';
   if (key === 'arcaneMight') return 'Arcane Might';
   return key;
 }
@@ -144,6 +177,13 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
       const selected = skillKey === defaultSecond ? ' selected' : '';
       options += `<option value="${skillKey}"${selected}>${def.label}</option>`;
     }
+  }
+
+  const isMiko = actor.type === 'character' && system.isMiko;
+  const spiritualism = isMiko ? Number(system.spiritualism?.value ?? 0) : 0;
+  if (isMiko) {
+    const selected = defaultSecond === 'spiritualism' ? ' selected' : '';
+    options += `<option value="spiritualism"${selected}>Spiritualism</option>`;
   }
 
   // ── Ninja options ─────────────────────────────────────────────────────────
@@ -195,6 +235,35 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
     ninjaHtml += '</fieldset>';
   }
 
+  // ── Miko options ──────────────────────────────────────────────────────────
+  let mikoHtml = '';
+  // Beloved Above All has no Unmei points: each one spent is paid with the Kami's wound instead.
+  const beloved = isMiko && system.belovedAboveAll;
+  const maxUnmei = isMiko
+    ? Math.min(config.miko.maxUnmeiPerRoll, beloved ? config.miko.maxUnmeiPerRoll : (system.unmei?.value ?? 0))
+    : 0;
+  // Spellblade (Harai): Spiritualism in place of Melee, Ranged, or Athletics.
+  const spellblade = isMiko && system.tradition === 'harai' && ['melee', 'ranged', 'athletics'].includes(key) && spiritualism > 0;
+  if (isMiko) {
+    mikoHtml += `
+      <fieldset class="ninja-roll-options">
+        <legend>Miko</legend>
+        <div class="form-group">
+          <label>Unmei to spend (1 automatic success each, max ${maxUnmei})</label>
+          <input type="number" name="unmei" value="0" min="0" max="${maxUnmei}"/>
+        </div>
+        <p class="hint">${beloved
+          ? "Beloved Above All: each Unmei costs 1 Pain and 1 Stress (the Kami's wound) and counts as a natural 10, so two guarantee a critical."
+          : `Unmei: ${system.unmei?.value ?? 0} / ${system.unmei?.max ?? 0}.`} It cannot be spent on a roll that Luck cannot be used on.</p>`;
+    if (spellblade) {
+      mikoHtml += `
+        <div class="form-group">
+          <label><input type="checkbox" name="useSpiritualism" ${spiritualism > value ? 'checked' : ''}/> Spellblade: use Spiritualism (${spiritualism}) instead of ${escape(label)} (${value})</label>
+        </div>`;
+    }
+    mikoHtml += '</fieldset>';
+  }
+
   const content = `
     <form>
       <div class="form-group">
@@ -210,6 +279,7 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
         <select name="secondKey">${options}</select>
       </div>
       ${ninjaHtml}
+      ${mikoHtml}
     </form>
   `;
 
@@ -227,6 +297,12 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
       primaryKey = 'taijutsu';
       primaryLabel = `Taijutsu (as ${label})`;
       totalDice = taijutsu;
+    }
+
+    if (spellblade && checked('useSpiritualism')) {
+      primaryKey = 'spiritualism';
+      primaryLabel = `Spiritualism (as ${label})`;
+      totalDice = spiritualism;
     }
 
     let flavor = `${primaryLabel} (TN ${tn})`;
@@ -277,11 +353,26 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
     }
     totalDice = Math.max(1, totalDice);
 
+    // Unmei: declared before the roll; each point is one automatic success.
+    let bonusSuccesses = 0;
+    if (isMiko) {
+      bonusSuccesses = Math.max(0, Math.min(maxUnmei, parseInt(field('unmei').val()) || 0));
+      if (bonusSuccesses > 0) {
+        if (beloved) {
+          const { inflictKamiWound } = await import('./miko.mjs');
+          await inflictKamiWound(actor, bonusSuccesses, `Spending ${bonusSuccesses} Unmei on ${label}`);
+        } else {
+          await actor.update({ 'system.unmei.value': (system.unmei?.value ?? 0) - bonusSuccesses });
+        }
+        flavor += ` [Unmei +${bonusSuccesses}]`;
+      }
+    }
+
     const minSuccesses = foresight && checked('foresight') ? Math.floor(totalDice / 2) : 0;
     const extraContent = notes.length
       ? `<div class="casus-belli-ninja-note">${notes.map((n) => `<p>${n}</p>`).join('')}</div>`
       : '';
-    await rollPool(actor, { dice: totalDice, tn, flavor, minSuccesses, extraContent });
+    await rollPool(actor, { dice: totalDice, tn, flavor, minSuccesses, bonusSuccesses, bonusAreTens: beloved, extraContent });
   };
 
   new Dialog({

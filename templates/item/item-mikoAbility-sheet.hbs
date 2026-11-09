@@ -1,0 +1,23 @@
+<form class='{{cssClass}} casus-belli-miko-ability-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Tradition</label>
+        <select name='system.tradition'>{{selectOptions mikoOptions.abilityTraditions selected=system.tradition}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Min. Arcane Might</label>
+        <input name='system.minArcaneMight' type='number' value='{{system.minArcaneMight}}' min='0'/>
+      </div>
+    </div>
+
+    {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+  </section>
+</form>

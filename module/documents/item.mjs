@@ -3,6 +3,11 @@ import {
   validateNinjaItemCreate,
   validateNinjaItemUpdate,
 } from '../helpers/ninja.mjs';
+import {
+  MIKO_ITEM_TYPES,
+  validateMikoItemCreate,
+  validateMikoItemUpdate,
+} from '../helpers/miko.mjs';
 
 /**
  * Extend the basic Item with some very simple modifications.
@@ -61,6 +66,15 @@ export class CasusBelliItem extends Item {
       if (warning) ui.notifications.info(warning);
     }
 
+    // Miko items: Miko only, and tradition abilities must match the owner's tradition.
+    if (this.parent && MIKO_ITEM_TYPES.includes(this.type)) {
+      const error = validateMikoItemCreate(this.parent, this);
+      if (error) {
+        ui.notifications.warn(error);
+        return false;
+      }
+    }
+
     let defaultIcon = CONFIG.Item.typeIcons?.[this.type];
     if (this.type === 'boon' && this.system.type === 'bane') {
       defaultIcon = 'icons/svg/daze.svg';
@@ -75,6 +89,13 @@ export class CasusBelliItem extends Item {
     if ((await super._preUpdate(changed, options, user)) === false) return false;
     if (this.parent && ['technique', 'bloodline'].includes(this.type)) {
       const error = validateNinjaItemUpdate(this.parent, this, changed);
+      if (error) {
+        ui.notifications.warn(error);
+        return false;
+      }
+    }
+    if (this.parent && MIKO_ITEM_TYPES.includes(this.type)) {
+      const error = validateMikoItemUpdate(this.parent, this, changed);
       if (error) {
         ui.notifications.warn(error);
         return false;

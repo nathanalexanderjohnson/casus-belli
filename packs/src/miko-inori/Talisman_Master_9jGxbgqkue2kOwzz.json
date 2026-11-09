@@ -1,0 +1,19 @@
+{
+  "_id": "9jGxbgqkue2kOwzz",
+  "_key": "!items!9jGxbgqkue2kOwzz",
+  "name": "Talisman Master",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Begin the game with one extra known Talisman and increase the maximum number of Talismans you can prepare by one.</p>",
+    "type": "boon",
+    "cost": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

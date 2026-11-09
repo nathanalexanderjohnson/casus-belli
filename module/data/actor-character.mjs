@@ -1,5 +1,16 @@
 import CasusBelliActorBase from "./base-actor.mjs";
 
+/**
+ * Whether an item is the Beloved Above All Inori: a boon flagged by the compendium,
+ * or any boon with that exact name (so a hand-made copy works too).
+ * @param {Item} item
+ */
+export function isBelovedAboveAll(item) {
+  if (item?.type !== 'boon') return false;
+  return item.getFlag?.('casus-belli', 'inori') === 'belovedAboveAll'
+    || item.name?.trim().toLowerCase() === 'beloved above all';
+}
+
 export default class CasusBelliCharacter extends CasusBelliActorBase {
 
   static defineSchema() {
@@ -135,6 +146,45 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
     /** Flat pain added by effects (e.g. the Wracked by Pain flaw). Applied on top of wound pain. */
     schema.painModifier = new fields.NumberField({ ...requiredInteger, initial: 0 });
 
+    // ── Miko ────────────────────────────────────────────────────────────────
+    schema.tradition = new fields.StringField({
+      required: true,
+      initial: 'dosojin',
+      choices: Object.keys(config.mikoTraditions)
+    });
+
+    schema.spiritualism = new fields.SchemaField({
+      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0, max: 14 })
+    });
+
+    schema.unmei = new fields.SchemaField({
+      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
+    /** Favor may go negative (Destined For Greatness). */
+    schema.favor = new fields.SchemaField({
+      value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
+    /** Extra Talisman slots from Inori such as Talisman Master. */
+    schema.talismanSlotBonus = new fields.NumberField({ ...requiredInteger, initial: 0 });
+
+    schema.wieldsMiasma = new fields.BooleanField({ required: true, initial: false });
+
+    /** Spirit Ward hit points (gained at Arcane Might V). */
+    schema.spiritWard = new fields.SchemaField({
+      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
+    /** Once-per-rest Favor uses. */
+    schema.mikoRest = new fields.SchemaField({
+      unmeiRestored: new fields.BooleanField({ required: true, initial: false }),
+      reetched: new fields.BooleanField({ required: true, initial: false })
+    });
+
     schema.thesis = new fields.StringField({
       required: true,
       blank: true
@@ -215,6 +265,51 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
     }
 
     this._prepareNinjaData();
+    this._prepareMikoData();
+  }
+
+  /** True when the character is a Miko. */
+  get isMiko() {
+    return this.magicType === 'miko';
+  }
+
+  /**
+   * Derived Miko values: Unmei, Favor, Talisman slots, Kannagara capacity, Spirit Ward.
+   * @private
+   */
+  _prepareMikoData() {
+    const miko = CONFIG.CASUSBELLI.miko;
+    const isMiko = this.isMiko;
+    const arcaneMight = this.arcaneMight ?? 0;
+
+    // Beloved Above All: no Unmei and a single Talisman; nothing can raise either.
+    // Extra Unmei and Talismans are paid for with the Kami's wound instead (see helpers/miko.mjs).
+    this.belovedAboveAll = isMiko && Boolean(this.parent?.items?.some((i) => isBelovedAboveAll(i)));
+
+    if (this.unmei) {
+      this.unmei.max = isMiko && !this.belovedAboveAll ? 1 + arcaneMight : 0;
+      this.unmei.value = Math.max(0, Math.min(this.unmei.value ?? 0, this.unmei.max));
+    }
+
+    if (this.favor) {
+      this.favor.max = isMiko ? miko.favorPerArcaneMight * arcaneMight : 0;
+      this.favor.value = Math.min(this.favor.value ?? 0, this.favor.max);
+    }
+
+    if (this.spiritWard) {
+      this.spiritWard.max = isMiko && arcaneMight >= miko.wardHpArcaneMight ? miko.wardHp : 0;
+      this.spiritWard.value = Math.min(this.spiritWard.value ?? 0, this.spiritWard.max);
+    }
+
+    // Ofuda that may be etched at once: 1 + Arcane Might, plus Inori bonuses.
+    if (!isMiko) this.talismanSlots = 0;
+    else if (this.belovedAboveAll) this.talismanSlots = 1;
+    else this.talismanSlots = Math.max(0, 1 + arcaneMight + (this.talismanSlotBonus ?? 0));
+
+    // Kannagara maintenance capacity.
+    this.kannagaraCapacity = isMiko
+      ? (miko.kannagaraCapacity.find((tier) => arcaneMight >= tier.arcaneMight)?.capacity ?? 0)
+      : 0;
   }
 
   /** True when the character is a ninja. */
@@ -301,6 +396,11 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
         data[key] = { value: skill.total ?? skill.value ?? 0 };
       }
       data.chakra = { value: this.chakra?.value ?? 0, max: this.chakra?.max ?? 0 };
+    }
+
+    // Spiritualism is only available to Miko.
+    if (this.isMiko) {
+      data.spiritualism = { value: this.spiritualism?.value ?? 0 };
     }
 
     return data

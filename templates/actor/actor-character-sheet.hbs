@@ -393,12 +393,7 @@
 
     {{#if (equals system.magicType "miko")}}
     <div class="tab miko flexcol" data-group="primary" data-tab="miko">
-      <div class="class-tab-placeholder">
-        <div class="attribute tile arcane-might-box">
-          <label for="system.arcaneMight" class="resource-label rollable" data-roll-type="attribute" data-key="arcaneMight" data-label="Arcane Might">Arcane Might</label>
-          <input type="text" name="system.arcaneMight" value="{{system.arcaneMight}}" data-dtype="Number"/>
-        </div>
-      </div>
+      {{> "systems/casus-belli/templates/actor/parts/actor-miko-tab.hbs"}}
     </div>
     {{/if}}
 

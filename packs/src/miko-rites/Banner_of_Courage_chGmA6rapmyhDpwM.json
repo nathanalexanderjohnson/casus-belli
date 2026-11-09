@@ -1,0 +1,27 @@
+{
+  "_id": "chGmA6rapmyhDpwM",
+  "_key": "!items!chGmA6rapmyhDpwM",
+  "name": "Banner of Courage",
+  "type": "rite",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Engrave a banner that may at Arcane Might II be raised over a squad, at Arcane Might III raised over a Company, and at Arcane Might IV be raised over a Regiment. So long as the banner remains raised, all units under it have their Morale increased by two.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 2,
+    "cost": 10,
+    "costNote": "",
+    "maintenance": 3,
+    "maintenanceNote": "",
+    "draining": true,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

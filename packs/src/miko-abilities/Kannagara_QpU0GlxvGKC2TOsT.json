@@ -1,0 +1,19 @@
+{
+  "_id": "QpU0GlxvGKC2TOsT",
+  "_key": "!items!QpU0GlxvGKC2TOsT",
+  "name": "Kannagara",
+  "type": "mikoAbility",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>A Miko can bestow blessings or curses upon the land, requiring them to perform complex rituals while standing within a domain, which one complete have a certain effect. Unless stated otherwise a Kannagara lasts for a single Passage of Time and requires an hour to be completed.</p><p>In addition to the Favor cost associated with each Kannagara, once it is cast it requires one or more Miko’s to maintain it based on its maintenance requirement. If sufficient Mikos to maintain it are not continually providing their assistance to the ritual then its effect ends (though there is a small grace period to replace a Miko should one have an untimely death before the entire ritual ends). This means some rituals may require multiple Miko to perform, unless cast by a truly powerful Miko.</p><p>Any Kannagara with the Draining tag continue to use up capacity until the end of the Passage of Time once they are used, even once their effect ends.</p><p>A Miko of Arcane Might I has a maintenance capacity of one, at Arcane Might III you have a capacity of ten, at Arcane Might V and at Arcane Might VII you have a capacity of a thousand. Gain access to each Kannagara once you reach the appropriate Arcane Might. A Miko may maintain a Kannagara even if they are not capable of casting it.</p><p>A Miko of greater Arcane Might may end a Kannagara (or Miasma) cast by another Miko by performing a rite requiring an hour.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

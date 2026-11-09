@@ -1,0 +1,24 @@
+{
+  "_id": "nqrfnMou8sEHkuNM",
+  "_key": "!items!nqrfnMou8sEHkuNM",
+  "name": "Spirit Bindings",
+  "type": "talisman",
+  "img": "icons/svg/net.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Make a spellcasting attack roll against a target within thirty yards, on a successful strike the target becomes Impeded until the end of your next turn as divine energy swirls around their body.</p>",
+    "ofuda": "<p>Make a spellcasting attack roll against a target within thirty yards, on a successful strike the target must make a contested Strength + Agility roll against a new casting roll, and on a failure becomes fully restrained by divine energy, causing them to fall prone and become unable to use any limbs. On each of their turns they may attempt to break the bindings as an action making a pure Strength roll against your casting roll. Creatures of Arcane Might greater than yours are unaffected by this ability.</p><p>Another Miko of equal Arcane Might may attempt to destroy the bindings with a contested casting roll as an action. A Miko of greater Arcane Might automatically succeeds in their attempt to break the bindings. These bindings last till you choose to dismiss them, till you replenish this Talisman slot, or till the target breaks them.</p>",
+    "omamoriRoll": true,
+    "ofudaRoll": true,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

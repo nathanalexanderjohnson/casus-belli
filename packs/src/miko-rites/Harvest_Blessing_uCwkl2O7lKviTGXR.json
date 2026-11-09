@@ -1,0 +1,27 @@
+{
+  "_id": "uCwkl2O7lKviTGXR",
+  "_key": "!items!uCwkl2O7lKviTGXR",
+  "name": "Harvest Blessing",
+  "type": "rite",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<p>Bless a field of crops, preventing blight, and ensuring that they will yield a bountiful harvest. So long as this ability is maintained till harvest prevent any blight or plant sickness from impacting these fields and double their output at harvest time.</p><p>At Arcane Might II you may bless the crops in a village sized area enhancing a maximum of a thousand farm capacity with a single ritual. At Arcane Might III you may cover the area of a town and its immediate surrounding fields, enhancing a maximum of ten thousand capacity. At Arcane Might V you may provide your blessing to an entire region enhancing a maximum of a hundred thousand capacity.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 2,
+    "cost": 5,
+    "costNote": "5 Favor per thousand Capacity at Arcane Might II, 3 at III, 2 at IV",
+    "maintenance": 1,
+    "maintenanceNote": "1 per thousand Capacity",
+    "draining": false,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

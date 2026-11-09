@@ -1,0 +1,27 @@
+{
+  "_id": "kKSFfM3PJ6uSoUTs",
+  "_key": "!items!kKSFfM3PJ6uSoUTs",
+  "name": "Ghost Fire",
+  "type": "rite",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>One of the most forbidden techniques even among Miasma Miko, twist your divine blessing to call forth the fire reserved by the Kami for holding evil spirits within the underworld and potentially use it against mortal men. On a successful spell attack roll deal 3 + Arcane Might spirit damage to the target, these flames do not burn any material they touch, but instead burn away their target’s soul. If the target is not already Stressed, inflict stress damage equal to the damage dealt. If the target is Stressed already increase the damage of this ability to 3 + (Arcane Might * 2).</p>",
+    "kind": "miasma",
+    "minArcaneMight": 1,
+    "cost": 5,
+    "costNote": "",
+    "maintenance": 0,
+    "maintenanceNote": "",
+    "draining": false,
+    "vicious": true,
+    "roll": true,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

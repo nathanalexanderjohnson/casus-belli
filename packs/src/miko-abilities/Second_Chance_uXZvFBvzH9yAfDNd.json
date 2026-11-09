@@ -1,0 +1,19 @@
+{
+  "_id": "uXZvFBvzH9yAfDNd",
+  "_key": "!items!uXZvFBvzH9yAfDNd",
+  "name": "Second Chance",
+  "type": "mikoAbility",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p><em>At Arcane Might V you may select one of the two options for your tradition.</em></p><p>Gain a secondary Katashiro that may only be linked to yourself. You may use it even while linked to another Katashiro. When it is used, you may choose to be teleported back to your shrine, as if taken by Miko’s path.</p>",
+    "tradition": "harai",
+    "minArcaneMight": 5
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

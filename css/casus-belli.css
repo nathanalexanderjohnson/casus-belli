@@ -2139,13 +2139,13 @@
 .casus-belli .augments-section .augments-list .augments-footer {
   padding: 4px 2px;
 }
-.casus-belli .ninja-tab-content {
+.casus-belli .ninja-tab-content, .casus-belli .miko-tab-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   overflow-y: auto;
 }
-.casus-belli .ninja-tab-content button {
+.casus-belli .ninja-tab-content button, .casus-belli .miko-tab-content button {
   background: #efe2c4;
   color: #2b1f1a;
   border: 1px solid rgba(123, 43, 39, 0.9);
@@ -2156,11 +2156,11 @@
   line-height: 1.4;
   width: auto;
 }
-.casus-belli .ninja-tab-content button.active {
+.casus-belli .ninja-tab-content button.active, .casus-belli .miko-tab-content button.active {
   background: #8d4e48;
   color: #fffaf3;
 }
-.casus-belli .ninja-tab-content button:disabled {
+.casus-belli .ninja-tab-content button:disabled, .casus-belli .miko-tab-content button:disabled {
   opacity: 0.5;
 }
 .casus-belli .ninja-header-row {
@@ -2323,7 +2323,7 @@
   gap: 6px;
   margin-left: auto;
 }
-.casus-belli .ninja-hint {
+.casus-belli .ninja-hint, .casus-belli .miko-hint {
   margin: 0;
   font-size: 11px;
   font-style: italic;
@@ -2337,7 +2337,7 @@
   background: rgba(123, 43, 39, 0.85);
   border-radius: 4px;
 }
-.casus-belli .ninja-meta {
+.casus-belli .ninja-meta, .casus-belli .miko-meta {
   font-size: 10px;
   font-style: italic;
   color: #9a4d47;
@@ -2348,26 +2348,28 @@
   font-weight: bold;
   color: #476d5d;
 }
-.casus-belli .ninja-empty {
+.casus-belli .ninja-empty, .casus-belli .miko-empty {
   padding: 4px 8px;
   font-style: italic;
   color: #9a4d47;
   list-style: none;
 }
-.casus-belli .ninja-panels {
+.casus-belli .ninja-panels, .casus-belli .miko-panels {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
-.casus-belli .ninja-panel,
-.casus-belli .ninja-section {
+.casus-belli .ninja-panel, .casus-belli .miko-panel,
+.casus-belli .ninja-section,
+.casus-belli .miko-section {
   background: rgba(228, 212, 175, 0.8);
   border: 2px groove #7b2b27;
   border-radius: 8px;
   padding: 8px 10px;
 }
-.casus-belli .ninja-panel h3,
-.casus-belli .ninja-section h3 {
+.casus-belli .ninja-panel h3, .casus-belli .miko-panel h3,
+.casus-belli .ninja-section h3,
+.casus-belli .miko-section h3 {
   margin: 0 0 6px;
   font-size: 12px;
   font-weight: 700;
@@ -2376,12 +2378,12 @@
   color: #5d4138;
   border-bottom: 1px solid rgba(123, 43, 39, 0.8);
 }
-.casus-belli .ninja-panel {
+.casus-belli .ninja-panel, .casus-belli .miko-panel {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.casus-belli .ninja-panel .ninja-surge {
+.casus-belli .ninja-panel .ninja-surge, .casus-belli .miko-panel .ninja-surge {
   text-align: left;
 }
 .casus-belli .ninja-skill {
@@ -2486,24 +2488,41 @@
   align-items: center;
   gap: 4px;
 }
-.casus-belli .ninja-techniques,
+.casus-belli .ninja-techniques, .casus-belli .miko-list,
 .casus-belli .ninja-training {
   padding: 4px 6px;
 }
-.casus-belli .ninja-techniques .items-list,
+.casus-belli .ninja-techniques .items-list, .casus-belli .miko-list .items-list,
 .casus-belli .ninja-training .items-list {
   margin: 0;
 }
-.casus-belli .ninja-techniques .ninja-col-rank,
+.casus-belli .ninja-techniques .ninja-col-rank, .casus-belli .ninja-techniques .miko-col-narrow, .casus-belli .miko-list .ninja-col-rank, .casus-belli .miko-list .miko-col-narrow,
 .casus-belli .ninja-techniques .ninja-col-element,
+.casus-belli .ninja-techniques .miko-col-medium,
+.casus-belli .miko-list .ninja-col-element,
+.casus-belli .miko-list .miko-col-medium,
 .casus-belli .ninja-techniques .ninja-col-cost,
+.casus-belli .ninja-techniques .miko-col-cost,
+.casus-belli .miko-list .ninja-col-cost,
+.casus-belli .miko-list .miko-col-cost,
 .casus-belli .ninja-techniques .ninja-col-roll,
+.casus-belli .ninja-techniques .miko-col-wide,
+.casus-belli .miko-list .ninja-col-roll,
+.casus-belli .miko-list .miko-col-wide,
 .casus-belli .ninja-techniques .ninja-col-progress,
+.casus-belli .ninja-techniques .miko-col-xwide,
+.casus-belli .miko-list .ninja-col-progress,
+.casus-belli .miko-list .miko-col-xwide,
 .casus-belli .ninja-training .ninja-col-rank,
+.casus-belli .ninja-training .miko-col-narrow,
 .casus-belli .ninja-training .ninja-col-element,
+.casus-belli .ninja-training .miko-col-medium,
 .casus-belli .ninja-training .ninja-col-cost,
+.casus-belli .ninja-training .miko-col-cost,
 .casus-belli .ninja-training .ninja-col-roll,
-.casus-belli .ninja-training .ninja-col-progress {
+.casus-belli .ninja-training .miko-col-wide,
+.casus-belli .ninja-training .ninja-col-progress,
+.casus-belli .ninja-training .miko-col-xwide {
   box-sizing: border-box;
   padding: 0 4px;
   text-align: center;
@@ -2511,31 +2530,36 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.casus-belli .ninja-techniques .ninja-col-rank,
-.casus-belli .ninja-training .ninja-col-rank {
+.casus-belli .ninja-techniques .ninja-col-rank, .casus-belli .ninja-techniques .miko-col-narrow, .casus-belli .miko-list .ninja-col-rank, .casus-belli .miko-list .miko-col-narrow,
+.casus-belli .ninja-training .ninja-col-rank,
+.casus-belli .ninja-training .miko-col-narrow {
   flex: 0 0 56px;
 }
-.casus-belli .ninja-techniques .ninja-col-element,
-.casus-belli .ninja-training .ninja-col-element {
+.casus-belli .ninja-techniques .ninja-col-element, .casus-belli .ninja-techniques .miko-col-medium, .casus-belli .miko-list .ninja-col-element, .casus-belli .miko-list .miko-col-medium,
+.casus-belli .ninja-training .ninja-col-element,
+.casus-belli .ninja-training .miko-col-medium {
   flex: 0 0 84px;
 }
-.casus-belli .ninja-techniques .ninja-col-cost,
-.casus-belli .ninja-training .ninja-col-cost {
+.casus-belli .ninja-techniques .ninja-col-cost, .casus-belli .ninja-techniques .miko-col-cost, .casus-belli .miko-list .ninja-col-cost, .casus-belli .miko-list .miko-col-cost,
+.casus-belli .ninja-training .ninja-col-cost,
+.casus-belli .ninja-training .miko-col-cost {
   flex: 0 0 70px;
 }
-.casus-belli .ninja-techniques .ninja-col-roll,
-.casus-belli .ninja-training .ninja-col-roll {
+.casus-belli .ninja-techniques .ninja-col-roll, .casus-belli .ninja-techniques .miko-col-wide, .casus-belli .miko-list .ninja-col-roll, .casus-belli .miko-list .miko-col-wide,
+.casus-belli .ninja-training .ninja-col-roll,
+.casus-belli .ninja-training .miko-col-wide {
   flex: 0 0 110px;
 }
-.casus-belli .ninja-techniques .ninja-col-progress,
-.casus-belli .ninja-training .ninja-col-progress {
+.casus-belli .ninja-techniques .ninja-col-progress, .casus-belli .ninja-techniques .miko-col-xwide, .casus-belli .miko-list .ninja-col-progress, .casus-belli .miko-list .miko-col-xwide,
+.casus-belli .ninja-training .ninja-col-progress,
+.casus-belli .ninja-training .miko-col-xwide {
   flex: 0 0 170px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 }
-.casus-belli .ninja-techniques .item-controls,
+.casus-belli .ninja-techniques .item-controls, .casus-belli .miko-list .item-controls,
 .casus-belli .ninja-training .item-controls {
   flex: 0 0 110px;
   min-width: 0;
@@ -2546,29 +2570,46 @@
   gap: 12px;
   padding-right: 6px;
 }
-.casus-belli .ninja-techniques .item-controls a,
+.casus-belli .ninja-techniques .item-controls a, .casus-belli .miko-list .item-controls a,
 .casus-belli .ninja-training .item-controls a {
   margin: 0;
 }
-.casus-belli .ninja-techniques .items-header .ninja-col-rank,
+.casus-belli .ninja-techniques .items-header .ninja-col-rank, .casus-belli .ninja-techniques .items-header .miko-col-narrow, .casus-belli .miko-list .items-header .ninja-col-rank, .casus-belli .miko-list .items-header .miko-col-narrow,
 .casus-belli .ninja-techniques .items-header .ninja-col-element,
+.casus-belli .ninja-techniques .items-header .miko-col-medium,
+.casus-belli .miko-list .items-header .ninja-col-element,
+.casus-belli .miko-list .items-header .miko-col-medium,
 .casus-belli .ninja-techniques .items-header .ninja-col-cost,
+.casus-belli .ninja-techniques .items-header .miko-col-cost,
+.casus-belli .miko-list .items-header .ninja-col-cost,
+.casus-belli .miko-list .items-header .miko-col-cost,
 .casus-belli .ninja-techniques .items-header .ninja-col-roll,
+.casus-belli .ninja-techniques .items-header .miko-col-wide,
+.casus-belli .miko-list .items-header .ninja-col-roll,
+.casus-belli .miko-list .items-header .miko-col-wide,
 .casus-belli .ninja-techniques .items-header .ninja-col-progress,
+.casus-belli .ninja-techniques .items-header .miko-col-xwide,
+.casus-belli .miko-list .items-header .ninja-col-progress,
+.casus-belli .miko-list .items-header .miko-col-xwide,
 .casus-belli .ninja-training .items-header .ninja-col-rank,
+.casus-belli .ninja-training .items-header .miko-col-narrow,
 .casus-belli .ninja-training .items-header .ninja-col-element,
+.casus-belli .ninja-training .items-header .miko-col-medium,
 .casus-belli .ninja-training .items-header .ninja-col-cost,
+.casus-belli .ninja-training .items-header .miko-col-cost,
 .casus-belli .ninja-training .items-header .ninja-col-roll,
-.casus-belli .ninja-training .items-header .ninja-col-progress {
+.casus-belli .ninja-training .items-header .miko-col-wide,
+.casus-belli .ninja-training .items-header .ninja-col-progress,
+.casus-belli .ninja-training .items-header .miko-col-xwide {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   font-size: 11px;
 }
-.casus-belli .ninja-techniques .items-header .item-controls a,
+.casus-belli .ninja-techniques .items-header .item-controls a, .casus-belli .miko-list .items-header .item-controls a,
 .casus-belli .ninja-training .items-header .item-controls a {
   white-space: nowrap;
 }
-.casus-belli .ninja-techniques .item-prop,
+.casus-belli .ninja-techniques .item-prop, .casus-belli .miko-list .item-prop,
 .casus-belli .ninja-training .item-prop {
   font-size: 11px;
 }
@@ -2586,7 +2627,7 @@
 .casus-belli .ninja-technique .ninja-toggle-used.used {
   color: #7b2b27;
 }
-.casus-belli .ninja-progress-bar {
+.casus-belli .ninja-progress-bar, .casus-belli .miko-progress-bar {
   flex: 1;
   height: 8px;
   background: #efe2c4;
@@ -2594,7 +2635,7 @@
   border-radius: 4px;
   overflow: hidden;
 }
-.casus-belli .ninja-progress-bar span {
+.casus-belli .ninja-progress-bar span, .casus-belli .miko-progress-bar span {
   display: block;
   height: 100%;
   background: #476d5d;
@@ -2659,6 +2700,147 @@
   display: flex;
   align-items: center;
   gap: 4px;
+}
+.casus-belli .miko-header-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.casus-belli .miko-header-actions {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+.casus-belli .miko-kami-value {
+  font-size: 13px;
+  font-weight: bold;
+  color: #7b2b27;
+}
+.casus-belli .miko-subheading {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a4d47;
+}
+.casus-belli .miko-favor input[type=text] {
+  font-weight: bold;
+}
+.casus-belli .miko-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #e4d4af;
+  border: 2px groove #7b2b27;
+  border-radius: 6px;
+  padding: 2px 4px;
+  height: 50px;
+}
+.casus-belli .miko-tile .resource-label {
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.casus-belli .miko-tile input {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid rgba(123, 43, 39, 0.9);
+  background: #efe2c4;
+  padding: 1px 2px;
+  border-radius: 3px;
+  height: 22px;
+}
+.casus-belli .miko-tile.miko-tile-small {
+  width: 84px;
+}
+.casus-belli .miko-tile.miko-tile-small input {
+  width: 44px;
+}
+.casus-belli .miko-tile.miko-tile-pair {
+  width: 110px;
+}
+.casus-belli .miko-tile.miko-tile-pair .resource-content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.casus-belli .miko-tile.miko-tile-pair .resource-content input {
+  width: 40px;
+}
+.casus-belli .miko-tile.miko-tile-pair .resource-content span {
+  font-weight: bold;
+  color: #9a4d47;
+}
+.casus-belli .miko-tile.miko-tile-select {
+  width: 130px;
+}
+.casus-belli .miko-tile.miko-tile-select select {
+  width: 100%;
+}
+.casus-belli .miko-panel button {
+  text-align: left;
+}
+.casus-belli .miko-inline-field,
+.casus-belli .miko-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.casus-belli .miko-inline-field input[type=text],
+.casus-belli .miko-checkbox input[type=text] {
+  width: 44px;
+  flex: 0 0 44px;
+  text-align: center;
+}
+.casus-belli .miko-count {
+  margin: 0;
+}
+.casus-belli .miko-count.over {
+  color: #7b2b27;
+  font-weight: bold;
+}
+.casus-belli .miko-meta.over {
+  color: #7b2b27;
+  font-weight: bold;
+}
+.casus-belli .miko-list .items-list + .items-list {
+  margin-top: 6px;
+}
+.casus-belli .miko-list .miko-row.unusable {
+  opacity: 0.55;
+}
+.casus-belli .miko-list .miko-etch-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.casus-belli .miko-list .miko-use-cell button {
+  padding: 1px 8px;
+  line-height: 1.3;
+}
+.casus-belli .miko-list .miko-toggle-active.active {
+  color: #476d5d;
+}
+.casus-belli .talisman-editor {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.casus-belli .talisman-editor .editor {
+  flex: 1;
+  min-height: 100px;
 }
 
 /* Ninja chat cards and roll dialog options (rendered outside actor sheets) */

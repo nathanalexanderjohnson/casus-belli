@@ -1,4 +1,5 @@
 import { syncNinjaEffects } from '../helpers/ninja.mjs';
+import { validateTraditionChange } from '../helpers/miko.mjs';
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -24,6 +25,20 @@ export class CasusBelliActor extends Actor {
   }
 
   /* -------------------------------------------- */
+
+  /** @inheritDoc */
+  async _preUpdate(changed, options, user) {
+    if ((await super._preUpdate(changed, options, user)) === false) return false;
+    // A Miko's tradition abilities must be removed before changing tradition.
+    const tradition = changed.system?.tradition;
+    if (this.type === 'character' && tradition !== undefined) {
+      const error = validateTraditionChange(this, tradition);
+      if (error) {
+        ui.notifications.warn(error);
+        return false;
+      }
+    }
+  }
 
   /** @inheritDoc */
   _onUpdate(changed, options, userId) {

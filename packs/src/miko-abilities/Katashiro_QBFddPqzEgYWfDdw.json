@@ -1,0 +1,19 @@
+{
+  "_id": "QBFddPqzEgYWfDdw",
+  "_key": "!items!QBFddPqzEgYWfDdw",
+  "name": "Katashiro",
+  "type": "mikoAbility",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>You may create a number of cursed dolls equal to your Arcane Might. Each doll may be bound to a person by placing a drop of their blood on the doll, a person may only be bound to a single Katashiro at once. Whenever a person suffers an injury you may choose to cause the Katashiro to suffer the injury instead, destroying it. This may be done even if you are not present in the scene or aware of what is happening, once it is done you become aware that the doll was triggered and what manner of injury triggered it, but not any other circumstances. A cursed doll cannot protect against an injury that results in an Instant Kill through overwhelming damage.</p><p>However these dolls may instead be used for darker purposes. You may use the doll to force a target who is bound to it to fail a roll with zero successes. The doll is consumed afterwards. These dolls may also be used as a connection for a Miasma, forcing the target to fail their roll against that Miasma and consuming the doll.</p><p>If a doll is destroyed you may recreate it given ten minutes of effort and paper/ink supplies.</p>",
+    "tradition": "harai",
+    "minArcaneMight": 3
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

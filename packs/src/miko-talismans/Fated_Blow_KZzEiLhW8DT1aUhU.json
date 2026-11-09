@@ -1,0 +1,24 @@
+{
+  "_id": "KZzEiLhW8DT1aUhU",
+  "_key": "!items!KZzEiLhW8DT1aUhU",
+  "name": "Fated Blow",
+  "type": "talisman",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Enchant a target of your choice with this ability, lasting till the end of their next turn. Add one to the damage dealt of their next physical attack. You may cast this on yourself as part of a Spirit Strike.</p>",
+    "ofuda": "<p>Enchant a target of your choice with this Talisman, lasting for a minute. If your target successfully lands a physical attack, you may add half your Arcane Might to the damage dealt once per turn. You may cast this ability on yourself as part of a Spirit Strike.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "cCHA1eT0penkcolC",
+  "_key": "!items!cCHA1eT0penkcolC",
+  "name": "Haunting",
+  "type": "rite",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Attract a spirit to haunt the target and attempt to drive them to madness or kill them. Usually the spirit will act against the target once per day, though more powerful spirits may do it more frequently. The exact nature of the haunting is dependent on the spirit, however usually they will inflict Stress upon the target till they have the Stressed condition, then fully manifest and attempt to kill them or drive them insane.</p><p>The cost of this spell is two Favor for a spirit of Threat Rating one and doubles for each Threat Rating level above one. You cannot attract a spirit of a Threat Rating above your Arcane Might unless you have made a deal with them through roleplay, and if the spirit is well disposed to you then the cost of drawing it may be reduced. The curse ends if the spirit is killed.</p><p>You may tie this curse to an object or location, in such cases the spirit will haunt the owner of the object or anyone who spends significant time in the area it is tied to.</p>",
+    "kind": "miasma",
+    "minArcaneMight": 1,
+    "cost": 0,
+    "costNote": "2 Favor for a spirit of Threat Rating one, doubling for each Threat Rating above one",
+    "maintenance": 3,
+    "maintenanceNote": "",
+    "draining": true,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

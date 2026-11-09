@@ -1,0 +1,24 @@
+{
+  "_id": "2zgsLIRXTNRZmVxN",
+  "_key": "!items!2zgsLIRXTNRZmVxN",
+  "name": "Commune",
+  "type": "talisman",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>You may speak directly into the mind of a creature within 100 Yards * Arcane Might that you are aware of and is in range (you are not aware if your message was delivered or not). They may choose to send a response to you telepathically after being given a message. You may freely maintain this connection and communicate so long as the target remains within range of this ability.</p><p>If you possess a valid Miasma connection to the target then you may ignore the range limitation of this ability.</p>",
+    "ofuda": "<p>Cast this spell on a target of your choice. Until your next rest you may spend Unmei dice on their rolls as if you were spending them on your own rolls. You may do so even if you are not present in the scene or aware of what is occurring, though you may have to decide if you are enhancing a given roll without context as to what it is being used for.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

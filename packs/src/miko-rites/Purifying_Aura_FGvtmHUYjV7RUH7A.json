@@ -1,0 +1,27 @@
+{
+  "_id": "FGvtmHUYjV7RUH7A",
+  "_key": "!items!FGvtmHUYjV7RUH7A",
+  "name": "Purifying Aura",
+  "type": "rite",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Purify all things of your choice in an area. If this is used on bodies their rate of decay will be slowed and they will not leave behind spirits. If it is used on rot or poison it cleanses it, destroying the poisoned or rotted portion and leaves the rest of any supplies as edible. This ability may also be used to cleanse malicious or cursed effects of an Arcane Might equal or lesser than yours, but may not cleanse Miasma curses unless you are of a greater Arcane Might than the caster.</p><p>People of your faith who come into this aura while sick or resisting infection and pray may add your Arcane Might to any roll made to resist illness or infection.</p><p>At Arcane Might I this may be over at most a ten yard area, at Arcane Might III a hundred yard area, and at Arcane Might V a thousand yard area.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 1,
+    "cost": 5,
+    "costNote": "",
+    "maintenance": 2,
+    "maintenanceNote": "",
+    "draining": false,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

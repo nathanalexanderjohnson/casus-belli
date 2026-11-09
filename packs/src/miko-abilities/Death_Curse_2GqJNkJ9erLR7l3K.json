@@ -1,0 +1,19 @@
+{
+  "_id": "2GqJNkJ9erLR7l3K",
+  "_key": "!items!2GqJNkJ9erLR7l3K",
+  "name": "Death Curse",
+  "type": "mikoAbility",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>When a Miko is killed, if they don’t suffer instant death they may pronounce a curse upon a target connected to their death (even if the target is not present), inflicting a Miasma effect with the benefit of two Unmei automatically applied on the target of their choice (even if the Miasma normally effects more than one target it will only ever affect a single target, though in cases where multiple people were responsible for the Miko’s death, the GM may allow multiple targets to be affected by a Death Curse). The Miko does not need a valid connection to the target for this curse to be performed and the curse is maintained even after the Miko’s death. You may use a Death Curse without needing to prepare a Talisman for the Miasma, or spending the associated Favor cost. The GM may allow a more free form death curse beyond the curses available in this document as they deem appropriate.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

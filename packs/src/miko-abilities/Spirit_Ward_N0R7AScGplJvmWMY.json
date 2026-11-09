@@ -1,0 +1,19 @@
+{
+  "_id": "N0R7AScGplJvmWMY",
+  "_key": "!items!N0R7AScGplJvmWMY",
+  "name": "Spirit Ward",
+  "type": "mikoAbility",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>A Miko may utilize their spiritual energy to protect against magical attacks or in place of their normal roll when making a roll to resist a magical effect with a Spiritualism roll.This must be done instead of any other defense or roll normally made to resist the effect, you cannot attempt to protect yourself with the ward and also attempt a defensive Maneuver. This restriction remains in place even if you transfer the ward to another creature.</p><p>Treat defending with this ward against attacks or other contested rolls as if you were performing a Block maneuver, causing you to win on ties. Whenever making a defense with this roll against a basic area of effect damage, subtract two from the damage for each extra success scored rather than one.</p><p>As a secondary action you may transfer this ward to a willing creature within thirty yards. Should the creature leave this radius or you take another secondary action to recall it, the ward returns to you. While this ward is protecting another it cannot be used to protect yourself.</p><p>At Arcane Might III you may also use this ward to defend against physical attacks in addition to protecting against magical threats.</p><p>At Arcane Might V the ward gains a hitpoint value of twenty which may be used to reduce damage from incoming attacks.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

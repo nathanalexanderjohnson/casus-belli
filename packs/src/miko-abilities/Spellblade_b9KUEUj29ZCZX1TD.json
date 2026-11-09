@@ -1,0 +1,19 @@
+{
+  "_id": "b9KUEUj29ZCZX1TD",
+  "_key": "!items!b9KUEUj29ZCZX1TD",
+  "name": "Spellblade",
+  "type": "mikoAbility",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>You may use your Spiritualism in place of Melee or Ranged, or in place of Athletics when performing a Maneuver or defense against a Maneuver that requires Athletics.</p><p>Gain natural armor equal to 1 + Arcane Might.</p>",
+    "tradition": "harai",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "qMa0srCtZgUjurMA",
+  "_key": "!items!qMa0srCtZgUjurMA",
+  "name": "Unmei",
+  "type": "mikoAbility",
+  "img": "icons/svg/dice-target.svg",
+  "system": {
+    "description": "<p>Fate smiles upon Miko and they may use this favor to manipulate the fate of the world. Gain a number of Unmei points equal to 1 + Arcane Might. These may be spent to grant one automatic success to a roll made by the Miko. You must declare how many Unmei you plan to spend before the roll is made. You cannot spend more than two Unmei on a single roll. Unmei dice may not be used on any roll that Luck cannot be used on.</p><p>You may alternatively spend a single Unmei dice as an action on a target you are touching to treat any non-Lethal wound, or two to treat a Lethal injury. You may also spend dice in a similar fashion to immediately heal the injury by spending an amount of dice equal to the Injury’s level. You may also cleanse sicknesses or ailments with a cost determined by the severity of the illness and how far it has progressed within the subject.</p><p>At Arcane Might III or greater you may heal or treat minor injuries or ailments at no cost. At Arcane Might V you may treat all wounds (though not heal), except Lethal wounds at no cost and treat Lethal wounds by spending only a single dice.</p><p>Unmei is restored upon completing a rest, and once per rest you may spend ten Favor to restore all your Unmei dice.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

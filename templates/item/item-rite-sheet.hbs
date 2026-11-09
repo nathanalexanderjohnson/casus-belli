@@ -1,0 +1,61 @@
+<form class='{{cssClass}} casus-belli-rite-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Kind</label>
+        <select name='system.kind'>{{selectOptions mikoOptions.riteKinds selected=system.kind}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label' title='Arcane Might required to perform'>Min. Arcane Might</label>
+        <input name='system.minArcaneMight' type='number' value='{{system.minArcaneMight}}' min='0'/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Draining</label>
+        <input name='system.draining' type='checkbox' {{#if system.draining}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Vicious</label>
+        <input name='system.vicious' type='checkbox' {{#if system.vicious}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label' title='Performing it calls for a casting roll (Spiritualism + Will)'>Roll</label>
+        <input name='system.roll' type='checkbox' {{#if system.roll}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Active</label>
+        <input name='system.active' type='checkbox' {{#if system.active}}checked{{/if}}/>
+      </div>
+    </div>
+
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Favor Cost</label>
+        <input name='system.cost' type='number' value='{{system.cost}}' min='0'/>
+      </div>
+      <div class='technique-stat technique-stat-wide'>
+        <label class='resource-label'>Cost Note (for variable costs)</label>
+        <input name='system.costNote' type='text' value='{{system.costNote}}'/>
+      </div>
+    </div>
+
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Maintenance</label>
+        <input name='system.maintenance' type='number' value='{{system.maintenance}}' min='0'/>
+      </div>
+      <div class='technique-stat technique-stat-wide'>
+        <label class='resource-label'>Maintenance Note</label>
+        <input name='system.maintenanceNote' type='text' value='{{system.maintenanceNote}}'/>
+      </div>
+    </div>
+
+    {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+  </section>
+</form>

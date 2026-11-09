@@ -1,0 +1,23 @@
+{
+  "_id": "8jfSB7tKOVzC11BB",
+  "_key": "!items!8jfSB7tKOVzC11BB",
+  "name": "Beloved Above All",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Lose all Unmei points and when performing a rest you may only ever engrave a single Talisman. No effect can ever grant you additional Unmei points or allow you to exceed this limit, besides those listed in this Inori. Instead you may draw directly on the Kami’s power, whenever you would spend an Unmei point or engrave a Talisman after the first, which you may now do with a minute downtime even when not immediately after a rest, you gain an internal injury inflicted by the power that causes you a single point of Pain and which may cause you to cough up or vomit out blood. The power of the Kami was not meant for humans to wield and despite their favor, being granted this power is both a curse and blessing.</p><p>If you already have a wound inflicted by this ability, increase the Pain inflicted by the curse by one and increase the wound’s severity level when you get to an appropriate level of Pain (two for Major, four for Critical, etc). Bleeding from this wound will never kill you unless it reaches a Lethal level. Whenever you gain a point of Pain in this manner, also gain a point of Stress. This wound cannot be treated or healed by any magic save for that which equals the power of a god, nor can the Pain be reduced in any way through such means. Regardless of the wound’s severity level it heals after a week, however each time you increase the wound’s Pain severity this timer resets. You may spend ten Favor to reduce the progression of this injury by one as an Instant action.</p><p>In return for this curse, whenever you use Unmei they are especially potent and each success granted counts as a natural ten if used on the Miko herself, allowing you to guarantee a critical success by spending two points. When used on another creature, a single point of Pain may be suffered to benefit the target as if two Unmei were spent, but they are treated as regular successes. Whenever healing or treating a wound, halve the Unmei cost.</p>",
+    "type": "boon",
+    "cost": 2
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "casus-belli": {
+      "inori": "belovedAboveAll"
+    }
+  }
+}

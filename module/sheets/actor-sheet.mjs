@@ -18,6 +18,20 @@ import {
   trainTechnique,
   useTechnique,
 } from '../helpers/ninja.mjs';
+import {
+  castingRoll,
+  etchTalisman,
+  getKamiWound,
+  reduceKamiWound,
+  maintenanceCapacity,
+  mikoRest,
+  performRite,
+  riteStatus,
+  spendRestFavor,
+  talismanSlots,
+  trainTalisman,
+  useTalisman,
+} from '../helpers/miko.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -181,7 +195,113 @@ export class CasusBelliActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     if (this.actor.system.isNinja) context.ninja = this._prepareNinjaContext();
+    if (this.actor.system.isMiko) context.miko = this._prepareMikoContext();
     return context;
+  }
+
+  /**
+   * Build the data for the Miko tab.
+   * @returns {object}
+   * @private
+   */
+  _prepareMikoContext() {
+    const config = CONFIG.CASUSBELLI;
+    const actor = this.actor;
+    const system = actor.system;
+    const arcaneMight = system.arcaneMight ?? 0;
+    const byName = (a, b) => a.name.localeCompare(b.name);
+
+    // Abilities: the Miko's tradition, then those shared by every Miko.
+    const abilities = actor.items.filter((i) => i.type === 'mikoAbility')
+      .sort((a, b) => (a.system.minArcaneMight - b.system.minArcaneMight) || byName(a, b))
+      .map((item) => ({
+        id: item.id,
+        name: item.name,
+        img: item.img,
+        tradition: item.system.tradition ? config.mikoTraditions[item.system.tradition] : 'Miko',
+        minArcaneMight: item.system.minArcaneMight,
+        usable: arcaneMight >= item.system.minArcaneMight,
+        reasons: `Requires Arcane Might ${item.system.minArcaneMight}`,
+      }));
+
+    // Talismans: learned ones, and those still in training.
+    const learningCost = config.miko.talismanLearningCost;
+    const talismans = [];
+    const training = [];
+    for (const item of actor.items.filter((i) => i.type === 'talisman').sort(byName)) {
+      const tal = item.system;
+      const entry = {
+        id: item.id,
+        name: item.name,
+        img: item.img,
+        prepared: tal.prepared ?? 0,
+        hasOmamori: Boolean(tal.omamori),
+        hasOfuda: Boolean(tal.ofuda),
+        progress: tal.progress ?? 0,
+        learningCost,
+        progressPercent: Math.min(100, Math.round(((tal.progress ?? 0) / learningCost) * 100)),
+      };
+      (tal.learned ? talismans : training).push(entry);
+    }
+
+    // Rites
+    const rites = { kannagara: [], miasma: [] };
+    for (const item of actor.items.filter((i) => i.type === 'rite')
+      .sort((a, b) => (a.system.minArcaneMight - b.system.minArcaneMight) || byName(a, b))) {
+      const rite = item.system;
+      const status = riteStatus(actor, item);
+      rites[rite.kind]?.push({
+        id: item.id,
+        name: item.name,
+        img: item.img,
+        minArcaneMight: rite.minArcaneMight,
+        cost: rite.costNote ? 'Varies' : rite.cost,
+        costTitle: rite.costNote,
+        maintenance: rite.maintenanceNote ? `${rite.maintenance}+` : (rite.maintenance || '—'),
+        maintenanceTitle: rite.maintenanceNote,
+        tags: [rite.draining ? 'Draining' : '', rite.vicious ? 'Vicious' : ''].filter(Boolean).join(', '),
+        active: rite.active,
+        usable: status.usable,
+        reasons: status.reasons.join('; '),
+      });
+    }
+
+    const slots = talismanSlots(actor);
+    const capacity = maintenanceCapacity(actor);
+    const beloved = Boolean(system.belovedAboveAll);
+    const kamiWound = beloved ? getKamiWound(actor) : null;
+    // Two Talismans to begin with, plus one for each increase in Arcane Might.
+    const expectedTalismans = arcaneMight > 0 ? arcaneMight + 1 : 0;
+
+    return {
+      traditions: config.mikoTraditions,
+      tradition: system.tradition,
+      traditionLabel: config.mikoTraditions[system.tradition],
+      isHarai: system.tradition === 'harai',
+      naturalArmor: 1 + arcaneMight,
+      wearingArmor: actor.items.some((i) => i.type === 'armor' && i.system.equipped),
+      abilities,
+      talismans,
+      training,
+      knownTalismans: talismans.length,
+      expectedTalismans,
+      slots,
+      // Beloved Above All may exceed its single slot by drawing on the Kami.
+      slotsOver: !beloved && slots.used > slots.max,
+      beloved,
+      kamiWound: kamiWound
+        ? { pain: kamiWound.system.fixedPain ?? 0, severity: kamiWound.system.severity }
+        : null,
+      capacity,
+      capacityOver: capacity.used > capacity.max,
+      kannagara: rites.kannagara,
+      miasma: rites.miasma,
+      wieldsMiasma: system.wieldsMiasma,
+      wardHasHp: (system.spiritWard?.max ?? 0) > 0,
+      wardPhysical: arcaneMight >= 3,
+      restFavorCost: config.miko.restFavorCost,
+      mikoRest: system.mikoRest,
+    };
   }
 
   /**
@@ -443,6 +563,18 @@ export class CasusBelliActorSheet extends ActorSheet {
       }
     }
 
+    // Harai Spellblade: natural armor of 1 + Arcane Might on every location, but only while the
+    // Miko wears no armor at all (they fight in priestess robes). Unlike the Samurai's bonus,
+    // it does not stack with worn armor.
+    if (this.actor.system.isMiko && this.actor.system.tradition === 'harai' && !hasAnyEquippedArmor) {
+      const bonus = 1 + (this.actor.system.arcaneMight ?? 0);
+      for (const zone of Object.values(armorTracker)) {
+        zone.avb += bonus;
+        zone.avp += bonus;
+        zone.avs += bonus;
+      }
+    }
+
     // Assign and return
     context.gear = gear;
     context.features = features;
@@ -548,6 +680,7 @@ export class CasusBelliActorSheet extends ActorSheet {
     });
 
     this._activateNinjaListeners(html);
+    this._activateMikoListeners(html);
 
     // Gadget toggles remain available for the generic item system; class-specific magic controls are intentionally removed.
     html.on('click', '.gadget-toggle', (ev) => {
@@ -705,6 +838,36 @@ export class CasusBelliActorSheet extends ActorSheet {
     });
   }
 
+  /**
+   * Miko tab controls (editable sheets only).
+   * @param {jQuery} html
+   * @private
+   */
+  _activateMikoListeners(html) {
+    const itemFrom = (ev) => this.actor.items.get(ev.currentTarget.closest('[data-item-id]')?.dataset.itemId);
+    const onItem = (selector, handler) => html.on('click', selector, (ev) => {
+      ev.preventDefault();
+      const item = itemFrom(ev);
+      if (item) handler(item, ev);
+    });
+    const onActor = (selector, handler) => html.on('click', selector, (ev) => {
+      ev.preventDefault();
+      handler(ev);
+    });
+
+    onItem('.miko-use-talisman', (item, ev) => useTalisman(item, ev.currentTarget.dataset.variant));
+    onItem('.miko-etch', (item, ev) => etchTalisman(item, Number(ev.currentTarget.dataset.delta) || 0));
+    onItem('.miko-train', (item) => trainTalisman(item));
+    onItem('.miko-toggle-training', (item) => item.update({ 'system.learned': !item.system.learned }));
+    onItem('.miko-perform-rite', (item) => performRite(item));
+    onItem('.miko-toggle-active', (item) => item.update({ 'system.active': !item.system.active }));
+
+    onActor('.miko-casting-roll', (ev) => castingRoll(this.actor, ev.currentTarget.dataset.label || 'Spiritualism'));
+    onActor('.miko-rest', () => mikoRest(this.actor));
+    onActor('.miko-rest-favor', (ev) => spendRestFavor(this.actor, ev.currentTarget.dataset.kind));
+    onActor('.miko-reduce-kami-wound', () => reduceKamiWound(this.actor));
+  }
+
   async _addSamuraiTableEntry(listKey) {
     if (!['martialSpirit', 'warriorsPresence', 'kenjutsu'].includes(listKey)) return;
     const entries = foundry.utils.duplicate(this.actor.system[listKey] ?? []);
@@ -795,7 +958,8 @@ export class CasusBelliActorSheet extends ActorSheet {
     // Grab any data associated with this control.
     const data = foundry.utils.duplicate(header.dataset);
     // Initialize a default name.
-    const name = `New ${type.capitalize()}`;
+    const typeLabel = CONFIG.Item.typeLabels?.[type];
+    const name = `New ${typeLabel ? game.i18n.localize(typeLabel) : type.capitalize()}`;
     // Prepare the item object.
     const itemData = {
       name: name,
