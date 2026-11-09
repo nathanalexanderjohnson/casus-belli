@@ -1,0 +1,27 @@
+{
+  "_id": "fRPegGEBW0TG44At",
+  "_key": "!items!fRPegGEBW0TG44At",
+  "name": "Spirit’s Protection",
+  "type": "rite",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Place a protective field over a building, fortification, or shrine. Any harmful magical effect (not performed by the caster) that tries to pass through this barrier of equal or lesser Arcane Might is destroyed (this also prevents creatures from inside the barrier summoning creatures from outside into it). Monsters of Threat Rating of equal or less than your Arcane Might cannot pass through the barrier.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 4,
+    "cost": 10,
+    "costNote": "10 for a small or medium building, 20 for a fortification around a village, 30 for larger fortifications",
+    "maintenance": 4,
+    "maintenanceNote": "4 for a small or medium building, 8 for a village fortification, 16 for a larger fortification",
+    "draining": false,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

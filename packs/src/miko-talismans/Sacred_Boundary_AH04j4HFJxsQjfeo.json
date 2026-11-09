@@ -1,0 +1,24 @@
+{
+  "_id": "AH04j4HFJxsQjfeo",
+  "_key": "!items!AH04j4HFJxsQjfeo",
+  "name": "Sacred Boundary",
+  "type": "talisman",
+  "img": "icons/svg/door-closed.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Enforce the concept of a boundary upon a door, gate, or other object that is capable of being shut or a barrier which is within ten yards of you. It may also be used on something that may conceptually become a barrier, such as thick tree branches over a maximum area equal to your Arcane Might in yards, increasing its Hardness by your Arcane Might and preventing it from being opened without force.</p>",
+    "ofuda": "<p>An invisible wall manifests at a chosen point within ten yards with the Talisman used to cast this ability floating in the center of it. The wall is made up of a number of 2x2 yard panels (they may be made slightly smaller to fit more confined areas, up to a minimum size of 1x1 yards) and may have a maximum number of panels equal to your Arcane Might multiplied by itself.</p><p>If a creature or other object obstructs the wall while it is being cast then the spell fails. Each segment of wall has ten hitpoints and Hardness equal to 3 + 2 * Arcane Might. Another Miko of equal Arcane Might may attempt to destroy the wall with a contested casting roll as an action. A Miko of greater Arcane Might automatically succeeds in their attempt to break the wall.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -11,6 +11,8 @@ export default class CasusBelliWound extends CasusBelliItemBase {
     schema.treated = new fields.BooleanField({ required: true, initial: false });
     schema.pain = new fields.NumberField({ required: true, nullable: false, initial: 1, integer: true });
     schema.title = new fields.StringField({ required: false, blank: true, initial: '' });
+    /** Pain that does not follow severity and cannot be reduced by treatment (e.g. the Kami's wound). */
+    schema.fixedPain = new fields.NumberField({ required: false, nullable: true, integer: true, initial: null, min: 0 });
 
     return schema;
   }
@@ -26,7 +28,8 @@ export default class CasusBelliWound extends CasusBelliItemBase {
       lethal: 8,
     }[severity] ?? 0;
 
-    this.pain = this.treated ? Math.max(1, Math.floor(basePain / 2)) : basePain;
+    if (Number.isInteger(this.fixedPain)) this.pain = this.fixedPain;
+    else this.pain = this.treated ? Math.max(1, Math.floor(basePain / 2)) : basePain;
 
     // Bleeding is suppressed once a wound is treated.
     const bleeding = this.bleeding && !this.treated;

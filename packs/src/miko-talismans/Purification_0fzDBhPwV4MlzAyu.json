@@ -1,0 +1,24 @@
+{
+  "_id": "0fzDBhPwV4MlzAyu",
+  "_key": "!items!0fzDBhPwV4MlzAyu",
+  "name": "Purification",
+  "type": "talisman",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>You send a blast of divine energy towards a target within thirty yards multiplied by your Arcane Might, make a spellcasting attack roll and on a successful hit deal spirit damage equal to 2 * Arcane Might. This spell is only able to deal damage to supernatural creatures, such as spirits, or Yokai, and has no effect against regular mortals.</p>",
+    "ofuda": "<p>Release a wave of divine energy capable of destroying any corruption or dark magic over a ten yard area. Supernatural creatures of your choice in the area must make a basic Threat Rating roll against your spellcasting roll or take damage as if they had been hit by the lesser variant of this spell.</p><p>At Arcane Might III you may increase the radius of this ability up to a hundred yards, at Arcane Might V you may increase it to a thousand yards.</p>",
+    "omamoriRoll": true,
+    "ofudaRoll": true,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

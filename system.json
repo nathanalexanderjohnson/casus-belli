@@ -82,6 +82,50 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "miko-abilities",
+      "label": "Miko Abilities",
+      "path": "packs/miko-abilities",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "miko-talismans",
+      "label": "Miko Talismans",
+      "path": "packs/miko-talismans",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "miko-rites",
+      "label": "Miko Rites",
+      "path": "packs/miko-rites",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "miko-inori",
+      "label": "Miko Inori",
+      "path": "packs/miko-inori",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [
@@ -94,6 +138,17 @@
         "ninja-bloodlines",
         "ninja-bloodline-techniques",
         "ninja-equipment"
+      ]
+    },
+    {
+      "name": "Miko",
+      "sorting": "m",
+      "color": "#476d5d",
+      "packs": [
+        "miko-abilities",
+        "miko-talismans",
+        "miko-rites",
+        "miko-inori"
       ]
     }
   ],

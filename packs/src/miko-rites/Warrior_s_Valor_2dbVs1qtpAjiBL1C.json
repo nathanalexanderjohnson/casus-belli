@@ -1,0 +1,27 @@
+{
+  "_id": "2dbVs1qtpAjiBL1C",
+  "_key": "!items!2dbVs1qtpAjiBL1C",
+  "name": "Warrior’s Valor",
+  "type": "rite",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>Engrave a banner that may be raised over a unit of your choice. The banner grants one extra attack dice to all men in the unit.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 5,
+    "cost": 20,
+    "costNote": "",
+    "maintenance": 10,
+    "maintenanceNote": "",
+    "draining": true,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

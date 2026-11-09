@@ -1,0 +1,24 @@
+{
+  "_id": "j6ad2jFBKd6HSpRJ",
+  "_key": "!items!j6ad2jFBKd6HSpRJ",
+  "name": "Cleanse",
+  "type": "talisman",
+  "img": "icons/svg/heal.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Touch an injury or creature suffering from sickness, blessing them with the favor of the spirits. When making a roll to resist infection or sickness they may add your Arcane Might to the dice pool. This effect lasts for a day.</p>",
+    "ofuda": "<p>Touch a creature or object who is being affected by a magical or supernatural ability cast by a creature of equal or lesser Arcane Might. If the ability’s rank is less than your Arcane Might, end the effect. Otherwise if it is equal to your Arcane Might, make a spellcasting roll against the spellcasting roll of the creature who created the effect (or Threat Rating if the ability was done by a supernatural creature). On a success you may end the effect.</p><p>You cannot end effects that are permanently part of the creature’s nature, it is up to the GM to determine if an effect can be ended or not and this may be influenced by the creature’s perception of itself, if it truly believes a curse or effect to be a part of itself or not.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": true,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

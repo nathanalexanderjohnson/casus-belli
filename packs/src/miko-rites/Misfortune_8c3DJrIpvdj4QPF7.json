@@ -1,0 +1,27 @@
+{
+  "_id": "8c3DJrIpvdj4QPF7",
+  "_key": "!items!8c3DJrIpvdj4QPF7",
+  "name": "Misfortune",
+  "type": "rite",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "<p>Inflict three points of Misfortune on the target of this curse at the start of each day. The GM may consume a point of Misfortune to inflict an unfortunate event or accident on the target, something they possess such as their lands, or someone close to them.</p>",
+    "kind": "miasma",
+    "minArcaneMight": 1,
+    "cost": 5,
+    "costNote": "",
+    "maintenance": 3,
+    "maintenanceNote": "",
+    "draining": true,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

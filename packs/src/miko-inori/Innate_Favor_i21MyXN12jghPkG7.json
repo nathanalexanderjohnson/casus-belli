@@ -1,0 +1,19 @@
+{
+  "_id": "i21MyXN12jghPkG7",
+  "_key": "!items!i21MyXN12jghPkG7",
+  "name": "Innate Favor",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Each Passage of Time gain additional Favor equal to your Arcane Might even if you are not tied to a Shrine.</p>",
+    "type": "boon",
+    "cost": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

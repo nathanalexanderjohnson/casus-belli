@@ -1,0 +1,27 @@
+{
+  "_id": "fCxRx9tqu5YpsbAa",
+  "_key": "!items!fCxRx9tqu5YpsbAa",
+  "name": "Banner of Protection",
+  "type": "rite",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Engrave a banner that may be raised over a unit of your choice. The banner has a number of charges equal to ten multiplied by your Arcane Might. Whenever a unit suffers losses, you may spend a number of charges equal to half the men lost to reduce the casualties by the number of charges spent.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 4,
+    "cost": 20,
+    "costNote": "",
+    "maintenance": 10,
+    "maintenanceNote": "",
+    "draining": true,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

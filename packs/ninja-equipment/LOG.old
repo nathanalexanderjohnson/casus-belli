@@ -1,3 +1,5 @@
-2026/11/09-13:37:46.993 65e4 Recovering log #4
-2026/11/09-13:37:47.001 65e4 Delete type=0 #4
-2026/11/09-13:37:47.001 65e4 Delete type=3 #2
+2026/11/09-14:10:19.701 6bbc Recovering log #7
+2026/11/09-14:10:19.701 6bbc Level-0 table #9: started
+2026/11/09-14:10:19.705 6bbc Level-0 table #9: 1126 bytes OK
+2026/11/09-14:10:19.714 6bbc Delete type=0 #7
+2026/11/09-14:10:19.714 6bbc Delete type=3 #6

@@ -57,7 +57,10 @@ Hooks.once('init', function () {
     armor: models.CasusBelliArmor,
     gadget: models.CasusBelliGadget,
     technique: models.CasusBelliTechnique,
-    bloodline: models.CasusBelliBloodline
+    bloodline: models.CasusBelliBloodline,
+    talisman: models.CasusBelliTalisman,
+    rite: models.CasusBelliRite,
+    mikoAbility: models.CasusBelliMikoAbility
   };
   CONFIG.Item.typeLabels = {
     item: 'Item',
@@ -68,7 +71,10 @@ Hooks.once('init', function () {
     armor: 'Armor',
     gadget: 'Gadget',
     technique: 'Technique',
-    bloodline: 'Bloodline'
+    bloodline: 'Bloodline',
+    talisman: 'Talisman',
+    rite: 'Rite',
+    mikoAbility: 'Miko Ability'
   };
 
   // Set type-specific default icons so items don't use the bag icon.
@@ -80,6 +86,9 @@ Hooks.once('init', function () {
     gadget: 'icons/tools/smithing/crucible.webp',
     technique: 'icons/svg/lightning.svg',
     bloodline: 'icons/svg/eye.svg',
+    talisman: 'icons/svg/book.svg',
+    rite: 'icons/svg/sun.svg',
+    mikoAbility: 'icons/svg/angel.svg',
   });
 
   // Active Effects are never copied to the Actor,
@@ -159,7 +168,8 @@ Hooks.on('getChatMessageContextOptions', (application, menuItems) => {
       // Calculate original total (including crit bonus)
       const originalTens = originalDice.filter(r => r === 10).length;
       const originalCritCount = Math.floor(originalTens / 2);
-      const originalTotal = originalRoll.total + originalCritCount * 2;
+      // bonusSuccesses: automatic successes added to the original roll (e.g. a Miko's Unmei).
+      const originalTotal = originalRoll.total + originalCritCount * 2 + (flags.bonusSuccesses ?? 0);
 
       // Calculate new re-roll total (including crit bonus)
       const newDice = reroll.dice[0]?.results.map(r => r.result) ?? [];

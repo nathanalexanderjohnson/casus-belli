@@ -1,0 +1,24 @@
+{
+  "_id": "YkHpb85jarnRaIN3",
+  "_key": "!items!YkHpb85jarnRaIN3",
+  "name": "Sealing",
+  "type": "talisman",
+  "img": "icons/svg/padlock.svg",
+  "system": {
+    "description": "",
+    "omamori": "",
+    "ofuda": "<p>Sealing is the art of binding spirits or monsters to locations, objects, or even within people. You may prepare a Talisman with sealing arts, using a Talisman slot as with a normal Talisman and use it to attempt to seal a creature away.</p><p>If a creature is bound to a location they may not freely leave the location and in most cases cannot affect anything outside of that area. The weaker the creature relative to you, the smaller a location you can bind them to. Especially powerful creatures may still impact the world even when sealed to a location, so this is rarely a good approach when binding powerful creatures.</p><p>If a creature is sealed within an object you must have an object of sufficient magical power or significance to bind the creature. The more powerful the creature, the more special an object must be used. The creature is freed if the object is destroyed.</p><p>The easiest way to seal a creature is into a person, however the creature will be able to wear at the mind of the person, driving them to madness and potentially death. The creature may be transferred between people, but doing so almost always results in the death of the former host. This is the only way to bind certain powerful and vicious monsters, sacrificing a steady stream of people to keep them sealed away. If the host dies before the creature is transferred to another host, the creature becomes free.</p><p>In some cases especially powerful people can be the host of a monster without being driven mad, and in certain rare cases with the right seals may be able to even draw on the monster’s strength to gain a portion of its power. Such tales are lost to time and you do not have knowledge of if this is truly possible.</p><p>Your ability to seal a creature is based on the difference between your Arcane Might and their Threat Rating.</p><p>If a creature’s Threat Rating is two levels below your Arcane Might you may seal them as an action without even requiring a Talisman or contested roll.</p><p>If a creature’s Threat Rating is one level below your Arcane Might and they are at half health or below you may seal them without a contested roll.</p><p>If a creature’s Threat Rating is equal to your Arcane Might and they are at half health or below you must win a contested spellcasting roll against their Threat Rating to successfully seal them.</p><p>Under normal circumstances you cannot seal a creature with a Threat Rating greater than your Arcane Might. However, you may spend two Unmei dice to count a creature’s Threat Rating as one level lower for purposes of sealing. This may be done multiple times on the same sealing if you possess enough Unmei dice to do so.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": true,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

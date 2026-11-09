@@ -1,0 +1,27 @@
+{
+  "_id": "CFFgHUIxbdiOWHZS",
+  "_key": "!items!CFFgHUIxbdiOWHZS",
+  "name": "Marked for Death",
+  "type": "rite",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": "<p>Beseech the Kami for the death of a target you can see or have a valid connection to. The target comes Vulnerable 3 until the next sunrise.</p>",
+    "kind": "miasma",
+    "minArcaneMight": 1,
+    "cost": 5,
+    "costNote": "",
+    "maintenance": 0,
+    "maintenanceNote": "",
+    "draining": false,
+    "vicious": true,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

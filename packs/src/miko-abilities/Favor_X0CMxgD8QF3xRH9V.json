@@ -1,0 +1,19 @@
+{
+  "_id": "X0CMxgD8QF3xRH9V",
+  "_key": "!items!X0CMxgD8QF3xRH9V",
+  "name": "Favor",
+  "type": "mikoAbility",
+  "img": "icons/svg/angel.svg",
+  "system": {
+    "description": "<p>Favor represents the spiritual power you possess. You may have a maximum amount of Favor equal to thirty times your Arcane Might. Gain one point of Favor every Passage of Time for each two thousand people who visited and worshiped at your shrine more than any other during that Passage of Time. Monsters or rare artifacts may also be sacrificed at your Shrine to gain Favor based on their power (generally equal to their Threat Rating multiplied by itself). Favor may be freely traded by Miko.</p><p>You also gain Favor equal to ten percent of the Favor income of each Miko who belongs to your shrine network (minimum of one if they possess a Shrine with a following of at least a thousand).</p><p>Once per rest as an action you may spend Favor to restore a twice amount of Chakra, or thrice that amount of Stamina to another character you are touching or have a valid connection to if you are capable of wielding Miasma.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

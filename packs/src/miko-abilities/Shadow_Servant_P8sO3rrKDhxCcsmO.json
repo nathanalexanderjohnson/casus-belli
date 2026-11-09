@@ -1,0 +1,19 @@
+{
+  "_id": "P8sO3rrKDhxCcsmO",
+  "_key": "!items!P8sO3rrKDhxCcsmO",
+  "name": "Shadow Servant",
+  "type": "mikoAbility",
+  "img": "icons/svg/cowled.svg",
+  "system": {
+    "description": "<p>Make a pact with a supernatural creature or spirit of Threat Rating no more than your Arcane Might. This creature remains within your shadow and may be summoned as an instant action. It may also act independently should it wish, taking positive actions; such as leaping in the way of a surprise attack that you hadn’t noticed, or actions you may be more displeased by, should it wish.</p><p>When forming the pact you and the creature must agree to the terms of the pact and you are both bound by it. Should you intentionally violate it, you lose your Miko powers, likewise should the creature intentionally violate it then it dies. There is no penalty for accidentally or unintentionally violating the deal, but you must make amends to the best of your ability or it will count as an intentional violation. Either party may choose to end the pact in the event of a violation by the other party, even an unintentional one.</p><p>The pact may have a duration or last for your entire lives. In most cases your Shadow Servant will grow in power as you do.</p>",
+    "tradition": "dosojin",
+    "minArcaneMight": 2
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

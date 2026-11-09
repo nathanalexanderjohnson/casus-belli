@@ -1,0 +1,27 @@
+{
+  "_id": "9UYO28EMBlNLVW7Q",
+  "_key": "!items!9UYO28EMBlNLVW7Q",
+  "name": "Miko’s Path",
+  "type": "rite",
+  "img": "icons/svg/door-exit.svg",
+  "system": {
+    "description": "<p>If you are head of a shrine network you may open up a gateway to any shrine within your network allowing a number of people to come from that shrine to yours, or to be transported to that shrine. With the consent of the Miko at the head of your shrine network, should you belong to one, you may also open such a portal to their shrine.</p><p>This ritual only requires a minute to be performed and may transport a number of people equal to twice your Arcane Might per Favor spent on this ritual, transported individuals may come or go to different shrines even with a single ritual and may bring a reasonable amount of items on their person. A larger number of goods may also be transported in this manner based on their weight, counting as if they were a person for each X Transportation of goods.</p>",
+    "kind": "kannagara",
+    "minArcaneMight": 3,
+    "cost": 0,
+    "costNote": "Variable: each Favor transports twice your Arcane Might in people",
+    "maintenance": 0,
+    "maintenanceNote": "",
+    "draining": false,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

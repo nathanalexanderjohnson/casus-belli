@@ -1,0 +1,19 @@
+{
+  "_id": "4zQzN6jMCKn4CXMq",
+  "_key": "!items!4zQzN6jMCKn4CXMq",
+  "name": "Speak with the Dead",
+  "type": "mikoAbility",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": "<p>As an action you may awaken the spirit of a corpse that has been dead for a number of days up to your Arcane Might. You can freely observe and speak to the spirit, and choose to make it visible to other creatures of your choice (otherwise it may only be perceived by individuals capable of seeing spirits or magic).</p><p>If a spirit has become malevolent or is restless you may forcefully call it to you, so long as you have access to its remains regardless of how long ago it died, so long as its Arcane Might is equal to or less than yours. Even if its Arcane Might is greater than yours, should you attempt to call it, it may still elect to be summoned, likely to your misfortune.</p>",
+    "tradition": "dosojin",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

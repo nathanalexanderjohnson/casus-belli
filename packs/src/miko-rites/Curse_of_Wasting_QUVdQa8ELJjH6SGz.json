@@ -1,0 +1,27 @@
+{
+  "_id": "QUVdQa8ELJjH6SGz",
+  "_key": "!items!QUVdQa8ELJjH6SGz",
+  "name": "Curse of Wasting",
+  "type": "rite",
+  "img": "icons/svg/biohazard.svg",
+  "system": {
+    "description": "<p>Inflict a sickness on the target, beginning at its first stage and following the rules related to infection and disease in the Core Rulebook. This sickness cannot be reduced below its first stage until this curse is broken, or until it is healed by a source of healing that is of an Arcane Might greater than yours.</p><p>You may tie this curse to an object to inflict the curse on anyone nearby, however the curse and sickness will fade if they fail to spend at least an hour a day nearby the cursed object.</p>",
+    "kind": "miasma",
+    "minArcaneMight": 1,
+    "cost": 5,
+    "costNote": "",
+    "maintenance": 3,
+    "maintenanceNote": "",
+    "draining": true,
+    "vicious": false,
+    "roll": false,
+    "active": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -77,7 +77,10 @@
       "armor": "Armor",
       "gadget": "Gadget",
       "technique": "Technique",
-      "bloodline": "Bloodline"
+      "bloodline": "Bloodline",
+      "talisman": "Talisman",
+      "rite": "Rite",
+      "mikoAbility": "Miko Ability"
     }
   }
 }

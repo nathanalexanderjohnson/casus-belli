@@ -1,0 +1,19 @@
+{
+  "_id": "0Sv6C5Eg5d98KAfG",
+  "_key": "!items!0Sv6C5Eg5d98KAfG",
+  "name": "Spirit Strike",
+  "type": "mikoAbility",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>When performing a ranged or melee attack as a primary action you may choose to empower the attack with a Talisman as a secondary action. If you successfully hit the target, apply the effects of the Talisman to the target after resolving your attack. If the Talisman calls for an attack roll, use the previous attack roll and defense when determining degrees of success, however if it requires a contested roll to resist the Talisman, then make a fresh roll.</p>",
+    "tradition": "harai",
+    "minArcaneMight": 2
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

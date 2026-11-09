@@ -1,0 +1,19 @@
+{
+  "_id": "oloeKlYFcLdGFy0O",
+  "_key": "!items!oloeKlYFcLdGFy0O",
+  "name": "Kami’s Grace",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Gain the blessing of supernatural grace and poise, increasing your Wits by two (this does not allow you to exceed your normal maximum). You are pleasant to be around and can easily avoid notice in social circumstances, allowing you to more easily fit in and potentially be overlooked when listening in on conversations that perhaps you should not know.</p><p>However this blessing does not come without a cost, in return your body is weak and prone to illness, lose a point of Endurance and reduce your maximum Endurance by one.</p>",
+    "type": "boon",
+    "cost": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,43 @@
+<form class='{{cssClass}} casus-belli-talisman-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label' title='The Omamori calls for a casting roll (Spiritualism + Will)'>Omamori Roll</label>
+        <input name='system.omamoriRoll' type='checkbox' {{#if system.omamoriRoll}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label' title='The Ofuda calls for a casting roll (Spiritualism + Will)'>Ofuda Roll</label>
+        <input name='system.ofudaRoll' type='checkbox' {{#if system.ofudaRoll}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label' title='Ofuda currently etched'>Etched</label>
+        <input name='system.prepared' type='number' value='{{system.prepared}}' min='0'/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Learned</label>
+        <input name='system.learned' type='checkbox' {{#if system.learned}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Progress</label>
+        <input name='system.progress' type='number' value='{{system.progress}}' min='0'/>
+      </div>
+    </div>
+
+    <label class='resource-label'>Omamori (lesser, used freely)</label>
+    <div class='talisman-editor'>
+      {{editor enrichedOmamori target='system.omamori' engine='prosemirror' button=true editable=editable}}
+    </div>
+
+    <label class='resource-label'>Ofuda (greater, must be etched)</label>
+    <div class='talisman-editor'>
+      {{editor enrichedOfuda target='system.ofuda' engine='prosemirror' button=true editable=editable}}
+    </div>
+  </section>
+</form>

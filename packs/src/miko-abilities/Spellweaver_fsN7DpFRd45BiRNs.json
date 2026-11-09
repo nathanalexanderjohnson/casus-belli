@@ -1,0 +1,19 @@
+{
+  "_id": "fsN7DpFRd45BiRNs",
+  "_key": "!items!fsN7DpFRd45BiRNs",
+  "name": "Spellweaver",
+  "type": "mikoAbility",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>So long as your primary action was not used to perform a magical ability you may spend your secondary action to use a Talisman ability. If you do so before spending your primary action you may not use it to use any magical ability until the end of your turn.</p>",
+    "tradition": "harai",
+    "minArcaneMight": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

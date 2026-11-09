@@ -1,0 +1,19 @@
+{
+  "_id": "gKRjXJx848ak8CNB",
+  "_key": "!items!gKRjXJx848ak8CNB",
+  "name": "Destined For Greatness",
+  "type": "boon",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>You were born beneath the light of a north star, marking you for greatness. Because of this marking, your dreams are troubled by spirits and you are inflicted with constant nightmares and when removing Stress through downtime you may make a Will roll requiring three successes (you may not spend Unmei dice on this roll) or fail to restore any Stress and instead gain a point of Stress.</p><p>Spirits and other supernatural creatures wish to sever your thread of fate and are more likely to seek you out to attack, or target you in combat. Should one slay you and devour your blood they will gain a boost in power based on your level Arcane Might when you were slain.</p><p>Once per Passage of Time the winds of fate may weave themselves to your assistance, providing an effect of the GM’s choosing which should be roughly equal in power to a Miko ability of one Arcane Might greater than yours. This ability may be used even if your character is not aware of the threat or is incapacitated. Whenever this ability is used, decrease your Favor by twenty (this may allow your Favor to become negative) as fate attempts to right the imbalance of fortune.</p>",
+    "type": "boon",
+    "cost": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

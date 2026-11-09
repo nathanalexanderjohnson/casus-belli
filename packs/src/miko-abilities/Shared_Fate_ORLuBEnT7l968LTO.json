@@ -1,0 +1,19 @@
+{
+  "_id": "ORLuBEnT7l968LTO",
+  "_key": "!items!ORLuBEnT7l968LTO",
+  "name": "Shared Fate",
+  "type": "mikoAbility",
+  "img": "icons/svg/blood.svg",
+  "system": {
+    "description": "<p>Whenever you would suffer an injury you may as a reaction choose to transfer it to your Shadow Servant, causing it to suffer HP damage equal to the amount of damage you would’ve taken. This damage cannot be mitigated in any way. If the damage would be enough to deal a lethal injury to you, you may not transfer it to your servant.</p><p>As an action you may heal your servant by suffering an injury and restoring an amount of health equal to the minimum amount of damage it would take to inflict such an injury.</p><p>Your servant may benefit from Unmei should you wish to use it to enhance them. If your servant is killed you may choose to suffer a Critical internal injury and recall it to your shadow. After you have done so your servant cannot leave your shadow for a week.</p>",
+    "tradition": "dosojin",
+    "minArcaneMight": 3
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

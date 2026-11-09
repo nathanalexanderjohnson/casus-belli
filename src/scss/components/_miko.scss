@@ -1,0 +1,130 @@
+// ─── Miko tab (scoped inside .casus-belli) ──────────────────────────────────
+// Shares its building blocks with the Ninja tab: mixins from _ninja.scss, and @extend for
+// panels, sections, and the fixed-width list columns (so headers and rows line up).
+
+.miko-tab-content { @extend .ninja-tab-content; }
+.miko-panels { @extend .ninja-panels; }
+.miko-panel { @extend .ninja-panel; }
+.miko-section { @extend .ninja-section; }
+.miko-hint { @extend .ninja-hint; }
+.miko-meta { @extend .ninja-meta; }
+.miko-empty { @extend .ninja-empty; }
+.miko-progress-bar { @extend .ninja-progress-bar; }
+
+// The tiles are centered; the Rest button sits at the right edge without pulling them off-center.
+.miko-header-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.miko-header-actions {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.miko-kami-value {
+  font-size: 13px;
+  font-weight: bold;
+  color: $c-danger;
+}
+
+.miko-subheading {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $c-beige;
+}
+
+.miko-favor input[type='text'] { font-weight: bold; }
+
+.miko-tile {
+  @include ninja-tile;
+
+  &.miko-tile-small {
+    width: 84px;
+    input { width: 44px; }
+  }
+
+  &.miko-tile-pair {
+    width: 110px;
+
+    .resource-content {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      input { width: 40px; }
+      span { font-weight: bold; color: $c-beige; }
+    }
+  }
+
+  &.miko-tile-select {
+    width: 130px;
+    select { width: 100%; }
+  }
+}
+
+.miko-panel button { text-align: left; }
+
+.miko-inline-field,
+.miko-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  input[type='text'] { width: 44px; flex: 0 0 44px; text-align: center; }
+}
+
+.miko-count {
+  margin: 0;
+
+  &.over { color: $c-danger; font-weight: bold; }
+}
+
+.miko-meta.over { color: $c-danger; font-weight: bold; }
+
+// Lists: same fixed columns as the ninja technique tables.
+.miko-list { @extend .ninja-techniques; }
+.miko-col-narrow { @extend .ninja-col-rank; }      // 56px
+.miko-col-cost { @extend .ninja-col-cost; }        // 70px
+.miko-col-medium { @extend .ninja-col-element; }   // 84px
+.miko-col-wide { @extend .ninja-col-roll; }        // 110px
+.miko-col-xwide { @extend .ninja-col-progress; }   // 170px
+
+.miko-list {
+  .items-list + .items-list { margin-top: 6px; }
+
+  .miko-row.unusable { opacity: 0.55; }
+
+  .miko-etch-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .miko-use-cell button {
+    padding: 1px 8px;
+    line-height: 1.3;
+  }
+
+  .miko-toggle-active.active { color: $c-success; }
+}
+
+// Talisman item sheet: two editors stacked.
+.talisman-editor {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+
+  .editor { flex: 1; min-height: 100px; }
+}

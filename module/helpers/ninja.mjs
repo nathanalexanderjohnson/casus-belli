@@ -2,6 +2,7 @@
  * Ninja rules: chakra spending, technique availability and use, bloodline state, training,
  * and the system-managed Active Effects for ninja conditions.
  */
+import { promptTrainingWeek } from './training.mjs';
 import { countSuccesses, formatRollContent, labelForKey, openRollDialog } from './rolls.mjs';
 
 const escape = (value) => Handlebars.escapeExpression(String(value ?? ''));
@@ -448,28 +449,8 @@ export async function trainTechnique(item) {
     return;
   }
 
-  const teacher = await new Promise((resolve) => {
-    new Dialog({
-      title: `Train ${item.name}`,
-      content: `
-        <form>
-          <p>One week of training adds ${actor.system.arcaneMight ?? 0} progress (Arcane Might).</p>
-          <div class="form-group">
-            <label>Teacher's Arcane Might (0 for none):</label>
-            <input type="number" name="teacher" value="0" min="0"/>
-          </div>
-        </form>`,
-      classes: ['casus-belli', 'casus-belli-roll-dialog'],
-      buttons: {
-        train: { label: 'Train One Week', callback: (html) => resolve(Math.max(0, parseInt(html.find('[name="teacher"]').val()) || 0)) },
-      },
-      default: 'train',
-      close: () => resolve(null),
-    }).render(true);
-  });
-  if (teacher === null) return;
-
-  const gained = (actor.system.arcaneMight ?? 0) + teacher;
+  const gained = await promptTrainingWeek(actor, item.name);
+  if (gained === null) return;
   const progress = (item.system.progress ?? 0) + gained;
   const learned = cost <= 0 || progress >= cost;
   await item.update({ 'system.progress': progress, 'system.learned': learned });

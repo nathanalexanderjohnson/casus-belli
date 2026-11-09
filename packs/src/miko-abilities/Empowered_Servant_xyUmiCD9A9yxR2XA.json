@@ -1,0 +1,19 @@
+{
+  "_id": "xyUmiCD9A9yxR2XA",
+  "_key": "!items!xyUmiCD9A9yxR2XA",
+  "name": "Empowered Servant",
+  "type": "mikoAbility",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p><em>At Arcane Might V you may select one of the two options for your tradition.</em></p><p>At the cost of two Unmei, whenever you attack a creature within reach of your Shadow Servant, you may allow your Shadow Servant to execute a physical attack on that creature as a Reaction (this attack may still hit other targets should your servant possess a Cleave or other such ability on its attack).</p>",
+    "tradition": "dosojin",
+    "minArcaneMight": 5
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

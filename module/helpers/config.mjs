@@ -267,3 +267,47 @@ CASUSBELLI.chakra = {
   jinchurikiPenalty: 10,
   chakraSealPenalty: 10,
 };
+
+/* -------------------------------------------- */
+/*  Miko                                        */
+/* -------------------------------------------- */
+
+/** Miko traditions. A Miko follows exactly one. */
+CASUSBELLI.mikoTraditions = {
+  dosojin: 'Dosojin',
+  harai: 'Harai',
+};
+
+/** Tradition choices for a Miko ability ("" = available to every Miko). */
+CASUSBELLI.mikoAbilityTraditions = {
+  '': 'Any Miko',
+  ...CASUSBELLI.mikoTraditions,
+};
+
+/** Rite kinds: blessings on the land, and curses. */
+CASUSBELLI.riteKinds = {
+  kannagara: 'Kannagara',
+  miasma: 'Miasma',
+};
+
+/** Miko rules constants. */
+CASUSBELLI.miko = {
+  /** Maximum Unmei that may be spent on one roll. */
+  maxUnmeiPerRoll: 2,
+  /** Maximum Favor per level of Arcane Might. */
+  favorPerArcaneMight: 30,
+  /** Favor cost of the once-per-rest Unmei restore and Talisman re-etch. */
+  restFavorCost: 10,
+  /** Progress needed to learn an additional Talisman. */
+  talismanLearningCost: 100,
+  /** Spirit Ward hit points, and the Arcane Might at which it gains them. */
+  wardHp: 20,
+  wardHpArcaneMight: 5,
+  /** Kannagara maintenance capacity by minimum Arcane Might (highest match wins). */
+  kannagaraCapacity: [
+    { arcaneMight: 7, capacity: 1000 },
+    { arcaneMight: 5, capacity: 100 },
+    { arcaneMight: 3, capacity: 10 },
+    { arcaneMight: 1, capacity: 1 },
+  ],
+};

@@ -1,0 +1,19 @@
+{
+  "_id": "JutAv4Mnkt4STR6q",
+  "_key": "!items!JutAv4Mnkt4STR6q",
+  "name": "Exorcist",
+  "type": "mikoAbility",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p><em>At Arcane Might V you may select one of the two options for your tradition.</em></p><p>Once per rest as an action you may target up to a hundred spirits of Threat Rating less than your Arcane Might and that are within 100 yards of you and lay them all to rest. Or you may select a spirit of equal Threat Rating to your Arcane Might within the same range and lay it to rest.</p>",
+    "tradition": "harai",
+    "minArcaneMight": 5
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

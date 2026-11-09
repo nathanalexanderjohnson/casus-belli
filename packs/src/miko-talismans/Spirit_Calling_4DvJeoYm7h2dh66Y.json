@@ -1,0 +1,24 @@
+{
+  "_id": "4DvJeoYm7h2dh66Y",
+  "_key": "!items!4DvJeoYm7h2dh66Y",
+  "name": "Spirit Calling",
+  "type": "talisman",
+  "img": "icons/svg/angel.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Send out a call to the local spirits around you asking for their aid. This ability does not compel them to assist you unless you are two levels of Arcane Might above the Threat Rating of a spirit (though doing so may anger them and other spirits). The manner of spirits that answer your call may be based on your nature and how the spirits perceive you.</p><p>Some spirits may request you provide them with Favor or other resources in exchange for their assistance. The maximum distance your call can reach is one mile per level of Arcane Might you possess.</p>",
+    "ofuda": "<p>Channel your power to summon a spirit or magical creature you have a pact with, or if you are capable of using Miasma, one you have a valid connection to. The summoned creature must be willing otherwise the spell fails and the Talisman is spent.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

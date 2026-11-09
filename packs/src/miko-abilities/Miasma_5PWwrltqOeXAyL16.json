@@ -1,0 +1,19 @@
+{
+  "_id": "5PWwrltqOeXAyL16",
+  "_key": "!items!5PWwrltqOeXAyL16",
+  "name": "Miasma",
+  "type": "mikoAbility",
+  "img": "icons/svg/biohazard.svg",
+  "system": {
+    "description": "<p>Once, your prayers were a source of solace, your talismans a vessel for divine blessings that warded off evil and brought peace to the troubled. But the sacred and the profane are two sides of the same coin, and even the purest spirit may be twisted into something wicked. By corrupting your rites with resentful energies, you turn your blessings into curses, poisoning the spirit, withering the body, and sowing misfortune in the souls of those you condemn. Where your prayers once offered salvation, now they deliver suffering.</p><p>Unless a Miasma has the Vicious tag, in order to use a Miasma on a target you must have a valid connection to them, through their blood (or that of a parent), a piece of hair or other part of their body, or an object that holds a significant emotional connection to them. If a Miko has a valid connection to a target they may discern their rough position at all times.</p><p>Cursing another Miko allows them to create a link back to you and use it to track you or attempt a counter Miasma against you.</p><p>Each Miasma must be prepared as if it were a Talisman, occupying a Talisman slot for as long as it is active and also has an associated Favor cost.</p><p>Unless stated otherwise a Miasma with a Maintenance component lasts for a single Passage of Time and requires an hour to be completed.</p>",
+    "tradition": "",
+    "minArcaneMight": 1
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
