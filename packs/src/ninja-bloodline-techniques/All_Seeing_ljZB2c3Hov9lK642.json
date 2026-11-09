@@ -1,0 +1,31 @@
+{
+  "_id": "ljZB2c3Hov9lK642",
+  "_key": "!items!ljZB2c3Hov9lK642",
+  "name": "All Seeing",
+  "type": "technique",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>You may project your vision as if it were a moving drone or bird's eye away from you in a radius of up to a number of miles equal to your Arcane Might. While doing so you remain aware of your immediate surroundings and can focus on both, so long as you are not performing any especially straining or detailed tasks such as fighting. While doing so your vision may pass through objects that exceed your normal vision but cannot penetrate those infused with Chakra or magic.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "byakugan",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

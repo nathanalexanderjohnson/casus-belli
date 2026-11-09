@@ -1,0 +1,49 @@
+<form class='{{cssClass}} casus-belli-boon-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img
+      class='profile-img'
+      src='{{item.img}}'
+      data-edit='img'
+      title='{{item.name}}'
+    />
+    <div class='header-fields'>
+      <h1 class='charname'><input
+          name='name'
+          type='text'
+          value='{{item.name}}'
+          placeholder='Name'
+        /></h1>
+    </div>
+  </header>
+
+  {{! Sheet Body }}
+  <section class='sheet-body boon-description'>
+    <div class='boon-stats'>
+      <div class='boon-stat'>
+        <label class='resource-label'>{{localize 'CASUSBELLI.Item.Boon.Type'}}</label>
+        <select name='system.type'>
+          <option value='boon' {{#if (eq system.type 'boon')}}selected{{/if}}>{{localize 'CASUSBELLI.Item.Boon.Boon'}}</option>
+          <option value='bane' {{#if (eq system.type 'bane')}}selected{{/if}}>{{localize 'CASUSBELLI.Item.Boon.Bane'}}</option>
+        </select>
+      </div>
+
+      <div class='boon-stat'>
+        <label class='resource-label'>{{localize 'CASUSBELLI.Item.Boon.Cost'}}</label>
+        <input
+          name='system.cost'
+          type='number'
+          value='{{system.cost}}'
+          min='0'
+        />
+      </div>
+    </div>
+
+    {{editor
+      enrichedDescription
+      target='system.description'
+      engine='prosemirror'
+      button=true
+      editable=editable
+    }}
+  </section>
+</form>

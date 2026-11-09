@@ -1,0 +1,31 @@
+{
+  "_id": "kJAPjm5eWzZP9rQW",
+  "_key": "!items!kJAPjm5eWzZP9rQW",
+  "name": "Escape",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>You are trained in how to escape bindings, grapples or other holds. Whenever making a roll to escape being tied up or restrained you may benefit from Chakra Surge. If you are being grappled, as an action you may attempt to break the grapple with a Taijutsu roll, benefiting from Chakra Surge, and on a success you end the grapple and may stand if you are prone.</p>",
+    "category": "taijutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 0,
+    "roll": "taijutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

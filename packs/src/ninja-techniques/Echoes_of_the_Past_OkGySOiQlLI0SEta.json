@@ -1,0 +1,31 @@
+{
+  "_id": "OkGySOiQlLI0SEta",
+  "_key": "!items!OkGySOiQlLI0SEta",
+  "name": "Echoes of the Past",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, cause a target within 10 yards to become tormented by visions conjured by their own mind of their regrets, lost loved ones, or simply their fears. The target must make a Will roll against your Genjutsu or gain Stress equal to your Arcane Might if they are not already Stressed. If they are already Stressed, they become overwhelmed and suffer the Madness condition for a minute. Creatures that have successfully resisted this ability are immune to it until their next rest.</p>",
+    "category": "genjutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 1,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

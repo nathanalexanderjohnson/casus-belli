@@ -1,0 +1,96 @@
+// Add custom fonts by visiting and search https://fonts.google.com
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Import utilities.
+@import 'utils/typography';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/variables';
+
+/* Global styles */
+@import 'global/window';
+@import 'global/grid';
+@import 'global/flex';
+
+/* Styles limited to casus-belli sheets */
+.casus-belli {
+  background: $c-background;
+  color: $c-text;
+
+  input,
+  textarea {
+    color: $c-text;
+  }
+
+  select {
+    color: $c-text;
+    background: linear-gradient($c-panel, $c-background);
+    border: 1px solid rgba($c-secondary, 0.45);
+    border-radius: 3px;
+    padding: 1px 2px;
+    height: 22px;
+    font-family: $font-primary;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+    option {
+      background: $c-panel;
+      color: $c-text;
+    }
+  }
+
+  @import 'components/forms';
+  @import 'components/resource';
+  @import 'components/items';
+  @import 'components/effects';
+  @import 'components/armor-tracker';
+  @import 'components/item-sheet';
+  @import 'components/ninja';
+}
+
+/* Ninja chat cards and roll dialog options (rendered outside actor sheets) */
+.casus-belli-ninja-note {
+  h3 {
+    margin: 0 0 4px;
+    font-weight: bold;
+  }
+
+  .technique-meta {
+    margin: 0 0 4px;
+    font-size: 11px;
+    font-style: italic;
+  }
+
+  p { margin: 2px 0; }
+}
+
+.casus-belli-roll-result .foresight-note {
+  font-size: 11px;
+  font-style: italic;
+  text-align: center;
+}
+
+.casus-belli-roll-dialog .ninja-roll-options {
+  margin-top: 6px;
+
+  .hint {
+    margin: 0 0 4px;
+    font-size: 11px;
+    font-style: italic;
+  }
+}
+
+/* Global styles (not scoped to .casus-belli — have their own wrapper) */
+@import 'components/roll-dialog';
+@import 'components/spellcast-dialog';
+@import 'components/roll-results';
+@import 'components/gadget-dialog';
+@import 'components/tag-dropdown';
+
+/* Ensure Foundry's .window-content uses the theme background */
+.casus-belli .window-content {
+  background: $c-background;
+  color: $c-text;
+}

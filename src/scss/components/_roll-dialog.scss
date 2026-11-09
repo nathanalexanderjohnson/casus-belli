@@ -1,0 +1,103 @@
+// ─── Roll Dialog ─────────────────────────────────────────────────────────────
+// Styles scoped to the custom class added via Dialog options.
+// Foundry dialogs sit outside .casus-belli, so this lives at the global level.
+
+.casus-belli-roll-dialog {
+  font-family: $font-primary;
+
+  // Pull the content area away from the window chrome slightly
+  .dialog-content {
+    padding: 8px 10px 4px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid $c-faint;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    label {
+      flex: 1;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: $c-dark;
+      margin: 0;
+    }
+
+    input[type='number'] {
+      width: 64px;
+      text-align: center;
+      font-family: $font-primary;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background; color: $c-text;
+      border-radius: 3px;
+      padding: 1px 4px;
+      height: 24px;
+
+      &:focus {
+        outline: none;
+        border-color: $c-beige;
+        box-shadow: 0 0 0 2px rgba(185, 174, 147, 0.35);
+      }
+    }
+
+    select {
+      flex: 1;
+      font-family: $font-primary;
+      font-size: 12px;
+      border: 1px solid $c-faint;
+      background: $c-background; color: $c-text;
+      border-radius: 3px;
+      padding: 1px 4px;
+      height: 24px;
+
+      &:focus {
+        outline: none;
+        border-color: $c-beige;
+        box-shadow: 0 0 0 2px rgba(185, 174, 147, 0.35);
+      }
+    }
+  }
+
+  // Dialog footer / button strip
+  .dialog-buttons {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid $c-faint;
+
+    button {
+      font-family: $font-primary;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: $border-groove;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}

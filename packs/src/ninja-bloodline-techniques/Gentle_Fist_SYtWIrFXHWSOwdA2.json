@@ -1,0 +1,31 @@
+{
+  "_id": "SYtWIrFXHWSOwdA2",
+  "_key": "!items!SYtWIrFXHWSOwdA2",
+  "name": "Gentle Fist",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>Your unarmed strikes may be infused with Chakra that lashes out and attacks the meridians of your target. Ignore non-magical armor with any unarmed attack, and whenever you strike a target, if it possesses Chakra it loses one point of Chakra per successful attack. If you successfully strike a ninja of Arcane Might equal to you or less while they are at zero Chakra you may seal their Chakra for up to a week, or till someone with this technique of equal or greater Arcane Might to you frees them.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "byakugan",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

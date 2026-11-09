@@ -1,0 +1,56 @@
+.window-app {
+  font-family: $font-primary;
+}
+
+.casus-belli,
+.casus-belli .window-content,
+.casus-belli .sheet-body,
+.casus-belli .sheet-header,
+.casus-belli .resource,
+.casus-belli .skill,
+.casus-belli .skill-group,
+.casus-belli .attribute,
+.casus-belli .xp-tracker {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.12), rgba(120,90,60,0.03)),
+    radial-gradient(circle at 20% 20%, rgba(143,98,62,0.08), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(90,70,42,0.05), transparent 22%),
+    repeating-linear-gradient(0deg, rgba(72, 56, 41, 0.015) 0, rgba(72, 56, 41, 0.015) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 4px),
+    linear-gradient($c-background, $c-panel);
+  background-size: auto, auto, auto, 8px 8px, 10px 10px, auto;
+  background-blend-mode: screen, multiply, overlay, overlay, screen, normal;
+}
+
+.casus-belli {
+  color: $c-text;
+  font-family: $font-primary;
+  letter-spacing: 0.02em;
+}
+
+.casus-belli * {
+  text-shadow: 0 0 0.5px rgba(32, 24, 20, 0.2);
+}
+
+// Font Awesome icons set their own font-family. This rule has the same specificity as `.fas`
+// and loads later, so icon elements must be excluded or they render as text-font glyphs.
+// :where() keeps the original specificity (0,1,0) so nothing else changes.
+.casus-belli :where(:not(.fa, .fas, .far, .fab, .fal, .fat, .fad, .fa-solid, .fa-regular, .fa-brands, .fa-light, .fa-thin, .fa-duotone)) {
+  font-family: inherit;
+}
+
+.casus-belli .window-content {
+  background: $c-background;
+  color: $c-text;
+  border: 1px solid rgba($c-secondary, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 0 18px rgba(100, 76, 52, 0.08), 0 8px 24px rgba(54, 38, 24, 0.12);
+}
+
+.rollable {
+  &:hover,
+  &:focus {
+    color: $c-highlight;
+    text-shadow: 0 0 12px rgba($c-highlight, 0.45);
+    cursor: pointer;
+  }
+}

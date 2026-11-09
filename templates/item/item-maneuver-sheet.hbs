@@ -1,0 +1,71 @@
+<form class='{{cssClass}} casus-belli-maneuver-sheet' autocomplete='off'>
+
+  {{! Sheet Header }}
+  <header class='sheet-header'>
+    <img
+      class='profile-img'
+      src='{{item.img}}'
+      data-edit='img'
+      title='{{item.name}}'
+    />
+    <div class='header-fields'>
+      <h1 class='charname'>
+        <input name='name' type='text' value='{{item.name}}' placeholder='Name'/>
+      </h1>
+      <div class='maneuver-header-stats'>
+        <div class='maneuver-stat'>
+          <label class='resource-label'>Cost</label>
+          <input name='system.cost' type='number' value='{{system.cost}}' min='0'/>
+        </div>
+        <div class='maneuver-stat maneuver-tempo'>
+          <label class='resource-label'>Tempo</label>
+          <input
+            name='system.requiresTempo'
+            type='checkbox'
+            {{#if system.requiresTempo}}checked{{/if}}
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{! Always-visible Tags Strip }}
+  <div class='maneuver-tags-strip'>
+    <span class='tags-strip-label'>Tags</span>
+    <div class='tag-dropdown'>
+
+      {{! Toggle row: shows selected bubbles + chevron }}
+      <div class='tag-dropdown-toggle'>
+        <div class='tag-selected-display'>
+          {{#each availableTags}}
+            {{#if selected}}<span class='tag-bubble'>{{value}}</span>{{/if}}
+          {{/each}}
+          {{#unless hasTags}}<span class='tag-placeholder'>Select tags…</span>{{/unless}}
+        </div>
+        <span class='tag-caret'><i class='fas fa-chevron-down'></i></span>
+      </div>
+
+      {{! Dropdown panel: all available tags as clickable bubbles }}
+      <div class='tag-dropdown-panel'>
+        {{#each availableTags}}
+          <span class='tag-bubble{{#if selected}} selected{{/if}}' data-tag='{{value}}'>{{value}}</span>
+        {{/each}}
+        {{#unless availableTags.length}}
+          <span class='tags-empty-hint'>No tags defined — add some to <code>config.mjs</code>.</span>
+        {{/unless}}
+      </div>
+
+    </div>
+  </div>
+
+  {{! Description }}
+  <section class='sheet-body maneuver-description'>
+    {{editor
+      enrichedDescription
+      target='system.description'
+      engine='prosemirror'
+      button=true
+      editable=editable
+    }}
+  </section>
+</form>

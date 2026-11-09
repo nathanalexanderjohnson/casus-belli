@@ -1,0 +1,31 @@
+{
+  "_id": "VhhMMELt8HtPAcgS",
+  "_key": "!items!VhhMMELt8HtPAcgS",
+  "name": "Gate of Opening: Front Lotus",
+  "type": "technique",
+  "img": "icons/svg/door-exit.svg",
+  "system": {
+    "description": "<p>Releasing this Gate allows the user to perform the Front Lotus technique. As an action they may move twice their Speed in a near instant. Movement performed as part of this technique is so rapid that it is counted as teleportation for purposes of triggering reactions, and ignores rough terrain due to one's momentum. Should your movement end next to a target you may close to any combat length and perform a Grab. Should you successfully grab them you may leap into the air with them and come crashing down, causing them to take fall damage (bypassing non-magical armor) equal to your Agility + Arcane Might plus bonus successes from the Grab, and inflicting the Stunned condition if they take an injury from this attack; after this the grapple ends.</p><p>After the Front Lotus is performed you may not perform it again until the next time you open this gate, and your Stamina is dropped to zero unless you have already opened the Gate of Healing.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "rest",
+    "used": false,
+    "bloodline": "eightGates",
+    "variant": "",
+    "requiredStage": 1,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

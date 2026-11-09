@@ -1,0 +1,24 @@
+{
+  "_id": "O4K7A6ATtBScEwhu",
+  "_key": "!items!O4K7A6ATtBScEwhu",
+  "name": "Mixed Affinity",
+  "type": "bloodline",
+  "img": "icons/svg/acid.svg",
+  "system": {
+    "description": "<p>You can combine two or more elements to create techniques specific to your bloodline. Work with the GM to create custom techniques for your bloodline; give them the Bloodline category and the Mixed Affinity bloodline.</p>",
+    "bloodline": "mixedAffinity",
+    "variant": "",
+    "active": false,
+    "stage": 0,
+    "gatesSpent": false,
+    "drewChakra": false,
+    "flaws": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "iTadlLGvIwbuiu7D",
+  "_key": "!items!iTadlLGvIwbuiu7D",
+  "name": "Swirling Winds",
+  "type": "technique",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>As an action you can cause the winds around a target within five yards to swirl about them, protecting them from physical ranged projectiles. Whenever a ranged attack with a physical projectile (a bolt of fire or other energy does not count as physical) is made against the protected target, subtract a number of dice from the attack equal to your Arcane Might. This effect lasts for an hour.</p>",
+    "category": "ninjutsu",
+    "rank": "A",
+    "element": "wind",
+    "cost": 3,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

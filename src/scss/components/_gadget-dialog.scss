@@ -1,0 +1,202 @@
+// ─── Gadget Edit Dialog ──────────────────────────────────────────────────────
+
+.casus-belli-gadget-dialog {
+  font-family: $font-primary;
+
+  .dialog-content {
+    padding: 8px 10px 4px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid $c-faint;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    label {
+      flex: 1;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: $c-dark;
+      margin: 0;
+    }
+
+    input[type='text'],
+    input[type='number'] {
+      flex: 1;
+      font-family: $font-primary;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      color: $c-text;
+      border-radius: 3px;
+      padding: 1px 4px;
+      height: 24px;
+
+      &:focus {
+        outline: none;
+        border-color: $c-beige;
+        box-shadow: 0 0 0 2px rgba(185, 174, 147, 0.35);
+      }
+    }
+
+    input[type='number'] {
+      width: 64px;
+      flex: 0 0 64px;
+      text-align: center;
+    }
+
+    select {
+      flex: 1;
+      font-family: $font-primary;
+      font-size: 12px;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      color: $c-text;
+      border-radius: 3px;
+      padding: 1px 4px;
+      height: 24px;
+
+      &:focus {
+        outline: none;
+        border-color: $c-beige;
+        box-shadow: 0 0 0 2px rgba(185, 174, 147, 0.35);
+      }
+    }
+  }
+
+  .augment-section {
+    margin-top: 8px;
+
+    h4 {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: $c-dark;
+      margin: 0 0 6px 0;
+      border-bottom: 1px solid $c-faint;
+      padding-bottom: 4px;
+    }
+
+    .dialog-augment-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .dialog-augment-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 0;
+        border-bottom: 1px solid rgba($c-faint, 0.5);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .dialog-aug-name {
+          flex: 1;
+          font-family: $font-primary;
+          font-size: 12px;
+          font-weight: bold;
+          border: 1px solid $c-faint;
+          background: $c-background;
+          color: $c-text;
+          border-radius: 3px;
+          padding: 1px 4px;
+          height: 22px;
+        }
+
+        .dialog-aug-complexity {
+          flex: 0 0 60px;
+          width: 60px;
+          text-align: center;
+          font-family: $font-primary;
+          font-size: 12px;
+          font-weight: bold;
+          border: 1px solid $c-faint;
+          background: $c-background;
+          color: $c-text;
+          border-radius: 3px;
+          padding: 1px 4px;
+          height: 22px;
+        }
+
+        .dialog-remove-augment {
+          flex: 0 0 auto;
+          background: transparent;
+          border: none;
+          color: $c-secondary;
+          cursor: pointer;
+          font-size: 12px;
+          padding: 2px 4px;
+
+          &:hover {
+            color: #c0392b;
+          }
+        }
+      }
+    }
+
+    .dialog-add-augment {
+      margin-top: 6px;
+      font-family: $font-primary;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: $border-groove;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: $c-text;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+
+  .dialog-buttons {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid $c-faint;
+
+    button {
+      font-family: $font-primary;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: $border-groove;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}

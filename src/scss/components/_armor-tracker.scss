@@ -1,0 +1,111 @@
+// ============================================================
+//  Armor Tracker — silhouette with overlaid AV zone panels
+// ============================================================
+
+// ─── Items tab two-column layout ────────────────────────────
+.items-layout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+
+  .items-sidebar {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+
+  .items-main {
+    flex: 1 1 75%;
+    min-width: 0; // prevent flex children from overflowing
+  }
+}
+
+.armor-tracker {
+
+  // The silhouette image + overlaid panels all live in here.
+  .armor-silhouette-wrap {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .armor-silhouette-img {
+      // Centered, constrained to the container height, non-interactive.
+      display: block;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.55;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  // ─── Zone panel base ────────────────────────────────────
+  .armor-zone {
+    position: absolute;
+    background: $c-panel;
+    border: 1px solid $c-faint;
+    border-radius: 5px;
+    padding: 4px 7px;
+    min-width: 72px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+
+    .zone-label {
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: $c-tan;
+      border-bottom: 1px solid $c-faint;
+      margin-bottom: 3px;
+      padding-bottom: 2px;
+    }
+
+    .zone-avs {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+
+      .av-entry {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .av-label {
+          font-size: 8px;
+          color: $c-beige;
+          line-height: 1;
+        }
+
+        .av-value {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 1.2;
+          color: $c-dark;
+        }
+      }
+    }
+  }
+
+  .armor-zone-head {
+    top: 2%;
+    left: 15%;
+  }
+
+  .armor-zone-arms {
+    top: 39%;
+    left: 8%;
+  }
+
+  .armor-zone-chest {
+    top: 26%;
+    right: 8%;
+  }
+
+  .armor-zone-legs {
+    top: 73%;
+    right: 14%;
+  }
+}

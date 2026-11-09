@@ -1,0 +1,429 @@
+// Section Header
+.items-header {
+  min-height: 32px;
+  height: auto;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba($c-secondary, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(74, 55, 40, 0.08);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  > * {
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.35;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: $c-primary;
+    text-shadow: 0 0 0.75px rgba(62, 44, 36, 0.35);
+  }
+  .item-name {
+    font-weight: 700;
+    padding-left: 5px;
+    text-align: left;
+    display: flex;
+    // font-size: 16px;
+  }
+}
+
+// -----------------------------------------
+// Items Lists
+// -----------------------------------------
+
+.items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: $c-tan;
+
+  // Child lists
+  .item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Item Name
+  .item-name {
+    flex: 2;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    h3, h4 {
+      margin: 0;
+      white-space: nowrap;
+      overflow-x: hidden;
+    }
+  }
+
+  // Control Buttons
+  .item-controls {
+    display: flex;
+    flex: 0 0 100px;
+    justify-content: flex-end;
+    a {
+      font-size: 12px;
+      text-align: center;
+      margin: 0 6px;
+    }
+  }
+
+  // Individual Item
+  .item {
+    align-items: center;
+    padding: 0 2px; // to align with the header border
+    border-bottom: 1px solid $c-faint;
+    &:last-child { border-bottom: none; }
+    .item-name {
+      color: $c-dark;
+      .item-image {
+        flex: 0 0 30px;
+        height: 30px;
+        background-size: 30px;
+        border: none;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .item-prop {
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+  }
+
+  .item-study {
+    flex: 1;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+
+    select {
+      width: 100%;
+    }
+  }
+
+  .item-ritual {
+    flex: 0 0 10%;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item-level {
+    flex: 0 0 60px;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  // Section Header
+  .items-header {
+    min-height: 32px;
+    height: auto;
+    margin: 2px 0;
+    padding: 0;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba($c-secondary, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(74, 55, 40, 0.08);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    > * {
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.35;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      color: $c-primary;
+      text-shadow: 0 0 0.75px rgba(62, 44, 36, 0.35);
+    }
+    .item-name {
+      padding-left: 5px;
+      text-align: left;
+      // font-size: 16px;
+    }
+  }
+}
+
+// Example style for CasusBelli (can be removed if not needed).
+.item-formula {
+
+  flex: 0 0 200px;
+  padding: 0 8px;
+}
+
+.item-weight {
+  flex: 0 0 100px;
+  padding: 0 8px;
+}
+
+.item-description {
+  flex: 1 1 240px;
+  padding: 0 8px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Gadget-specific styles
+.gadget-item {
+  padding: 4px 2px;
+
+  .gadget-summary {
+    align-items: center;
+  }
+
+  .gadget-toggle {
+    cursor: pointer;
+
+    h4 {
+      display: inline;
+      margin: 0;
+    }
+
+    .gadget-chevron {
+      font-size: 10px;
+      margin-left: 6px;
+      color: $c-secondary;
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &.expanded .gadget-chevron {
+    transform: rotate(180deg);
+  }
+
+  .item-blueprint {
+    flex: 1.5;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .item-total-complexity {
+    flex: 0 0 50px;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+
+    .complexity-total {
+      font-weight: bold;
+      color: $c-text;
+    }
+  }
+
+  .gadget-details {
+    display: none;
+    padding: 6px 6px 2px 34px;
+  }
+
+  &.expanded .gadget-details {
+    display: block;
+  }
+
+  .gadget-augments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .augment-entry {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 2px 0;
+      border-bottom: 1px solid rgba($c-secondary, 0.3);
+      font-size: 12px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+
+        .augment-name {
+          text-decoration: line-through;
+        }
+
+        .augment-cost {
+          text-decoration: line-through;
+        }
+      }
+
+      &.enabled .augment-name {
+        color: #2ecc71;
+      }
+
+      .augment-toggle {
+        flex: 0 0 auto;
+        cursor: pointer;
+      }
+
+      .augment-name {
+        flex: 1;
+      }
+
+      .augment-cost {
+        flex: 0 0 auto;
+        font-weight: bold;
+        color: $c-dark;
+      }
+    }
+  }
+}
+
+// Align gadget list header columns with data rows
+.items-header {
+  .item-blueprint {
+    flex: 1.5;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+  }
+
+  .item-total-complexity {
+    flex: 0 0 50px;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+  }
+
+  .gadget-equipped {
+    flex: 0 0 40px;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+  }
+}
+
+.gadget-item {
+  .gadget-equipped {
+    flex: 0 0 40px;
+    text-align: center;
+    border-left: 1px solid $c-secondary;
+    border-right: 1px solid $c-secondary;
+    font-size: 12px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      cursor: pointer;
+      color: $c-text;
+    }
+
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.gadget-augments {
+  margin-top: 4px;
+  padding-left: 24px;
+
+  .augments-header {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: $c-secondary;
+    margin-bottom: 2px;
+  }
+
+  .augments-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .item {
+      border-bottom: 1px solid rgba($c-secondary, 0.3);
+      padding: 2px 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .augment-name {
+      flex: 2;
+      text-align: left;
+      font-size: 12px;
+      padding: 0 4px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .augment-complexity {
+      flex: 0 0 60px;
+      text-align: center;
+      border-left: 1px solid $c-secondary;
+      border-right: 1px solid $c-secondary;
+      font-size: 12px;
+      padding: 0 4px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .augment-enabled {
+      flex: 0 0 40px;
+      text-align: center;
+      border-left: 1px solid $c-secondary;
+      border-right: 1px solid $c-secondary;
+      font-size: 12px;
+      padding: 0 4px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .item-controls {
+      flex: 0 0 80px;
+    }
+  }
+}

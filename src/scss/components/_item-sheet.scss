@@ -1,0 +1,500 @@
+// ─── Item Sheet (shared) ─────────────────────────────────────────────────────
+
+// Item sheet header: square icon + name + meta stats in a compact row
+&.item .sheet-header {
+  align-items: flex-start;
+  margin-bottom: 8px;
+
+  .profile-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border: $border-groove;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  .header-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    h1.charname {
+      margin: 0;
+    }
+  }
+}
+
+// ─── Maneuver Sheet ───────────────────────────────────────────────────────────
+
+// Cost + Tempo tiles in the header, matching the actor sheet resource tiles
+.maneuver-header-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  .maneuver-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 4px 10px;
+    min-width: 60px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 3px;
+    }
+
+    input[type='number'] {
+      width: 48px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+
+    // Tempo tile: larger checkbox, centered
+    &.maneuver-tempo input[type='checkbox'] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: $c-brass;
+    }
+  }
+}
+
+// ─── Always-visible Tags Strip ───────────────────────────────────────────────
+.maneuver-tags-strip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: $border-groove;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 10px;
+  margin-bottom: 8px;
+
+  .tags-strip-label {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $c-dark;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+
+// ─── Armor Item Sheet ────────────────────────────────────────────────────────
+
+// Equipped + Location Worn row — sits below the AVB/AVP/AVS/Weight grid
+.armor-equip-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+// Equipped tile — matches the maneuver-stat tile pattern
+.armor-equipped {
+  // Override Foundry's .form-group defaults
+  padding: 0;
+  border: none;
+  margin: 0;
+
+  .checkbox-label {
+    display: flex;
+    flex-direction: column-reverse; // text (last in DOM) → top; input → bottom
+    align-items: center;
+    justify-content: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 4px 10px;
+    min-width: 60px;
+    min-height: 50px;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: $c-dark;
+
+    input[type='checkbox'] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: $c-brass;
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Location Worn — "Location Worn" text + a row of location tiles
+.armor-locations {
+  // Override Foundry's .form-group defaults
+  padding: 0;
+  border: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  .location-label {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: $c-dark;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .location-checkboxes {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    flex-wrap: wrap;
+
+    .checkbox-label {
+      display: flex;
+      flex-direction: column-reverse; // text (last in DOM) → top; input → bottom
+      align-items: center;
+      justify-content: center;
+      background: $c-panel;
+      border: $border-groove;
+      border-radius: 6px;
+      padding: 4px 8px;
+      min-width: 48px;
+      min-height: 50px;
+      gap: 4px;
+      cursor: pointer;
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: $c-dark;
+
+      input[type='checkbox'] {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: $c-brass;
+        margin: 0;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// Description fills the remaining sheet height
+.maneuver-description {
+  flex: 1;
+  overflow: hidden;
+
+  .editor {
+    height: 100%;
+  }
+}
+
+// ─── Boon Sheet ────────────────────────────────────────────────────────────────
+
+.boon-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  .boon-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 4px 10px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 3px;
+    }
+
+    input[type='number'] {
+      width: 48px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+
+    select {
+      width: 64px;
+      font-size: 14px;
+    }
+  }
+}
+
+.boon-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow: hidden;
+
+  .editor {
+    flex: 1;
+    overflow: hidden;
+    height: auto;
+  }
+}
+
+
+// ─── Gadget Sheet ───────────────────────────────────────────────────────────
+
+.gadget-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: $c-panel;
+  border: $border-groove;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+
+  .resource-label {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .complexity-total {
+    font-size: 22px;
+    font-weight: bold;
+    color: $c-dark;
+  }
+}
+
+.gadget-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 10px;
+
+  .gadget-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 4px 10px;
+    min-width: 60px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 3px;
+    }
+
+    input[type='text'],
+    input[type='number'] {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+
+    input[type='number'] {
+      width: 48px;
+    }
+
+    select {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+}
+
+.gadget-description {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .editor {
+    flex: 1;
+    min-height: 200px;
+  }
+}
+
+.augments-section {
+  h3 {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $c-dark;
+    margin: 0 0 6px 0;
+    border-bottom: 1px solid $c-faint;
+    padding-bottom: 4px;
+  }
+
+  .augments-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .items-header {
+      height: 24px;
+      margin: 2px 0;
+      padding: 0;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: $border-groove;
+      font-weight: bold;
+
+      > * {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .augment-name {
+        flex: 2;
+        padding-left: 5px;
+        text-align: left;
+      }
+
+      .augment-complexity {
+        flex: 0 0 60px;
+        text-align: center;
+        border-left: 1px solid $c-secondary;
+        border-right: 1px solid $c-secondary;
+        font-size: 11px;
+        padding: 0 4px;
+      }
+
+      .augment-enabled {
+        flex: 0 0 40px;
+        text-align: center;
+        border-left: 1px solid $c-secondary;
+        border-right: 1px solid $c-secondary;
+        font-size: 11px;
+        padding: 0 4px;
+      }
+
+      .augment-controls {
+        flex: 0 0 40px;
+      }
+    }
+
+    .item {
+      align-items: center;
+      padding: 0 2px;
+      border-bottom: 1px solid $c-faint;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .augment-name {
+      flex: 2;
+      padding: 0 4px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .augment-complexity {
+      flex: 0 0 60px;
+      text-align: center;
+      border-left: 1px solid $c-secondary;
+      border-right: 1px solid $c-secondary;
+      font-size: 12px;
+      padding: 0 4px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .augment-enabled {
+      flex: 0 0 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $c-secondary;
+      border-right: 1px solid $c-secondary;
+      font-size: 12px;
+      padding: 0 4px;
+
+      input {
+        width: auto;
+      }
+    }
+
+    .augment-controls {
+      flex: 0 0 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        font-size: 12px;
+        text-align: center;
+        margin: 0 4px;
+      }
+    }
+
+    .augments-footer {
+      padding: 4px 2px;
+    }
+  }
+}

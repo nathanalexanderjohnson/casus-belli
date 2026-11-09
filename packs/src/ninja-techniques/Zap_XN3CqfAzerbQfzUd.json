@@ -1,0 +1,31 @@
+{
+  "_id": "XN3CqfAzerbQfzUd",
+  "_key": "!items!XN3CqfAzerbQfzUd",
+  "name": "Zap",
+  "type": "technique",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>As an action, make a Ninjutsu attack roll against a target within 5 yards. On a success the target becomes Off-Balance until the end of your next turn.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "lightning",
+    "cost": 1,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "2xgQTFkH5Q2L02Me",
+  "_key": "!items!2xgQTFkH5Q2L02Me",
+  "name": "Shuriken",
+  "type": "item",
+  "img": "icons/weapons/thrown/shuriken-blue.webp",
+  "system": {
+    "description": "<p>Easy to carry; a ninja can be assumed to be carrying as many as realistically needed at all times. Deals 3 piercing base damage when thrown.</p>",
+    "quantity": 10,
+    "weight": 0,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

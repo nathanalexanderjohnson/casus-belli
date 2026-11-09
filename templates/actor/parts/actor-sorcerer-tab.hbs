@@ -1,0 +1,371 @@
+{{#if (equals system.magicType "sorcerer")}}
+<div class="tab sorcerer" data-group="primary" data-tab="sorcerer">
+  <div class="sorcerer-content">
+
+    <div class="curse-widget">
+      <div class="curse-label-wrapper">
+        <div class="curse-label-display">
+          <label class="curse-label">{{system.curseTitle}}</label>
+        </div>
+        <div class="curse-label-edit">
+          <input type="text" class="curse-title-input" value="{{system.curseTitle}}"/>
+          <div class="curse-edit-actions">
+            <button class="curse-title-save">Save</button>
+            <button class="curse-title-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="curse-dots">
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 1)}}filled{{/if}}" data-value="1"></a>
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 2)}}filled{{/if}}" data-value="2"></a>
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 3)}}filled{{/if}}" data-value="3"></a>
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 4)}}filled{{/if}}" data-value="4"></a>
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 5)}}filled{{/if}}" data-value="5"></a>
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 6)}}filled{{/if}}" data-value="6"></a>
+        <a class="sorcerer-curse-dot {{#if (gte system.curse 7)}}filled{{/if}}" data-value="7"></a>
+      </div>
+    </div>
+
+    <div class="sorcerer-top-row flexrow">
+      <div class="attribute tile">
+        <label class="resource-label rollable" data-roll-type="system-value" data-value-path="arcaneMight" data-label="Arcane Might" data-default-second="wil">Arcane Might</label>
+        <input type="number" name="system.arcaneMight" value="{{system.arcaneMight}}" min="0" max="10" data-dtype="Number"/>
+      </div>
+      <div class="attribute tile">
+        <label class="resource-label">Source</label>
+        <select name="system.sorcererSource">
+          <option value="blood" {{#if (equals system.sorcererSource "blood")}}selected{{/if}}>Blood</option>
+          <option value="pact" {{#if (equals system.sorcererSource "pact")}}selected{{/if}}>Pact</option>
+          <option value="grove" {{#if (equals system.sorcererSource "grove")}}selected{{/if}}>Grove</option>
+        </select>
+      </div>
+      <div class="attribute tile">
+        <label class="resource-label">Field of Study</label>
+        <select name="system.fieldOfStudy">
+          <option value="deeps" {{#if (equals system.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+          <option value="mind" {{#if (equals system.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+          <option value="nature" {{#if (equals system.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+          <option value="realms" {{#if (equals system.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+          <option value="soul" {{#if (equals system.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="sorcerer-bottom-row grid grid-4col">
+      <div class="resource">
+        <label class="resource-label rollable" data-roll-type="system-value" data-value-path="senseTheUnseen.value" data-label="Sense the Unseen" data-default-second="ins">Sense the Unseen</label>
+        <input type="text" name="system.senseTheUnseen.value" value="{{system.senseTheUnseen.value}}" data-dtype="Number"/>
+      </div>
+      <div class="resource">
+        <label class="resource-label rollable" data-roll-type="system-value" data-value-path="arcaneLore.value" data-label="Arcane Lore" data-default-second="ins">Arcane Lore</label>
+        <input type="text" name="system.arcaneLore.value" value="{{system.arcaneLore.value}}" data-dtype="Number"/>
+      </div>
+      <div class="resource">
+        <label class="resource-label">Scourge</label>
+        <div class="resource-content">
+          <input type="text" name="system.scourge.value" value="{{system.scourge.value}}" data-dtype="Number"/>
+          <span>/</span>
+          <input type="text" name="system.scourge.max" value="{{system.scourge.max}}" data-dtype="Number"/>
+        </div>
+      </div>
+      <div class="resource">
+        <label class="resource-label">Mental Strain</label>
+        <div class="resource-content">
+          <input type="text" name="system.mentalStrain.value" value="{{system.mentalStrain.value}}" data-dtype="Number"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="spellcores-stack">
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">First Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-ritual">Ritual</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="first"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.first as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="first">
+            <div class="item-name"><input type="text" name="system.spellCores.first.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.first.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.first.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="first"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">Second Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-ritual">Ritual</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="second"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.second as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="second">
+            <div class="item-name"><input type="text" name="system.spellCores.second.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.second.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.second.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="second"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">Third Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-ritual">Ritual</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="third"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.third as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="third">
+            <div class="item-name"><input type="text" name="system.spellCores.third.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.third.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.third.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="third"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">Fourth Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-ritual">Ritual</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="fourth"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.fourth as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="fourth">
+            <div class="item-name"><input type="text" name="system.spellCores.fourth.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.fourth.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.fourth.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="fourth"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">Fifth Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-ritual">Ritual</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="fifth"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.fifth as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="fifth">
+            <div class="item-name"><input type="text" name="system.spellCores.fifth.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.fifth.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.fifth.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="fifth"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">Sixth Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-ritual">Ritual</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="sixth"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.sixth as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="sixth">
+            <div class="item-name"><input type="text" name="system.spellCores.sixth.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.sixth.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.sixth.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="sixth"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="spellcore-col">
+        <h3 class="spellcore-header">Seventh Circle</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-study">Study</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-create" title="Add Spell Core" data-circle="seventh"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.spellCores.seventh as |entry index|}}
+          <li class="item flexrow" data-index="{{index}}" data-circle="seventh">
+            <div class="item-name"><input type="text" name="system.spellCores.seventh.{{index}}.name" value="{{entry.name}}"/></div>
+            <div class="item-study">
+              <select name="system.spellCores.seventh.{{index}}.fieldOfStudy">
+                <option value="" {{#if (equals entry.fieldOfStudy "")}}selected{{/if}}>—</option>
+                <option value="deeps" {{#if (equals entry.fieldOfStudy "deeps")}}selected{{/if}}>Study of the Deeps</option>
+                <option value="mind" {{#if (equals entry.fieldOfStudy "mind")}}selected{{/if}}>Study of the Mind</option>
+                <option value="nature" {{#if (equals entry.fieldOfStudy "nature")}}selected{{/if}}>Study of Nature</option>
+                <option value="realms" {{#if (equals entry.fieldOfStudy "realms")}}selected{{/if}}>Study of the Realms</option>
+                <option value="soul" {{#if (equals entry.fieldOfStudy "soul")}}selected{{/if}}>Study of the Soul</option>
+              </select>
+            </div>
+            <div class="item-ritual">
+              <input type="checkbox" name="system.spellCores.seventh.{{index}}.ritual" {{#if entry.ritual}}checked{{/if}}/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-spellcore-cast" title="Cast Spell" data-index="{{index}}" data-circle="seventh"><i class="fas fa-magic"></i></a>
+              <a class="item-control sorcerer-spellcore-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+    <div class="aspects-gifts-row flexrow">
+      <div class="aspects-section">
+        <h3 class="aspects-header">Aspects</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Level</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-aspect-create" title="Add Aspect"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.aspects as |aspect index|}}
+          <li class="item flexrow" data-index="{{index}}">
+            <div class="item-name"><input type="text" name="system.aspects.{{index}}.name" value="{{aspect.name}}"/></div>
+            <div class="item-level"><input type="number" class="aspect-level" name="system.aspects.{{index}}.level" value="{{aspect.level}}" min="0"/></div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-aspect-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+      <div class="gifts-section">
+        <h3 class="gifts-header">Gifts</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-gift-create" title="Add Gift"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.gifts as |gift index|}}
+          <li class="item flexrow" data-index="{{index}}">
+            <div class="item-name"><input type="text" name="system.gifts.{{index}}.name" value="{{gift.name}}"/></div>
+            <div class="item-controls">
+              <a class="item-control sorcerer-gift-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</div>
+{{/if}}

@@ -1,0 +1,31 @@
+{
+  "_id": "NPIi46X3hJ2PCpD7",
+  "_key": "!items!NPIi46X3hJ2PCpD7",
+  "name": "Obfuscation",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, place a suggestion upon all that look at you, preventing yourself from standing out of the norm to others so long as you don't perform any action that draws attention to yourself. Others that have seen you will struggle to recall details about your state of dress or face. You cannot use this ability to enter places that are restricted to only people that the guards recognize by face, but if entry only requires a uniform or badge, people will believe that you are wearing the appropriate uniform or have the correct authorization, so long as they are not required to look too closely. You may maintain this technique for up to a day.</p><p>This technique may be resisted by those Touched by Fate with a Will + Wits roll against your Genjutsu roll.</p>",
+    "category": "genjutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 2,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

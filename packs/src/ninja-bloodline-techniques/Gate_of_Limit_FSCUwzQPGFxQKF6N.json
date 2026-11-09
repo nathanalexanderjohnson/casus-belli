@@ -1,0 +1,31 @@
+{
+  "_id": "FSCUwzQPGFxQKF6N",
+  "_key": "!items!FSCUwzQPGFxQKF6N",
+  "name": "Gate of Limit",
+  "type": "technique",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>While this gate is open, increase your Strength and Agility by an additional point. Each time you perform a movement you may move as if you were benefiting from Front Lotus, effectively doubling your speed, appearing to teleport, and allowing you to close distance with each movement. Once this gate closes, suffer a major internal injury to each limb, rather than the minor one described in the Gate of Life.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "eightGates",
+    "variant": "",
+    "requiredStage": 5,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

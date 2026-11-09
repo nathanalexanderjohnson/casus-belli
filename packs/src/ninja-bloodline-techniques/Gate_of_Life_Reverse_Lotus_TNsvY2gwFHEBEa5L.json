@@ -1,0 +1,31 @@
+{
+  "_id": "TNsvY2gwFHEBEa5L",
+  "_key": "!items!TNsvY2gwFHEBEa5L",
+  "name": "Gate of Life: Reverse Lotus",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>After opening this gate your veins begin to bulge and your skin takes on a red flushed color, allowing the user to perform the Reverse Lotus technique. In a single turn you may perform three attacks with any combination of a Swing, Thrust, Punch or Kick. Before the first attack and between each attack you may perform the movement technique described as part of the Front Lotus, moving rapidly and being able to alter the combat length as needed.</p><p>After the Reverse Lotus is performed you may not perform it again until the next time you open this gate. Unless you are capable of opening the Gate of Pain, after performing this technique all your gates close and you are incapacitated. Once this gate closes, suffer a minor internal injury on each of your arms and legs.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "rest",
+    "used": false,
+    "bloodline": "eightGates",
+    "variant": "",
+    "requiredStage": 3,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

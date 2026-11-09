@@ -1,0 +1,31 @@
+{
+  "_id": "8bwGEde2cy7IPjUc",
+  "_key": "!items!8bwGEde2cy7IPjUc",
+  "name": "Swamp of the Underworld",
+  "type": "technique",
+  "img": "icons/svg/stoned.svg",
+  "system": {
+    "description": "<p>Cause the ground in a radius up to 10 yards × Arcane Might to become Difficult Terrain. At the end of their turn, a creature within the swamp must make an Agility + Strength roll against your Ninjutsu to avoid sinking into it and being unable to perform movements or abilities that require movement. On a failure they become stuck and must make a pure Strength roll against your Ninjutsu to free themselves.</p><p>Ninja capable of Water Walking may ignore the Difficult Terrain created by this ability but must still roll to avoid being trapped. You may ignore all penalties imposed by this ability.</p>",
+    "category": "ninjutsu",
+    "rank": "A",
+    "element": "earth",
+    "cost": 3,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

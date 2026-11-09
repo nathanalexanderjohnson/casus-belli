@@ -1,0 +1,1051 @@
+.item-form {
+  font-family: $font-primary;
+}
+
+.sheet-header {
+  flex: 0 auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 10px;
+
+  .header-fields {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h1.charname {
+    height: 50px;
+    padding: 0px;
+    margin: 5px 0;
+    border-bottom: 0;
+    input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  .magic-type {
+    select {
+      max-width: 25%;
+    }
+  }
+
+  .resource {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 4px 6px;
+    min-height: 50px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 3px;
+    }
+
+    // Single-value resources (e.g. Combatant Rank, Speed)
+    > input {
+      width: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+
+    // Value / max resources (e.g. Pain, Stress, Stamina, Luck…)
+    .resource-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+
+      input {
+        width: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $c-faint;
+        background: $c-background;
+        padding: 1px 2px;
+        border-radius: 3px;
+        height: 22px;
+      }
+
+      span {
+        font-size: 11px;
+        font-weight: bold;
+        color: $c-beige;
+      }
+    }
+  }
+}
+
+.samurai-header-row {
+  flex: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.samurai-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 150px;
+  flex: 0 0 150px;
+
+  .arcane-might-box,
+  .ephiphanies-box,
+  .attribute.tile,
+  .tracker-box {
+    width: 68px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 2px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    input {
+      width: 44px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid rgba($c-secondary, 0.9);
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+  }
+
+  .ephiphanies-box,
+  .tracker-box {
+    width: 110px;
+    height: 50px;
+
+    .resource-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 4px;
+      box-sizing: border-box;
+      gap: 2px;
+
+      input {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        font-size: 11px;
+        font-weight: bold;
+        border: 1px solid rgba($c-secondary, 0.9);
+        background: $c-background;
+        padding: 1px 1px;
+        border-radius: 3px;
+        height: 20px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: bold;
+        color: $c-beige;
+      }
+    }
+  }
+}
+
+.class-tab-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 10px 0;
+
+  .arcane-might-box,
+  .attribute.tile {
+    width: 68px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 2px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    input {
+      width: 44px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid rgba($c-secondary, 0.9);
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+  }
+
+  .tracker-box,
+  .ephiphanies-box {
+    width: 110px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 2px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .resource-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 4px;
+      box-sizing: border-box;
+      gap: 2px;
+
+      input {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        font-size: 11px;
+        font-weight: bold;
+        border: 1px solid rgba($c-secondary, 0.9);
+        background: $c-background;
+        padding: 1px 1px;
+        border-radius: 3px;
+        height: 20px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: bold;
+        color: $c-beige;
+      }
+    }
+  }
+}
+
+.samurai-entries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  margin-top: 0;
+}
+
+.samurai-entry-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba($c-panel, 0.8);
+  border: $border-groove;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 160px;
+}
+
+.samurai-kenjutsu-table {
+  width: 100%;
+  min-height: auto;
+  margin-bottom: 0;
+}
+
+.samurai-entry-table {
+
+  .samurai-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba($c-secondary, 0.8);
+
+    h3 {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $c-primary;
+      text-shadow: 0 0 0.7px rgba(62, 44, 36, 0.35);
+    }
+
+    button {
+      flex: 0 0 10%;
+      min-width: 28px;
+      max-width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $c-background;
+      color: $c-text;
+      border: 1px solid rgba($c-secondary, 0.9);
+      border-radius: 3px;
+      padding: 3px 4px;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+
+  .samurai-empty {
+    margin: 0;
+    font-style: italic;
+    color: $c-beige;
+  }
+}
+
+.samurai-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: $c-background;
+  border: 1px solid rgba($c-secondary, 0.7);
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+  input,
+  textarea {
+    width: 100%;
+    background: $c-panel;
+    border: 1px solid rgba($c-secondary, 0.8);
+    border-radius: 4px;
+    color: $c-text;
+    padding: 6px 8px;
+    font-family: $font-primary;
+    font-size: 12px;
+  }
+
+  textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+}
+
+.samurai-entry-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $c-primary;
+  text-transform: uppercase;
+}
+
+.samurai-entry-description {
+  white-space: pre-wrap;
+  color: $c-text;
+  line-height: 1.45;
+  font-size: 12px;
+}
+
+.samurai-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  button {
+    flex: 1;
+    min-width: 70px;
+    background: $c-background;
+    color: $c-text;
+    border: 1px solid rgba($c-secondary, 0.9);
+    border-radius: 3px;
+    padding: 4px 6px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.class-selector-wrap {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 6px;
+}
+
+.class-selector-title {
+  margin-bottom: 4px;
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $c-primary;
+  text-shadow: 0 0 0.7px rgba(62, 44, 36, 0.35);
+}
+
+.class-selector {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 6px 10px 5px;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 14px 8px 14px 8px;
+  border: 2px solid rgba($c-secondary, 0.9);
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(123,82,58,0.06));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15), inset 0 0 14px rgba(78,41,38,0.08), 0 1px 0 rgba(55,39,30,0.15);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 5px 8px;
+    border: 1px solid rgba($c-secondary, 0.32);
+    border-radius: 10px 6px 10px 6px;
+    pointer-events: none;
+  }
+}
+
+.class-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px 5px 8px 5px;
+  border: 1px solid rgba($c-secondary, 0.45);
+  background: rgba(255,255,255,0.04);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07);
+  font-family: $font-primary;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: $c-text;
+  cursor: pointer;
+
+  input[type='radio'] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid rgba($c-secondary, 0.9);
+    background: rgba(255,255,255,0.25);
+    box-shadow: inset 0 0 0 1px rgba(51, 28, 24, 0.2);
+    position: relative;
+    flex-shrink: 0;
+
+    &:checked {
+      background: radial-gradient(circle, $c-danger 0 32%, rgba($c-danger, 0.3) 33%, rgba(255,255,255,0.2) 34%, rgba(255,255,255,0.05) 100%);
+      border-color: rgba($c-secondary, 0.95);
+      box-shadow: 0 0 0 1px rgba($c-secondary, 0.3), inset 0 0 0 1px rgba(255,255,255,0.15);
+    }
+  }
+
+  span {
+    display: inline-block;
+    line-height: 1.2;
+  }
+}
+
+// Avatar + attributes arranged in a circle
+.avatar-circle {
+  position: relative;
+  flex: 0 0 250px;
+  width: 250px;
+  height: 315px;
+  margin-right: 15px;
+
+  // Centered avatar portrait
+  .profile-img {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 70px;   // center(125) - half(55) = 70
+    left: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: $border-groove;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  // Each attribute bubble is absolutely placed around the circle.
+  // Container center: (125, 125), radius: 100px, tile size: 68×50px.
+  // Angles at 12, 2, 4, 6, 8, 10 o'clock (270°, 330°, 30°, 90°, 150°, 210°).
+  .attribute {
+    position: absolute;
+    width: 68px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 2px;
+    margin-bottom: 0;
+    z-index: 2;
+
+    // 12 o'clock — STR (270°): x=125, y=25 → top=0,  left=91
+    &:nth-child(2) { top:   0px; left:  91px; }
+    // 2  o'clock — AGI (330°): x=212, y=75  → top=50, left=178
+    &:nth-child(3) { top:  50px; left: 178px; }
+    // 4  o'clock — END (30°):  x=212, y=175 → top=150,left=178
+    &:nth-child(4) { top: 150px; left: 178px; }
+    // 6  o'clock — WIL (90°):  x=125, y=225 → top=200,left=91
+    &:nth-child(5) { top: 200px; left:  91px; }
+    // 8  o'clock — WIT (150°): x=38,  y=175 → top=150,left=4
+    &:nth-child(6) { top: 150px; left:   4px; }
+    // 10 o'clock — INS (210°): x=38,  y=75  → top=50, left=4
+    &:nth-child(7) { top:  50px; left:   4px; }
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-bottom: 2px;
+      cursor: pointer;
+    }
+
+    input {
+      width: 44px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid $c-faint;
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+  }
+
+  // XP tracker — sits directly below the WIL (6 o'clock) bubble
+  .xp-tracker {
+    position: absolute;
+    top: 258px; // WIL top(200) + height(50) + gap(8)
+    left: 74px; // centered under WIL: WIL center(125) - half-width(51)
+    width: 102px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 2px;
+    z-index: 2;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .resource-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 4px;
+      box-sizing: border-box;
+      gap: 2px;
+
+      input {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        font-size: 11px;
+        font-weight: bold;
+        border: 1px solid $c-faint;
+        background: $c-background;
+        padding: 1px 1px;
+        border-radius: 3px;
+        height: 20px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: bold;
+        color: $c-beige;
+      }
+    }
+  }
+}
+
+.sheet-tabs {
+  flex: 0;
+
+  .item {
+    color: $c-text;
+
+    &:hover {
+      color: $c-highlight;
+    }
+
+    &.active {
+      color: $c-highlight;
+      border-bottom: 2px solid $c-primary;
+      text-shadow: none;
+    }
+  }
+}
+
+.sheet-body,
+.sheet-body .tab,
+.sheet-body .tab .editor {
+  height: 100%;
+}
+
+.tox {
+  .tox-editor-container {
+    background: $c-white;
+  }
+
+  .tox-edit-area {
+    padding: 0 8px;
+  }
+}
+
+// Skills + Combat merged tab layout
+// Row 1: [Physical 250px] [Social 250px] [Professional 250px] [Maneuvers - fills remaining]
+// Row 2: [Wounds -------- spans full width --------------------]
+.skills-combat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 8fr;
+  grid-template-rows: auto auto;
+  gap: $padding-md;
+
+  .skill-col-physical {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .skill-col-social {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .skill-col-professional {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .maneuvers-section {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  .wounds-section {
+    grid-column: 1 / 5;
+    grid-row: 2;
+  }
+}
+
+// ─── CasusBelli Tab Attribute Tiles ───────────────────────────────────────────
+.casus-belli-attributes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-end;
+
+  .thesis-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 4px 10px;
+    min-height: 50px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 3px;
+    }
+
+    input {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid rgba($c-secondary, 0.9);
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+  }
+
+  .tile {
+    width: 68px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $c-panel;
+    border: $border-groove;
+    border-radius: 6px;
+    padding: 2px;
+
+    .resource-label {
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    input {
+      width: 44px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid rgba($c-secondary, 0.9);
+      background: $c-background;
+      padding: 1px 2px;
+      border-radius: 3px;
+      height: 22px;
+    }
+
+    .resource-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2px;
+
+      input {
+        width: 28px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+// ─── Sorcerer Tab ───────────────────────────────────────────────────────────
+.sorcerer-content {
+  .curse-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .curse-label-wrapper {
+      margin-bottom: 5px;
+
+      .curse-label-display {
+        cursor: pointer;
+        user-select: none;
+
+        .curse-label {
+          font-size: 11px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin: 0;
+          cursor: inherit;
+        }
+      }
+
+      .curse-label-edit {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        input {
+          width: 140px;
+          text-align: center;
+          font-size: 12px;
+          font-weight: bold;
+          border: 1px solid $c-faint;
+          background: $c-background;
+          padding: 1px 4px;
+          border-radius: 3px;
+          height: 22px;
+        }
+
+        .curse-edit-actions {
+          display: flex;
+          gap: 6px;
+
+          button {
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 10px;
+            background: $c-panel;
+            border: $border-groove;
+            color: $c-text;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover {
+              background: $c-background;
+            }
+          }
+        }
+      }
+
+      &.editing {
+        .curse-label-display { display: none; }
+        .curse-label-edit { display: flex; }
+      }
+    }
+
+    .curse-dots {
+      display: flex;
+      gap: 8px;
+
+      .sorcerer-curse-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid $c-primary;
+        background: transparent;
+        cursor: pointer;
+        transition: background 0.15s ease;
+
+        &.filled {
+          background: $c-primary;
+        }
+
+        &:hover {
+          background: rgba($c-primary, 0.5);
+        }
+      }
+    }
+  }
+
+  .sorcerer-top-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: flex-end;
+
+    .attribute.tile {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: $c-panel;
+      border: $border-groove;
+      border-radius: 6px;
+      padding: 4px 6px;
+      min-height: 50px;
+
+      .resource-label {
+        font-size: 9px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 3px;
+      }
+
+      input {
+        width: 50px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $c-faint;
+        background: $c-background;
+        padding: 1px 2px;
+        border-radius: 3px;
+        height: 22px;
+      }
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+
+  .sorcerer-bottom-row {
+    .resource {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: $c-panel;
+      border: $border-groove;
+      border-radius: 6px;
+      padding: 4px 6px;
+      min-height: 50px;
+
+      .resource-label {
+        font-size: 9px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 3px;
+      }
+
+      > input {
+        width: 50px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $c-faint;
+        background: $c-background;
+        padding: 1px 2px;
+        border-radius: 3px;
+        height: 22px;
+      }
+
+      .resource-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+
+        input {
+          width: 40px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          border: 1px solid $c-faint;
+          background: $c-background;
+          padding: 1px 2px;
+          border-radius: 3px;
+          height: 22px;
+        }
+
+        span {
+          font-size: 11px;
+          font-weight: bold;
+          color: $c-beige;
+        }
+      }
+    }
+  }
+
+  .spellcores-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .spellcore-col {
+      .spellcore-header {
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin: 0 0 5px 0;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $c-faint;
+      }
+    }
+  }
+
+  .aspects-gifts-row {
+    display: flex;
+    gap: 10px;
+
+    .aspects-section,
+    .gifts-section {
+      flex: 1;
+    }
+  }
+
+  .aspects-section {
+    .aspects-header {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin: 0 0 5px 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $c-faint;
+    }
+  }
+
+  .gifts-section {
+    .gifts-header {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin: 0 0 5px 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $c-faint;
+    }
+  }
+}

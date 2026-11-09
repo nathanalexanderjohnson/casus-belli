@@ -1,0 +1,31 @@
+{
+  "_id": "cr8tDyVEI6JowrSe",
+  "_key": "!items!cr8tDyVEI6JowrSe",
+  "name": "Manipulate Earth",
+  "type": "technique",
+  "img": "icons/svg/stoned.svg",
+  "system": {
+    "description": "<p>As an action you can shift a patch of earth within ten yards of you into a shape you desire. You can move at most an amount of earth roughly equal to twice the size of a person. Below are some examples of what it can be used for.</p><p>You may shape earth into spikes or strike with blunt earth, making a Ninjutsu attack and dealing 8 + Arcane Might piercing damage or 6 + Arcane Might blunt damage.</p><p>You may attempt to bind a target, fully restraining them on a successful Ninjutsu roll against their Strength + Agility. They may attempt to break free each turn afterwards as an action with a pure Strength roll against your Ninjutsu.</p>",
+    "category": "ninjutsu",
+    "rank": "B",
+    "element": "earth",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

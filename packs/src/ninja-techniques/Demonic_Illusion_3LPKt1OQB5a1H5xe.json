@@ -1,0 +1,31 @@
+{
+  "_id": "3LPKt1OQB5a1H5xe",
+  "_key": "!items!3LPKt1OQB5a1H5xe",
+  "name": "Demonic Illusion",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, attempt to cast a number of targets equal to your Arcane Might within 10 yards into an illusionary nightmare. Make a Genjutsu roll which they may contest with a pure Will roll. On a win, characters of equal Arcane Might to you are Frightened. Should you score a critical win, characters of equal Arcane Might are Terrified. Characters of greater Arcane Might count their level of success as one greater, only becoming Frightened should you score a critical win. Characters of lesser Arcane Might who you win this test against are either Terrified or rendered completely unable to move. In all cases this effect lasts for a minute but may be maintained for longer by paying the cost of this ability again.</p><p>If the target is Stressed they automatically fail their save against this ability. Creatures that have successfully resisted this ability are immune to it until their next rest.</p>",
+    "category": "genjutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 2,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

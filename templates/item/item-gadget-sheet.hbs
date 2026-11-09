@@ -1,0 +1,90 @@
+<form class='{{cssClass}} casus-belli-gadget-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img
+      class='profile-img'
+      src='{{item.img}}'
+      data-edit='img'
+      title='{{item.name}}'
+    />
+    <div class='header-fields'>
+      <h1 class='charname'><input
+          name='name'
+          type='text'
+          value='{{item.name}}'
+          placeholder='Name'
+        /></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body'>
+    <div class='gadget-total'>
+      <label class='resource-label'>Total Complexity</label>
+      <span class='complexity-total'>{{system.totalComplexity}}</span>
+    </div>
+
+    <div class='gadget-stats'>
+      <div class='gadget-stat'>
+        <label class='resource-label'>Blueprint</label>
+        <input name='system.baseBlueprint' type='text' value='{{system.baseBlueprint}}' placeholder='Blueprint'/>
+      </div>
+
+      <div class='gadget-stat'>
+        <label class='resource-label'>Base Complexity</label>
+        <input name='system.baseComplexity' type='number' value='{{system.baseComplexity}}' data-dtype='Number'/>
+      </div>
+      <div class='gadget-stat'>
+        <label class='resource-label'>Weight</label>
+        <input name='system.weight' type='number' value='{{system.weight}}' data-dtype='Number' min='0'/>
+      </div>
+
+      <div class='gadget-stat'>
+        <label class='resource-label'>Wire Type</label>
+        <select name='system.wireType'>
+          <option value='copper' {{#if (equals system.wireType 'copper')}}selected{{/if}}>Copper</option>
+          <option value='silver' {{#if (equals system.wireType 'silver')}}selected{{/if}}>Silver (-1)</option>
+          <option value='gold' {{#if (equals system.wireType 'gold')}}selected{{/if}}>Gold (-2)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class='augments-section'>
+      <h3>Augments</h3>
+      <ol class='items-list augments-list'>
+        <li class='item flexrow items-header'>
+          <div class='augment-name'>Name</div>
+          <div class='augment-complexity'>Cost</div>
+          <div class='augment-enabled'>On</div>
+          <div class='augment-controls'></div>
+        </li>
+        {{#each system.augments as |augment index|}}
+        <li class='item flexrow' data-index='{{index}}'>
+          <div class='augment-name'>
+            <input type='text' name='system.augments.{{index}}.name' value='{{augment.name}}' placeholder='Augment Name'/>
+          </div>
+          <div class='augment-complexity'>
+            <input type='number' name='system.augments.{{index}}.complexity' value='{{augment.complexity}}' data-dtype='Number'/>
+          </div>
+          <div class='augment-enabled'>
+            <input type='checkbox' name='system.augments.{{index}}.enabled' {{checked augment.enabled}}/>
+          </div>
+          <div class='augment-controls'>
+            <a class='item-control gadget-augment-delete' title='Delete Augment'><i class='fas fa-trash'></i></a>
+          </div>
+        </li>
+        {{/each}}
+        <li class='item flexrow augments-footer'>
+          <div class='augment-name'></div>
+          <div class='augment-complexity'></div>
+          <div class='augment-controls'>
+            <a class='item-control gadget-augment-create' title='Add Augment'><i class='fas fa-plus'></i></a>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class='gadget-description'>
+      <h3>Description</h3>
+      {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+    </div>
+  </section>
+</form>

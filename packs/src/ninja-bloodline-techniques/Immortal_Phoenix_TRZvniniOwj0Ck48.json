@@ -1,0 +1,31 @@
+{
+  "_id": "TRZvniniOwj0Ck48",
+  "_key": "!items!TRZvniniOwj0Ck48",
+  "name": "Immortal Phoenix",
+  "type": "technique",
+  "img": "icons/svg/angel.svg",
+  "system": {
+    "description": "<p>The Emperor of the Hinatori is an immortal creature immune to fire and able to heal from nearly any injury in seconds; even if it is slain it will simply be reborn after death. While your healing is not so great, increase your healing speed by seven times (counting each day as a week). Your wounds stop bleeding without requiring treatment or a roll and any roll made to resist sickness or infection is an automatic critical success. You are immune to fire damage.</p><p>If you have opened the Third Seal, whenever you suffer enough wounds to trigger instant death, you only become incapacitated and slowly heal over time. You cannot be killed unless your head is destroyed and will slowly regenerate; you can regrow limbs and fix other permanent injuries, and you will not starve to death or die of thirst so long as you have Chakra.</p><p>If you have opened the Sixth Seal your healing increases even further in speed, causing each minute to count as a week of normal healing. Minor injuries heal at the end of each turn.</p><p>Your healing does not help against an injury inflicted from your own Jinchuriki abilities, unless the Hinatori Emperor wishes it.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "jinchuriki",
+    "variant": "devouringFlame",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

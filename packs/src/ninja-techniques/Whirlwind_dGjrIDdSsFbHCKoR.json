@@ -1,0 +1,31 @@
+{
+  "_id": "dGjrIDdSsFbHCKoR",
+  "_key": "!items!dGjrIDdSsFbHCKoR",
+  "name": "Whirlwind",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>Perform a Kick or Punch against two opponents at once.</p>",
+    "category": "taijutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "FCV59T2d857KqifS",
+  "_key": "!items!FCV59T2d857KqifS",
+  "name": "Lethal Body",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>You learn to infuse your limbs with Chakra, granting all unarmed strikes the Brutal tag. You may benefit from Duelist with your unarmed attacks and defenses.</p>",
+    "category": "taijutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

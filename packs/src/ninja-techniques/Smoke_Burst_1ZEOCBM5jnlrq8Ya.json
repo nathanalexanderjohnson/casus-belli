@@ -1,0 +1,31 @@
+{
+  "_id": "1ZEOCBM5jnlrq8Ya",
+  "_key": "!items!1ZEOCBM5jnlrq8Ya",
+  "name": "Smoke Burst",
+  "type": "technique",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>As a secondary action, release a burst of smoke around you equal to that which is released by a Smoke Bomb.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "fire",
+    "cost": 1,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

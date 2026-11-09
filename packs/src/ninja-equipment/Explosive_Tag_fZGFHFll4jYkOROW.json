@@ -1,0 +1,20 @@
+{
+  "_id": "fZGFHFll4jYkOROW",
+  "_key": "!items!fZGFHFll4jYkOROW",
+  "name": "Explosive Tag",
+  "type": "item",
+  "img": "icons/sundries/documents/paper-plain-white.webp",
+  "system": {
+    "description": "<p>Pieces of paper engraved by a Miko. Useless on their own; however, with the Infuse Explosive Tag Ninjutsu they may be turned into a lethal weapon.</p>",
+    "quantity": 5,
+    "weight": 0,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

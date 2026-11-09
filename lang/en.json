@@ -1,0 +1,83 @@
+{
+  "CASUSBELLI": {
+    "Attribute": {
+      "Str": { "long": "Strength", "abbr": "STR" },
+      "Agi": { "long": "Agility", "abbr": "AGI" },
+      "End": { "long": "Endurance", "abbr": "END" },
+      "Wil": { "long": "Willpower", "abbr": "WIL" },
+      "Wit": { "long": "Wits", "abbr": "WIT" },
+      "Ins": { "long": "Insight", "abbr": "INS" }
+    },
+    "Skill": {
+      "Athletics": "Athletics",
+      "Unarmed": "Unarmed",
+      "Melee": "Melee",
+      "Ranged": "Ranged",
+      "Stealth": "Stealth",
+      "Survival": "Survival",
+      "Riding": "Riding",
+      "Persuasion": "Persuasion",
+      "Intimidation": "Intimidation",
+      "Subterfuge": "Subterfuge",
+      "Performance": "Performance",
+      "Etiquette": "Etiquette",
+      "Awareness": "Awareness",
+      "Empathy": "Empathy",
+      "Leadership": "Leadership",
+      "Tactics": "Tactics",
+      "Scholarship": "Scholarship",
+      "Stewardship": "Stewardship",
+      "Crafting": "Crafting",
+      "Medicine": "Medicine"
+    },
+    "SheetLabels": {
+      "Actor": "CasusBelli Actor Sheet",
+      "Item": "CasusBelli Item Sheet"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      },
+      "Boon": {
+        "Type": "Type",
+        "Cost": "Cost",
+        "Boon": "Boon",
+        "Bane": "Bane",
+        "Boons": "Boons",
+        "Banes": "Banes"
+      }
+    },
+    "Armor": {
+      "AVB": "Blunt Armor (AVB)",
+      "AVP": "Piercing Armor (AVP)",
+      "AVS": "Slashing Armor (AVS)",
+      "Location": "Location Worn"
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    }
+  },
+
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell",
+      "boon": "Boon",
+      "wound": "Wound",
+      "armor": "Armor",
+      "gadget": "Gadget",
+      "technique": "Technique",
+      "bloodline": "Bloodline"
+    }
+  }
+}

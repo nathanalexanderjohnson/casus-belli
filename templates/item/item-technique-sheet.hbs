@@ -1,0 +1,77 @@
+<form class='{{cssClass}} casus-belli-technique-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Category</label>
+        <select name='system.category'>{{selectOptions techniqueOptions.categories selected=system.category}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Rank</label>
+        <select name='system.rank'>{{selectOptions techniqueOptions.ranks selected=system.rank}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Element</label>
+        <select name='system.element'>{{selectOptions techniqueOptions.elements selected=system.element}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Chakra Cost</label>
+        <input name='system.cost' type='number' value='{{system.cost}}' min='0'/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Roll</label>
+        <select name='system.roll'>{{selectOptions techniqueOptions.rolls selected=system.roll}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Frequency</label>
+        <select name='system.frequency'>{{selectOptions techniqueOptions.frequencies selected=system.frequency}}</select>
+      </div>
+    </div>
+
+    {{#if (eq system.category 'bloodline')}}
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Bloodline</label>
+        <select name='system.bloodline'>{{selectOptions techniqueOptions.bloodlines selected=system.bloodline}}</select>
+      </div>
+      {{#if techniqueOptions.variants}}
+      <div class='technique-stat'>
+        <label class='resource-label'>Variant</label>
+        <select name='system.variant'>{{selectOptions techniqueOptions.variants selected=system.variant}}</select>
+      </div>
+      {{/if}}
+      <div class='technique-stat'>
+        <label class='resource-label' title='Tomoe, Gates open, or Seals opened needed to use this technique'>Required Stage</label>
+        <input name='system.requiredStage' type='number' value='{{system.requiredStage}}' min='0'/>
+      </div>
+    </div>
+    {{/if}}
+
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Min. Arcane Might</label>
+        <input name='system.minArcaneMight' type='number' value='{{system.minArcaneMight}}' min='0'/>
+      </div>
+      <div class='technique-stat technique-stat-wide'>
+        <label class='resource-label'>Prerequisite</label>
+        <input name='system.prerequisite' type='text' value='{{system.prerequisite}}' placeholder='e.g. Transformation'/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Learned</label>
+        <input name='system.learned' type='checkbox' {{#if system.learned}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Progress</label>
+        <input name='system.progress' type='number' value='{{system.progress}}' min='0'/>
+      </div>
+    </div>
+
+    {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+  </section>
+</form>

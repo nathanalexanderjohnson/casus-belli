@@ -1,0 +1,31 @@
+{
+  "_id": "eEHbW99UNekEVOKW",
+  "_key": "!items!eEHbW99UNekEVOKW",
+  "name": "Lightning Strike",
+  "type": "technique",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>As an action you can fire a bolt of lightning towards a target within 20 yards. On a successful hit deal 3 + Arcane Might electric damage.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "lightning",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

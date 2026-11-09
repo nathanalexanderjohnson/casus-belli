@@ -1,0 +1,31 @@
+{
+  "_id": "t87Lo5tlGsmwJmOt",
+  "_key": "!items!t87Lo5tlGsmwJmOt",
+  "name": "Shuriken Manipulation",
+  "type": "technique",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>As a secondary action you may attach Chakra strings to a Shuriken, allowing you to change its trajectory or throw it from a distance by pulling on the string. While you are unlikely to surprise a skilled opponent by changing the direction of a Shuriken you had just thrown, you could use these strings to attack an enemy from an unexpected angle. These strings may be maintained for up to an hour.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 1,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

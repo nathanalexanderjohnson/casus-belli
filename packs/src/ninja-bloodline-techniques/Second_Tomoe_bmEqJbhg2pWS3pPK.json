@@ -1,0 +1,31 @@
+{
+  "_id": "bmEqJbhg2pWS3pPK",
+  "_key": "!items!bmEqJbhg2pWS3pPK",
+  "name": "Second Tomoe",
+  "type": "technique",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>You see through and automatically resist any effect caused by an illusion of Arcane Might equal or less than yours. So long as you are able to hold extended eye contact with a target (generally impossible in a fight) you may gain the benefits of Chakra Surge on any Genjutsu you attempt on the target without spending Chakra.</p><p>You briefly glimpse the immediate future, allowing you to ignore penalties from the Surprised condition, and may act as normal even while ambushed so long as you have the Sharingan manifested.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "sharingan",
+    "variant": "",
+    "requiredStage": 2,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

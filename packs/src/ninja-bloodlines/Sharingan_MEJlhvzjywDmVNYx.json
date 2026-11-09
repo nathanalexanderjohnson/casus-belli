@@ -1,0 +1,24 @@
+{
+  "_id": "MEJlhvzjywDmVNYx",
+  "_key": "!items!MEJlhvzjywDmVNYx",
+  "name": "Sharingan",
+  "type": "bloodline",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>When you choose to manifest the Sharingan your eyes bleed red with tomoe swirling within. As you gain proficiency, further tomoe manifest in your eyes, up to a third and final tomoe.</p><p>Track your tomoe on the Ninja tab; each tomoe unlocks its technique.</p><p><em>Techniques: First Tomoe, Second Tomoe, Third Tomoe.</em></p>",
+    "bloodline": "sharingan",
+    "variant": "",
+    "active": false,
+    "stage": 1,
+    "gatesSpent": false,
+    "drewChakra": false,
+    "flaws": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

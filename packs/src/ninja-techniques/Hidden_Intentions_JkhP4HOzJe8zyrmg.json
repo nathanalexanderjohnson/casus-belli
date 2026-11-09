@@ -1,0 +1,31 @@
+{
+  "_id": "JkhP4HOzJe8zyrmg",
+  "_key": "!items!JkhP4HOzJe8zyrmg",
+  "name": "Hidden Intentions",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>Cloak yourself in a basic Genjutsu, making it harder for others to read your expression or intentions. Subtract dice equal to your Arcane Might from any Empathy roll made to read your intentions or tell if you are lying. Targets who are familiar with this Genjutsu or Touched by Fate may make a Wits + Awareness roll against your Genjutsu roll to resist this effect.</p>",
+    "category": "genjutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 1,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

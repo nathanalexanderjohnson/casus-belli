@@ -1,0 +1,31 @@
+{
+  "_id": "vW0gbz7NKyN8i10f",
+  "_key": "!items!vW0gbz7NKyN8i10f",
+  "name": "Leaf Gale",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>When performing a Kick you force the target to attempt to resist or be knocked prone, regardless of your margin of success. Increase your kick damage to 2b regardless of if you are wearing metal boots or not.</p>",
+    "category": "taijutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

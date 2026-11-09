@@ -1,0 +1,31 @@
+{
+  "_id": "5yKuIxigGtHepA3Y",
+  "_key": "!items!5yKuIxigGtHepA3Y",
+  "name": "Advanced Transformation",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, allows the user to take on the appearance of anyone they desire for up to a day. Observant characters or those Touched by Fate may make a Wits + Awareness roll against your Genjutsu skill roll to see through this illusion. While users may appear to be of vastly different sizes or builds than their natural size, the illusion only applies to sight and if touched the user will be discovered to be of their normal size and shape.</p>",
+    "category": "genjutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 1,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "Transformation",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

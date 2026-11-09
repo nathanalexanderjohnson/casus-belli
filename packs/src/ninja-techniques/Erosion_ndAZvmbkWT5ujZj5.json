@@ -1,0 +1,31 @@
+{
+  "_id": "ndAZvmbkWT5ujZj5",
+  "_key": "!items!ndAZvmbkWT5ujZj5",
+  "name": "Erosion",
+  "type": "technique",
+  "img": "icons/svg/waterfall.svg",
+  "system": {
+    "description": "<p>As a secondary action, make a Ninjutsu attack roll against a target within 10 yards. On a successful strike the target becomes Vulnerable 3 against blunt damage.</p>",
+    "category": "ninjutsu",
+    "rank": "B",
+    "element": "water",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

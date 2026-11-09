@@ -1,0 +1,31 @@
+{
+  "_id": "uLrHpXsOZ292rcUB",
+  "_key": "!items!uLrHpXsOZ292rcUB",
+  "name": "Torrential Wave",
+  "type": "technique",
+  "img": "icons/svg/waterfall.svg",
+  "system": {
+    "description": "<p>Send a huge wave of water with a width of five yards + Arcane Might; it continues forward up to thirty yards. All creatures caught in the wave must make a basic Strength + Endurance roll; on a failure the target is swept up in the wave, moved towards its final destination, and knocked prone. Deals 6 + Arcane Might blunt damage to the first rank of people it strikes, and 3 + Arcane Might to all creatures struck afterwards.</p>",
+    "category": "ninjutsu",
+    "rank": "A",
+    "element": "water",
+    "cost": 4,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

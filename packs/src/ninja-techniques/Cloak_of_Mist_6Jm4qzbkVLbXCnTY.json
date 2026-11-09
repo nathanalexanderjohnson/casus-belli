@@ -1,0 +1,31 @@
+{
+  "_id": "6Jm4qzbkVLbXCnTY",
+  "_key": "!items!6Jm4qzbkVLbXCnTY",
+  "name": "Cloak of Mist",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, the user may channel Chakra into a cloak or other object for up to a day which they may drape around them, causing them to appear less distinct or noticeable; add the benefits of Chakra Surge to stealth rolls. However, as this focuses Chakra into the cloak or clothing, you automatically fail stealth rolls against anyone capable of seeing Chakra with this ability active, as you light up like a beacon to them.</p>",
+    "category": "genjutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 2,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

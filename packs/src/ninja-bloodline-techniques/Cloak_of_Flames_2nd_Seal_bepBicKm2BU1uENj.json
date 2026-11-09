@@ -1,0 +1,31 @@
+{
+  "_id": "bepBicKm2BU1uENj",
+  "_key": "!items!bepBicKm2BU1uENj",
+  "name": "Cloak of Flames (2nd Seal)",
+  "type": "technique",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Gain natural armor equal to 1 + Arcane Might which stacks with armor granted from Chakra Surge. Whenever your Chakra Surge grants you extra armor while this ability is active, the armor granted through Chakra Surge lasts till the start of your next turn.</p><p>You may roll Ninjutsu to defend against magical effects rather than the usual roll they call for. This cloak that coats your skin is not normally visible; however when it is struck it lights up with energy and becomes apparent to all observers.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "jinchuriki",
+    "variant": "devouringFlame",
+    "requiredStage": 2,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

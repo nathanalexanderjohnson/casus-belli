@@ -1,0 +1,31 @@
+{
+  "_id": "gw3Xpv5xYid33GkC",
+  "_key": "!items!gw3Xpv5xYid33GkC",
+  "name": "Basic Illusion",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, create a basic illusion that lasts for ten minutes. Observant characters or those Touched by Fate may make a Wits + Awareness roll against your Genjutsu roll to see through this illusion. This illusion may be around medium size and may move, make noise, or appear to perform actions, but ultimately is intangible. You may pay the cost of this technique again to extend its duration.</p>",
+    "category": "genjutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 1,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

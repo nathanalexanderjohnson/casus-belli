@@ -1,0 +1,31 @@
+{
+  "_id": "zB5eGN6K8Yz0Y05V",
+  "_key": "!items!zB5eGN6K8Yz0Y05V",
+  "name": "Like Wind",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>You may move through squares that other creatures inhabit so long as you don't end your movement within them. Increase your movement speed by half your Arcane Might.</p>",
+    "category": "taijutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

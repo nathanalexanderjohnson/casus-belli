@@ -1,0 +1,31 @@
+{
+  "_id": "AeQmxWJdVYjORJbq",
+  "_key": "!items!AeQmxWJdVYjORJbq",
+  "name": "Hakkesho Kaiten",
+  "type": "technique",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>As a defensive reaction upon being attacked with a physical attack or magical attack with a projectile, at the cost of two Chakra you may release a spherical swirl of Chakra in a near 360 degree field around yourself, only absent in your blindspot. Make a Ninjutsu roll as your defense as if you were performing the Block maneuver. Gain the benefits of Chakra Surge if you are defending against a ranged attack. If the ranged attack is not magical you automatically succeed on the Block without needing to roll.</p><p>Once this ability is used you may use it again to defend against an unlimited number of attacks without needing to pay the Chakra cost again until the start of your next turn.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "byakugan",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

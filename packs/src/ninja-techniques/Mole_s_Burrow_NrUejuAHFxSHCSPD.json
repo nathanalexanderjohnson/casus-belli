@@ -1,0 +1,31 @@
+{
+  "_id": "NrUejuAHFxSHCSPD",
+  "_key": "!items!NrUejuAHFxSHCSPD",
+  "name": "Mole's Burrow",
+  "type": "technique",
+  "img": "icons/svg/stoned.svg",
+  "system": {
+    "description": "<p>While you maintain this ability you may spend an action to dig yourself a number of yards equal to your Arcane Might into the ground. You may remain hidden within a burrow dug by yourself and either continually move by digging further in, or burst out of the ground to ambush a target.</p><p>This ability lasts for a minute, but you may remain in your burrow even without this ability active. Because of the time taken to burrow it isn't practical to do so while being attacked.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "earth",
+    "cost": 1,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

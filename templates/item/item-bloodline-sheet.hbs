@@ -1,0 +1,49 @@
+<form class='{{cssClass}} casus-belli-bloodline-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Bloodline</label>
+        <select name='system.bloodline'>{{selectOptions bloodlineOptions.bloodlines selected=system.bloodline}}</select>
+      </div>
+      {{#if bloodlineOptions.variants}}
+      <div class='technique-stat'>
+        <label class='resource-label'>Variant</label>
+        <select name='system.variant'>{{selectOptions bloodlineOptions.variants selected=system.variant}}</select>
+      </div>
+      {{/if}}
+      {{#if bloodlineOptions.canManifest}}
+      <div class='technique-stat'>
+        <label class='resource-label'>Manifested</label>
+        <input name='system.active' type='checkbox' {{#if system.active}}checked{{/if}}/>
+      </div>
+      {{/if}}
+      {{#if bloodlineOptions.stageLabel}}
+      <div class='technique-stat'>
+        <label class='resource-label'>{{bloodlineOptions.stageLabel}}</label>
+        <input name='system.stage' type='number' value='{{system.stage}}' min='{{bloodlineOptions.minStage}}' max='{{bloodlineOptions.maxStage}}'/>
+      </div>
+      {{/if}}
+    </div>
+
+    {{#if bloodlineOptions.flaws}}
+    <div class='bloodline-flaws'>
+      <label class='resource-label'>Flaws (choose at least one)</label>
+      {{#each bloodlineOptions.flaws as |flaw|}}
+        <label class='bloodline-flaw' title='{{flaw.description}}'>
+          <input type='checkbox' class='bloodline-flaw-toggle' data-flaw='{{flaw.key}}' {{#if flaw.checked}}checked{{/if}}/>
+          {{flaw.label}}
+        </label>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+  </section>
+</form>

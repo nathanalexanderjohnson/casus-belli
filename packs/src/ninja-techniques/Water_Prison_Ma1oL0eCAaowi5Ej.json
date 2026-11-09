@@ -1,0 +1,31 @@
+{
+  "_id": "Ma1oL0eCAaowi5Ej",
+  "_key": "!items!Ma1oL0eCAaowi5Ej",
+  "name": "Water Prison",
+  "type": "technique",
+  "img": "icons/svg/waterfall.svg",
+  "system": {
+    "description": "<p>As an action you may attempt to trap a target you are touching in a prison of water. The target must make an Agility + Wits test against your Ninjutsu roll or become trapped within the prison. While the target is in the prison you may elect to have them fully restrained and unable to take actions that require physical movement (including forming hand signs).</p><p>The water prison has ten hitpoints and an armor value of six against all damage types. This armor value is doubled against physical damage or fire. You may freely enter or leave the prison and allow creatures or objects to pass through as you wish. The prison lasts so long as you remain in contact with it or till you rest.</p><p>You may form this prison around yourself or a willing creature as a defense without requiring a roll.</p>",
+    "category": "ninjutsu",
+    "rank": "B",
+    "element": "water",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

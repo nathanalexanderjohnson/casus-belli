@@ -1,0 +1,24 @@
+{
+  "_id": "HvZa902p5asdPLu6",
+  "_key": "!items!HvZa902p5asdPLu6",
+  "name": "Eight Gates",
+  "type": "bloodline",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Users of the Eight Gates have eight additional Chakra pathways that may be forcibly opened to allow the user to gain a burst of power well beyond their natural limits. However this technique puts significant strain on the user and leaves its user exhausted and vulnerable after being performed, with a specific price tied to each level of gate that is opened. At the greatest level it may even cost its wielder their life as their Chakra is forcibly used up to perform the technique.</p><p>Each Gate may only be opened once per rest (unless stated otherwise) and they must be opened sequentially; however as they do not require an action to open you may, for example, open as many as you wish in a single turn. A Gate may not remain open past a single Scene.</p><p>Open and close the Gates from the Ninja tab. Closing them applies their aftermath automatically.</p><p><em>Gates: Opening, Healing, Life, Pain, Limit.</em></p>",
+    "bloodline": "eightGates",
+    "variant": "",
+    "active": false,
+    "stage": 0,
+    "gatesSpent": false,
+    "drewChakra": false,
+    "flaws": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

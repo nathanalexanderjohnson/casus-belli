@@ -1,0 +1,31 @@
+{
+  "_id": "DwKDByQXgQYMolCV",
+  "_key": "!items!DwKDByQXgQYMolCV",
+  "name": "Agile Strikes",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>You may use Agility rather than Strength when determining the damage modifier of melee attacks, so long as you use Agility for the attack roll.</p>",
+    "category": "taijutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

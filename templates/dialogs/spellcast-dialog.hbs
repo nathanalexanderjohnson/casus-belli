@@ -1,0 +1,84 @@
+<form class="spellcast-form" autocomplete="off">
+  {{#if (equals page "potency")}}
+  <div class="spellcast-page">
+    <h2>Potency</h2>
+    <div class="form-group">
+      <label>Select Circle</label>
+      <select name="potency">
+        {{#each potencyOptions}}
+        <option value="{{this.value}}" {{#if this.checked}}selected{{/if}}>{{this.label}} (Complexity: {{this.complexity}})</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="dialog-nav">
+      <button type="button" class="next-page" data-page="connection">Next</button>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if (equals page "connection")}}
+  <div class="spellcast-page">
+    <h2>Connection</h2>
+    <div class="form-group connection-group">
+      {{#each connectionOptions}}
+      <label class="checkbox-label">
+        <input type="checkbox" name="connection" value="{{this.value}}" {{#if this.checked}}checked{{/if}} />
+        {{this.label}} (Complexity: {{this.complexity}})
+      </label>
+      {{/each}}
+    </div>
+    <div class="dialog-nav">
+      <button type="button" class="prev-page" data-page="potency">Back</button>
+      <button type="button" class="next-page" data-page="range">Next</button>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if (equals page "range")}}
+  <div class="spellcast-page">
+    <h2>Range</h2>
+    <div class="form-group">
+      <label>Select Range</label>
+      <select name="range">
+        {{#each rangeOptions}}
+        <option value="{{this.value}}" {{#if this.checked}}selected{{/if}}>{{this.label}} (Complexity: {{this.complexity}})</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="dialog-nav">
+      <button type="button" class="prev-page" data-page="connection">Back</button>
+      <button type="button" class="next-page" data-page="summary">Next</button>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if (equals page "summary")}}
+  <div class="spellcast-page">
+    <h2>Summary</h2>
+    <div class="summary-details">
+      <p><strong>Core:</strong> {{coreName}}</p>
+      <p><strong>Potency:</strong> {{potency.label}} (Complexity: {{potency.complexity}})</p>
+      <p><strong>Connection:</strong> {{connectionLabel}} (Complexity: {{connectionComplexity}})</p>
+      <p><strong>Range:</strong> {{range.label}} (Complexity: {{range.complexity}})</p>
+      <p class="total-complexity"><strong>Total Complexity:</strong> {{totalComplexity}}</p>
+      <p><strong>Dice Pool:</strong> {{will}} (WIL) + {{arcaneMight}} (Arcane Might) = {{dicePool}} dice</p>
+    </div>
+
+    <h3>Scourge</h3>
+    <div class="form-group scourge-group">
+      {{#each scourgeOptions}}
+      <label class="checkbox-label">
+        <input type="checkbox" name="scourgeOption" value="{{this.value}}" {{#if this.checked}}checked{{/if}} {{#if this.disabled}}disabled{{/if}} />
+        <strong>{{this.label}}</strong> — {{this.description}}
+      </label>
+      {{/each}}
+    </div>
+
+    <div class="dialog-nav summary-buttons">
+      <button type="button" class="prev-page" data-page="range">Back</button>
+      <button type="button" class="cancel-button">Cancel</button>
+      <button type="button" class="cast-button">Cast</button>
+    </div>
+  </div>
+  {{/if}}
+</form>

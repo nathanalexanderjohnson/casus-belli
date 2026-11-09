@@ -1,0 +1,31 @@
+{
+  "_id": "64LnBW0vsshL8M8W",
+  "_key": "!items!64LnBW0vsshL8M8W",
+  "name": "Chidori",
+  "type": "technique",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Dart forward as if you had taken a dash action towards a target of your choice and perform a punch against the target. When performing this attack you may close the Combat Length to a distance of your choice. Deal 7 + Arcane Might electric damage on a successful strike. After performing this attack, you cannot perform any defensive maneuvers until the start of your next turn unless you possess an active Sharingan.</p>",
+    "category": "ninjutsu",
+    "rank": "A",
+    "element": "lightning",
+    "cost": 4,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

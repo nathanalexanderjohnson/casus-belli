@@ -1,0 +1,31 @@
+{
+  "_id": "WZJi7fmHzB8YZ50s",
+  "_key": "!items!WZJi7fmHzB8YZ50s",
+  "name": "Demon's Face",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action you may force all creatures who can see you to suffer the effects of Demonic Illusion, requiring a contested roll as normal to resist it.</p>",
+    "category": "genjutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 4,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 4,
+    "prerequisite": "Demonic Illusion",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

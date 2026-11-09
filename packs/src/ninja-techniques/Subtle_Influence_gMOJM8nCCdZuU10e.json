@@ -1,0 +1,31 @@
+{
+  "_id": "gMOJM8nCCdZuU10e",
+  "_key": "!items!gMOJM8nCCdZuU10e",
+  "name": "Subtle Influence",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>This ability must be performed with another Genjutsu technique, along with paying for the cost of that technique. The target makes their save against that technique when you perform this ability, but the effect does not occur till you choose to trigger this technique at a later time. Once you choose to trigger this ability as an instant action, the target suffers the effect of the Genjutsu you performed on them with the same level of success they rolled previously.</p><p>If the target fails its save against the Genjutsu they are not aware you performed a technique on them; however, should they succeed their save and be knowledgeable about Genjutsu or the arcane, they will know you attempted to use your power on them. This technique may be discovered by other Genjutsu users of equal or greater Arcane Might if they inspect the target, or by those who can see Chakra.</p>",
+    "category": "genjutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 1,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

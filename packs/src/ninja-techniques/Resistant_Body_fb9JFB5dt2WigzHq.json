@@ -1,0 +1,31 @@
+{
+  "_id": "fb9JFB5dt2WigzHq",
+  "_key": "!items!fb9JFB5dt2WigzHq",
+  "name": "Resistant Body",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>Do not increase the Difficulty of your Unarmed Defense by one against weapon attacks. You do not suffer a zero success blow when successfully defending against a weapon with Unarmed Defense, nor do you suffer a strike when an unarmed attack of yours is successfully parried.</p>",
+    "category": "taijutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

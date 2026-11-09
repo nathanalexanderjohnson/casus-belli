@@ -1,0 +1,31 @@
+{
+  "_id": "4GEl6Ef9dQBBLeBd",
+  "_key": "!items!4GEl6Ef9dQBBLeBd",
+  "name": "Fortified Mind",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>Whenever making a roll to resist a magical effect that includes a mental attribute, you may make a Genjutsu roll instead of the normal roll. Suffer half stress whenever taking stress damage from a supernatural ability.</p>",
+    "category": "genjutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 0,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

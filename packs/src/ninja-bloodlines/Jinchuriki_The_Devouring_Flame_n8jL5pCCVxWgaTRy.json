@@ -1,0 +1,24 @@
+{
+  "_id": "n8jL5pCCVxWgaTRy",
+  "_key": "!items!n8jL5pCCVxWgaTRy",
+  "name": "Jinchuriki: The Devouring Flame",
+  "type": "bloodline",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>A Jinchuriki is an individual who has a monstrous creature sealed within their body, serving as its living prison and the vessel for its immense power. Within you is sealed the Emperor of the Hinatori: the Devouring Flame.</p><p><strong>Endless Chakra.</strong> Gain the ability to draw a near endless amount of Chakra from the monster sealed within you. However doing so puts an incredible drain on your body and mind, inflicting one Stress per two points of Chakra used, and at the end of a scene where any Chakra was drawn in this manner, suffer a Critical internal injury. When spending this power on Techniques, it may twist the technique based on the nature of the creature.</p><p>When you Chakra Surge you may recklessly spend Chakra to add an extra die to your Chakra Surge at the cost of two Chakra; you may at most double the dice count normally added by Chakra Surge by using this ability. You may use this bonus to increase the armor granted by Chakra Surge in a similar manner, or to increase your speed.</p><p>However this endless source of Chakra overpowers and stunts your natural Chakra channels. Subtract ten from your maximum Chakra (which may result in you having zero Chakra).</p><p><strong>The Devouring Flame.</strong> All Chakra you use when drawing from the Devouring Flame has the nature of fire and may twist techniques to match its nature. It cannot be used for water based Jutsu, and increases the base damage of fire Jutsu by three.</p><p>Flames created by this Chakra devour the very souls of creatures they touch, and are capable of damaging creatures that are normally immune to fire. When doing so count its armor as five greater against your fire damage. Do not add this extra armor against Hinatori, as the Devouring Flame can entirely bypass their immunity.</p><p><strong>Flaws.</strong> Choose at least one flaw on the Ninja tab. The creature within you may inflict more if you use its power beyond your ability to handle, and may remove them temporarily or permanently as it wishes.</p>",
+    "bloodline": "jinchuriki",
+    "variant": "devouringFlame",
+    "active": false,
+    "stage": 0,
+    "gatesSpent": false,
+    "drewChakra": false,
+    "flaws": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "zQsqaZEh4MBcm8vs",
+  "_key": "!items!zQsqaZEh4MBcm8vs",
+  "name": "Illusion of War",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action you may choose a target within ten yards and make a contested Genjutsu roll against your opponent's Will. Should you succeed you trap them in an illusion and may cause them to view foes as allies and allies as foes. This technique is broken if anyone they perceive as allies attacks them. This effect lasts for a minute but may be maintained for longer by paying the cost of this ability again.</p><p>If the target is Stressed they automatically fail their save against this ability. Creatures of an Arcane Might greater than yours are immune to this technique.</p>",
+    "category": "genjutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 3,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

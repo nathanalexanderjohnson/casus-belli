@@ -1,0 +1,31 @@
+{
+  "_id": "fnVnggcGY7WROeBc",
+  "_key": "!items!fnVnggcGY7WROeBc",
+  "name": "Tailwinds",
+  "type": "technique",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>As an action, enhance yourself with the element of wind, allowing you to Chakra Surge to increase your movement speed without paying the normal Chakra cost. This effect lasts for ten minutes.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "wind",
+    "cost": 2,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

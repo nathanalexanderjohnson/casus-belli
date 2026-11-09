@@ -1,0 +1,256 @@
+{{#if (equals system.magicType "casus-belli")}}
+<div class="tab casus-belli" data-group="primary" data-tab="casus-belli">
+  <div class="casus-belli-content">
+
+    <div class="casus-belli-attributes flexrow">
+      <div class="thesis-field">
+        <label class="resource-label">Thesis</label>
+        <input type="text" name="system.thesis" value="{{system.thesis}}" placeholder="Thesis Name"/>
+      </div>
+      <div class="attribute tile">
+        <label class="resource-label rollable" data-roll-type="system-value" data-value-path="arithmeticSpark" data-label="Arithmetic Spark" data-default-second="ins">Arithmetic Spark</label>
+        <input type="number" name="system.arithmeticSpark" value="{{system.arithmeticSpark}}" min="0" max="10" data-dtype="Number"/>
+      </div>
+      <div class="attribute tile">
+        <label class="resource-label">Flux</label>
+        <div class="resource-content">
+          <input type="text" name="system.flux.value" value="{{system.flux.value}}" data-dtype="Number"/>
+          <span>/</span>
+          <input type="text" name="system.flux.max" value="{{system.flux.max}}" data-dtype="Number"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="breakthroughs-grid grid grid-3col">
+      <div class="breakthrough-col">
+        <h3 class="breakthrough-header">Kinetics</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Lvl</div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-breakthrough-create" title="Add Breakthrough" data-field="kinetics"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.breakthroughs.kinetics as |entry index|}}
+          <li class="item flexrow" data-index="{{entry.originalIndex}}" data-field="kinetics">
+            <div class="item-name">
+              <input type="text" name="system.breakthroughs.kinetics.{{entry.originalIndex}}.name" value="{{entry.name}}"/>
+            </div>
+            <div class="item-level">
+              <input type="number" name="system.breakthroughs.kinetics.{{entry.originalIndex}}.level" value="{{entry.level}}" data-dtype="Number"/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-breakthrough-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="breakthrough-col">
+        <h3 class="breakthrough-header">Matrices</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Lvl</div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-breakthrough-create" title="Add Breakthrough" data-field="matrices"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.breakthroughs.matrices as |entry index|}}
+          <li class="item flexrow" data-index="{{entry.originalIndex}}" data-field="matrices">
+            <div class="item-name">
+              <input type="text" name="system.breakthroughs.matrices.{{entry.originalIndex}}.name" value="{{entry.name}}"/>
+            </div>
+            <div class="item-level">
+              <input type="number" name="system.breakthroughs.matrices.{{entry.originalIndex}}.level" value="{{entry.level}}" data-dtype="Number"/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-breakthrough-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="breakthrough-col">
+        <h3 class="breakthrough-header">Thermalworks</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Lvl</div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-breakthrough-create" title="Add Breakthrough" data-field="thermalworks"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.breakthroughs.thermalworks as |entry index|}}
+          <li class="item flexrow" data-index="{{entry.originalIndex}}" data-field="thermalworks">
+            <div class="item-name">
+              <input type="text" name="system.breakthroughs.thermalworks.{{entry.originalIndex}}.name" value="{{entry.name}}"/>
+            </div>
+            <div class="item-level">
+              <input type="number" name="system.breakthroughs.thermalworks.{{entry.originalIndex}}.level" value="{{entry.level}}" data-dtype="Number"/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-breakthrough-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+    <div class="expertise-grid grid grid-3col">
+      <div class="expertise-col">
+        <h3 class="expertise-header">Kinetics Expertise</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Lvl</div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-expertise-create" title="Add Expertise" data-field="kinetics"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.expertise.kinetics as |entry index|}}
+          <li class="item flexrow" data-index="{{entry.originalIndex}}" data-field="kinetics">
+            <div class="item-name">
+              <input type="text" name="system.expertise.kinetics.{{entry.originalIndex}}.name" value="{{entry.name}}"/>
+            </div>
+            <div class="item-level">
+              <input type="number" name="system.expertise.kinetics.{{entry.originalIndex}}.level" value="{{entry.level}}" data-dtype="Number"/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-expertise-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="expertise-col">
+        <h3 class="expertise-header">Matrices Expertise</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Lvl</div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-expertise-create" title="Add Expertise" data-field="matrices"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.expertise.matrices as |entry index|}}
+          <li class="item flexrow" data-index="{{entry.originalIndex}}" data-field="matrices">
+            <div class="item-name">
+              <input type="text" name="system.expertise.matrices.{{entry.originalIndex}}.name" value="{{entry.name}}"/>
+            </div>
+            <div class="item-level">
+              <input type="number" name="system.expertise.matrices.{{entry.originalIndex}}.level" value="{{entry.level}}" data-dtype="Number"/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-expertise-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="expertise-col">
+        <h3 class="expertise-header">Thermalworks Expertise</h3>
+        <ol class="items-list">
+          <li class="item flexrow items-header">
+            <div class="item-name">Name</div>
+            <div class="item-level">Lvl</div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-expertise-create" title="Add Expertise" data-field="thermalworks"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+          {{#each system.expertise.thermalworks as |entry index|}}
+          <li class="item flexrow" data-index="{{entry.originalIndex}}" data-field="thermalworks">
+            <div class="item-name">
+              <input type="text" name="system.expertise.thermalworks.{{entry.originalIndex}}.name" value="{{entry.name}}"/>
+            </div>
+            <div class="item-level">
+              <input type="number" name="system.expertise.thermalworks.{{entry.originalIndex}}.level" value="{{entry.level}}" data-dtype="Number"/>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-expertise-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+    <div class="gadgets-section">
+      <h3 class="gadgets-header">Gadgets</h3>
+      <div class="gadget-total">
+        <label class="resource-label">Equipped Complexity</label>
+        <span class="complexity-total">{{totalEquippedGadgetComplexity}}</span>
+      </div>
+      <ol class="items-list">
+        <li class="item flexrow items-header">
+          <div class="item-name">Name</div>
+          <div class="item-blueprint">Blueprint</div>
+          <div class="item-total-complexity">Total</div>
+          <div class="item-weight item-prop">Wt</div>
+          <div class="gadget-equipped" title="Equipped">E</div>
+          <div class="item-controls">
+            <a class="item-control casus-belli-gadget-create" title="Add Gadget"><i class="fas fa-plus"></i></a>
+          </div>
+        </li>
+        {{#each gadgets as |item id|}}
+        <li class="item gadget-item {{#if item.expanded}}expanded{{/if}}" data-item-id="{{item._id}}">
+          <div class="gadget-summary flexrow">
+            <div class="item-name gadget-toggle" title="Toggle Augments">
+              <div class="item-image">
+                <a class="rollable" data-roll-type="item">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                </a>
+              </div>
+              <h4>{{item.name}}</h4>
+              <i class="fas fa-chevron-down gadget-chevron"></i>
+            </div>
+            <div class="item-blueprint">
+              {{item.system.baseBlueprint}}
+            </div>
+            <div class="item-total-complexity">
+              <span class="complexity-total">{{item.system.totalComplexity}}</span>
+            </div>
+            <div class="item-weight item-prop">{{item.system.weight}}</div>
+            <div class="gadget-equipped">
+              <a class="gadget-toggle-equipped" title="Toggle Equipped">
+                <i class="fas fa-shield-alt" style="{{#unless item.system.equipped}}opacity: 0.2;{{/unless}}"></i>
+              </a>
+            </div>
+            <div class="item-controls">
+              <a class="item-control casus-belli-gadget-edit" title="Edit"><i class="fas fa-edit"></i></a>
+              <a class="item-control casus-belli-gadget-delete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </div>
+          {{#if item.system.augments.length}}
+          <div class="gadget-details">
+            <ul class="gadget-augments">
+              {{#each item.system.augments as |augment index|}}
+              <li class="augment-entry {{#if augment.enabled}}enabled{{/if}}">
+                <a class="augment-toggle" data-augment-index="{{index}}" title="Toggle Augment">
+                  <i class="fas fa-toggle-{{#if augment.enabled}}on{{else}}off{{/if}}"></i>
+                </a>
+                <span class="augment-name">{{#if augment.enabled}}<b>{{augment.name}}</b>{{else}}{{augment.name}}{{/if}}</span>
+                {{#if augment.enabled}}
+                  <span class="augment-cost">+{{augment.complexity}}</span>
+                {{else}}
+                  <span class="augment-cost">-0</span>
+                {{/if}}
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+
+  </div>
+</div>
+{{/if}}

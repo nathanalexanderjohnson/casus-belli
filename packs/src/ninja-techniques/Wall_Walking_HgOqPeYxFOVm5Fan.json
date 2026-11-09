@@ -1,0 +1,31 @@
+{
+  "_id": "HgOqPeYxFOVm5Fan",
+  "_key": "!items!HgOqPeYxFOVm5Fan",
+  "name": "Wall Walking",
+  "type": "technique",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>As an Instant action you may infuse Chakra into your feet, freely allowing you to move and cling onto flat surfaces.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

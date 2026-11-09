@@ -1,0 +1,52 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{system.title}}" />
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="system.title" type="text" value="{{system.title}}" readonly />
+      </h1>
+      <div class="wound-grid grid grid-2col">
+        <div class="form-group">
+          <label for="system.severity">Severity</label>
+          <select name="system.severity">
+            <option value="minor" {{#if (equals system.severity "minor")}}selected{{/if}}>Minor</option>
+            <option value="major" {{#if (equals system.severity "major")}}selected{{/if}}>Major</option>
+            <option value="critical" {{#if (equals system.severity "critical")}}selected{{/if}}>Critical</option>
+            <option value="lethal" {{#if (equals system.severity "lethal")}}selected{{/if}}>Lethal</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="system.bodyLocation">Body Location</label>
+          <select name="system.bodyLocation">
+            {{#each config.bodyLocations}}
+              <option value="{{this.label}}" {{#if (equals ../system.bodyLocation this.label)}}selected{{/if}}>{{this.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group form-group-inline">
+        <label><input type="checkbox" name="system.bleeding" {{#if system.bleeding}}checked{{/if}} /> Bleeding</label>
+        <label><input type="checkbox" name="system.treated" {{#if system.treated}}checked{{/if}} /> Treated</label>
+      </div>
+      <div class="form-group">
+        <label for="system.pain">Pain</label>
+        <input type="text" name="system.pain" value="{{system.pain}}" readonly />
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="effects">Effects</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/casus-belli/templates/item/parts/item-effects.hbs"}}
+    </div>
+  </section>
+</form>

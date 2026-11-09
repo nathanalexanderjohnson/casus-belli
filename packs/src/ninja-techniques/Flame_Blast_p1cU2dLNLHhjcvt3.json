@@ -1,0 +1,31 @@
+{
+  "_id": "p1cU2dLNLHhjcvt3",
+  "_key": "!items!p1cU2dLNLHhjcvt3",
+  "name": "Flame Blast",
+  "type": "technique",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>As an action you can fire a burst of flame towards a target within 10 yards. On a successful hit deal 6 + Arcane Might fire damage.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "fire",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

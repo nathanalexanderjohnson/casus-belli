@@ -1,0 +1,31 @@
+{
+  "_id": "V6cEuVQ8RfrPcyJa",
+  "_key": "!items!V6cEuVQ8RfrPcyJa",
+  "name": "Earthen Skin",
+  "type": "technique",
+  "img": "icons/svg/stoned.svg",
+  "system": {
+    "description": "<p>As a secondary action, gain armor against slashing, piercing, or blunt damage equal to 1 + Arcane Might. This armor stacks with armor granted through Chakra Surge and has the Hard trait, but acts as if it doesn't for purposes of abilities or gaining benefits that would not be available while wearing armor with the Hard trait. This effect lasts till the start of your next turn.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "earth",
+    "cost": 1,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

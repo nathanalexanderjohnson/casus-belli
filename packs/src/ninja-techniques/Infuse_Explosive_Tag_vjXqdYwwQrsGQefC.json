@@ -1,0 +1,31 @@
+{
+  "_id": "vjXqdYwwQrsGQefC",
+  "_key": "!items!vjXqdYwwQrsGQefC",
+  "name": "Infuse Explosive Tag",
+  "type": "technique",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>As an action, infuse your Chakra into an explosive tag that when detonated as an instant action forces a basic Agility + Strength roll to any character caught in its radius, dealing 3 + Arcane Might fire damage. The radius of the tag must be decided when you create it and may be a number of yards up to your Arcane Might. A target may only suffer damage from one explosive tag per turn, even if multiple are overlapped in the same area. However each additional tag as part of the same explosion may add one to the base damage, up to a maximum bonus of two.</p><p>The infused Chakra lasts for a day.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

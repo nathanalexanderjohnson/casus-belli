@@ -1,0 +1,20 @@
+{
+  "_id": "orEdKEIXWLALvPuU",
+  "_key": "!items!orEdKEIXWLALvPuU",
+  "name": "Smoke Bomb",
+  "type": "item",
+  "img": "icons/commodities/tech/smoke-bomb-purple.webp",
+  "system": {
+    "description": "<p>A bomb that may be detonated as an action. Creates an obscuring field over a five yard radius.</p>",
+    "quantity": 3,
+    "weight": 0,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

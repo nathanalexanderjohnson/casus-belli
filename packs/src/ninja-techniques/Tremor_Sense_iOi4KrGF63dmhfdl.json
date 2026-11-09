@@ -1,0 +1,31 @@
+{
+  "_id": "iOi4KrGF63dmhfdl",
+  "_key": "!items!iOi4KrGF63dmhfdl",
+  "name": "Tremor Sense",
+  "type": "technique",
+  "img": "icons/svg/stoned.svg",
+  "system": {
+    "description": "<p>As an action while touching the ground (must be dirt) with your bare skin you may become aware of the tremors within the earth. You are able to detect any movement that disturbs the earth within this ability's radius and the general direction in which the movement is, as well as roughly how far away it is.</p><p>You may use this ability over a radius equal to 100 yards × Arcane Might. This ability must be maintained by spending your action each turn or it ends. After you stop maintaining this technique, or after an hour, the ability ends.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "earth",
+    "cost": 1,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

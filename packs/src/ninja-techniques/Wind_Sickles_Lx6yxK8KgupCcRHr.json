@@ -1,0 +1,31 @@
+{
+  "_id": "Lx6yxK8KgupCcRHr",
+  "_key": "!items!Lx6yxK8KgupCcRHr",
+  "name": "Wind Sickles",
+  "type": "technique",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>As an action, perform a ranged attack with your Ninjutsu with a Range value of twenty against up to two targets within one yard of each other. On a successful hit deal 8 + Arcane Might slashing damage to both targets.</p>",
+    "category": "ninjutsu",
+    "rank": "B",
+    "element": "wind",
+    "cost": 2,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

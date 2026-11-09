@@ -1,0 +1,31 @@
+{
+  "_id": "Y8AdFMm1rI6xhDEY",
+  "_key": "!items!Y8AdFMm1rI6xhDEY",
+  "name": "Fake World",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>This ability must be performed over a minute while holding the target(s)'s attention. Once complete, attempt to cast the target(s) into a detailed illusion where you can freely shift their surroundings and experiences. Make a Genjutsu roll against a pure Will roll and on a success they are trapped within your illusion. Due to the delicacy of this technique it cannot be done during combat and is broken if they suffer pain. You may maintain this technique for up to an hour and extend its duration by paying the Chakra cost anew.</p><p>At Arcane Might I it may only be performed on a single person, at Arcane Might III you may target ten at once, at Arcane Might V you may trap a hundred people, and at Arcane Might VII you may trap a thousand at once. Characters who possess no Arcane Might, are not Touched by Fate, and have less than four Will automatically fail their save against this technique.</p><p>There is no range limitation on this technique so long as you are able to perceive all targets, all targets can see you, and you are able to hold their attention. Targets with an Arcane Might greater than yours are immune to this technique.</p>",
+    "category": "genjutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 3,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

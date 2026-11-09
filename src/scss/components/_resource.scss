@@ -1,0 +1,75 @@
+.resource-label {
+  font-weight: bold;
+}
+
+.attribute {
+  margin-bottom: 5px;
+  .attribute-mod {
+    flex: 0 0 24px;
+    text-align: center;
+  }
+}
+
+// Skill column — stretch to fill the full grid row height
+.skill-col-physical,
+.skill-col-social,
+.skill-col-professional {
+  display: flex;
+  flex-direction: column;
+}
+
+// Skill group container — same tile treatment as the attribute circle boxes
+.skill-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: $c-panel;
+  border: $border-groove;
+  border-radius: 6px;
+  padding: 6px 8px;
+
+  .skill-group-label {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 5px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba($c-secondary, 0.9);
+    flex-shrink: 0;
+  }
+}
+
+.skill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: $c-panel;
+  border: $border-groove;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin-bottom: 4px;
+
+  .resource-label {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+
+  input {
+    width: 44px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba($c-secondary, 0.9);
+    background: $c-background;
+    padding: 1px 2px;
+    border-radius: 3px;
+    height: 22px;
+  }
+}

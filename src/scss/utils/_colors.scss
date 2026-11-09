@@ -1,0 +1,19 @@
+$c-white: #fffaf3;
+$c-black: #1f1a16;
+
+// ─── CasusBelli Theme Palette ─────────────────────────────────────────
+$c-background: #efe2c4;    // Softer parchment
+$c-panel: #e4d4af;          // Muted paper panel
+$c-primary: #5d4138;        // Sable ink brown
+$c-highlight: #8d4e48;      // Dark red lacquer accent
+$c-text: #2b1f1a;           // Deep ink
+$c-secondary: #7b2b27;      // Dark red border tone
+$c-danger: #7b2b27;         // Matching dark red
+$c-success: #476d5d;        // Moss-green tea
+
+// Legacy aliases so existing component styles migrate automatically
+$c-dark: $c-text;
+$c-faint: rgba(123, 43, 39, 0.38);
+$c-beige: #9a4d47;
+$c-tan: #b06a62;
+$c-brass: $c-highlight;

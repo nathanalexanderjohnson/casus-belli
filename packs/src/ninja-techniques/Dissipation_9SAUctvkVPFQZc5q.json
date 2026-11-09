@@ -1,0 +1,31 @@
+{
+  "_id": "9SAUctvkVPFQZc5q",
+  "_key": "!items!9SAUctvkVPFQZc5q",
+  "name": "Dissipation",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As a secondary action while under the effect of Genjutsu or an illusion you may cycle your Chakra to attempt a Genjutsu roll against whatever ability was used to perform the illusion. On a success you break out of the illusion and end any associated debuffs. You may use this ability on others so long as you can touch them.</p>",
+    "category": "genjutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 1,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

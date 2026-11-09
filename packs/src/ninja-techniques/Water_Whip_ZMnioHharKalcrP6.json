@@ -1,0 +1,31 @@
+{
+  "_id": "ZMnioHharKalcrP6",
+  "_key": "!items!ZMnioHharKalcrP6",
+  "name": "Water Whip",
+  "type": "technique",
+  "img": "icons/svg/waterfall.svg",
+  "system": {
+    "description": "<p>As an action, infuse your Chakra into water, causing it to come to life as a tendril. When you first perform this ability and as an action each turn afterwards you may perform a Ninjutsu attack with the water against a target within five yards of both you and the water. Should you successfully land the attack you may either grab the target with the manipulated water or deal 3 + Arcane Might blunt damage. A target grabbed by this tendril may attempt to break free with a Strength + Agility roll against a fresh Ninjutsu roll. You may not reinforce the grapple with this tendril, but you may crush the target to deal 3 + Arcane Might blunt damage without requiring a roll. This ability lasts for a minute.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "water",
+    "cost": 1,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

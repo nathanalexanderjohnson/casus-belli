@@ -1,0 +1,31 @@
+{
+  "_id": "DXsOXGAyZvA5ZPzL",
+  "_key": "!items!DXsOXGAyZvA5ZPzL",
+  "name": "Flurry of Strikes",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>At the cost of two Stamina you may perform a Kick or Punch as a secondary action, or if your primary action was to perform a throwing attack you may perform another throwing attack with the same projectile type as the first.</p>",
+    "category": "taijutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

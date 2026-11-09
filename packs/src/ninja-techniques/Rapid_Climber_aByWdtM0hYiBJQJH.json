@@ -1,0 +1,31 @@
+{
+  "_id": "aByWdtM0hYiBJQJH",
+  "_key": "!items!aByWdtM0hYiBJQJH",
+  "name": "Rapid Climber",
+  "type": "technique",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>You may climb on most surfaces without requiring a roll and may move at a climb speed equal to your normal speed. With a successful roll you can climb nearly any surface, so long as there are some handholds and it isn't entirely a sheer wall.</p>",
+    "category": "taijutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 0,
+    "roll": "taijutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "37JD8Z7tErrOZRkC",
+  "_key": "!items!37JD8Z7tErrOZRkC",
+  "name": "Phoenix Fire",
+  "type": "technique",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>As an action, send a volley of fireballs with a number of projectiles equal to your Arcane Might. Each fireball may be sent at a target within twenty yards. Each fireball forces all targets within a one yard radius to make a basic Endurance + Agility roll contested against your Ninjutsu and deals 6 + Arcane Might fire damage. A target may only suffer damage from one fireball per casting of this technique, even if multiple are overlapped in the same area. However each additional fireball that strikes the same creature adds one to the base damage of the ability.</p>",
+    "category": "ninjutsu",
+    "rank": "A",
+    "element": "fire",
+    "cost": 4,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

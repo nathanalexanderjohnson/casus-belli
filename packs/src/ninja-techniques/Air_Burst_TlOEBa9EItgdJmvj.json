@@ -1,0 +1,31 @@
+{
+  "_id": "TlOEBa9EItgdJmvj",
+  "_key": "!items!TlOEBa9EItgdJmvj",
+  "name": "Air Burst",
+  "type": "technique",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>As an action you may release a burst of air against all targets. The target makes a Strength + Endurance roll against your Ninjutsu and on a failure is thrown back a number of yards up to your Arcane Might and knocked prone.</p>",
+    "category": "ninjutsu",
+    "rank": "C",
+    "element": "wind",
+    "cost": 1,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "casus-belli",
+  "version": "2.0.0",
+  "description": "CSS compiler for the Casus Belli system",
+  "scripts": {
+    "build": "sass --silence-deprecation=import --silence-deprecation=color-functions src/scss/casus-belli.scss css/casus-belli.css --style=expanded --no-source-map",
+    "watch": "sass --silence-deprecation=import --silence-deprecation=color-functions src/scss/casus-belli.scss css/casus-belli.css --style=expanded --source-map --watch",
+    "build:packs": "node tools/build-packs.mjs"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Asacolips",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.5",
+    "sass": "^1.53.0"
+  }
+}

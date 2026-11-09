@@ -1,0 +1,24 @@
+{
+  "_id": "6MhoUfdWHkRF3tE6",
+  "_key": "!items!6MhoUfdWHkRF3tE6",
+  "name": "Divine Lineage",
+  "type": "bloodline",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Rather than needing to invest in other different ninja skills you need only invest in a single skill, and all other skills are increased to equal your highest ninja skill. Whenever you learn a new ninja technique, you may learn an additional one in each of the other valid categories (Genjutsu, Ninjutsu, Taijutsu, etc.) of equal or lesser difficulty to learn. You begin with the ability to use all of the five basic Elemental Affinities.</p>",
+    "bloodline": "divineLineage",
+    "variant": "",
+    "active": false,
+    "stage": 0,
+    "gatesSpent": false,
+    "drewChakra": false,
+    "flaws": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

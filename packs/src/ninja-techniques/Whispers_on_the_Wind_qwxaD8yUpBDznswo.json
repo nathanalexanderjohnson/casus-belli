@@ -1,0 +1,31 @@
+{
+  "_id": "qwxaD8yUpBDznswo",
+  "_key": "!items!qwxaD8yUpBDznswo",
+  "name": "Whispers on the Wind",
+  "type": "technique",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>As an action, perform this ability on a target within ten yards. The target may notice you performing this ability if they succeed a Wits + Awareness roll against your Ninjutsu. You are able to hear anything spoken by your target so long as they remain within a hundred yards of you. This ability ends after an hour or if the target leaves the radius.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "wind",
+    "cost": 1,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

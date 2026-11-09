@@ -1,0 +1,31 @@
+{
+  "_id": "7iUbyI73ByP7wH42",
+  "_key": "!items!7iUbyI73ByP7wH42",
+  "name": "Monarch's Disdain (3rd Seal)",
+  "type": "technique",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Once per scene you may end all mental effects of your choice upon you and set your Stress to zero. You may use this ability even when incapacitated. At the end of the scene you collapse into a catatonic state and set your Stress to one below twice your maximum. You remain unconscious for a week.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "scene",
+    "used": false,
+    "bloodline": "jinchuriki",
+    "variant": "devouringFlame",
+    "requiredStage": 3,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

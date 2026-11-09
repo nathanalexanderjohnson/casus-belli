@@ -1,0 +1,31 @@
+{
+  "_id": "BvJJR8n0pVugen6c",
+  "_key": "!items!BvJJR8n0pVugen6c",
+  "name": "Transformation",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action, allows the user to take on a nondescript appearance for up to a day. Observant characters or those Touched by Fate may make a Wits + Awareness roll against your Genjutsu skill roll to see through this illusion.</p>",
+    "category": "genjutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 1,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

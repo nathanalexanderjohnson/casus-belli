@@ -1,0 +1,31 @@
+{
+  "_id": "9wphUPneSGCDtPcj",
+  "_key": "!items!9wphUPneSGCDtPcj",
+  "name": "Hinatori's Descent (4th Seal)",
+  "type": "technique",
+  "img": "icons/svg/falling.svg",
+  "system": {
+    "description": "<p>Your body begins to shift, visibly glowing with light, and when cut your blood burns while in contact with the air. While still mostly human in appearance you are clearly not a normal person; your eyes take on a yellow hue and have an unnatural pattern like a Hinatori's eyes.</p><p>As an action and at the cost of eight Chakra you can draw upon the Hinatori's flames, and leap into the air with a limited version of flight and cross up to 10 yards × Arcane Might. After doing so you may erupt in flames at your destination, forcing a basic Endurance + Agility roll against your Ninjutsu roll and dealing 6 + 2 × Arcane Might fire damage to all creatures in a radius up to twice your Arcane Might. Once you've used this ability you cannot use it again till your next rest.</p>",
+    "category": "bloodline",
+    "rank": "S",
+    "element": "none",
+    "cost": 8,
+    "roll": "ninjutsu",
+    "frequency": "rest",
+    "used": false,
+    "bloodline": "jinchuriki",
+    "variant": "devouringFlame",
+    "requiredStage": 4,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

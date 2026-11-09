@@ -1,0 +1,423 @@
+// ─── Ninja tab (scoped inside .casus-belli) ─────────────────────────────────
+
+@mixin ninja-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: $c-panel;
+  border: $border-groove;
+  border-radius: 6px;
+  padding: 2px 4px;
+  height: 50px;
+
+  .resource-label {
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  input {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba($c-secondary, 0.9);
+    background: $c-background;
+    padding: 1px 2px;
+    border-radius: 3px;
+    height: 22px;
+  }
+}
+
+@mixin ninja-button {
+  background: $c-background;
+  color: $c-text;
+  border: 1px solid rgba($c-secondary, 0.9);
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  width: auto;
+
+  &.active {
+    background: $c-highlight;
+    color: $c-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.ninja-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+
+  button { @include ninja-button; }
+}
+
+.ninja-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .arcane-might-box {
+    @include ninja-tile;
+    width: 72px;
+    input { width: 44px; }
+  }
+
+  .chakra-box {
+    @include ninja-tile;
+    width: 110px;
+
+    .resource-content {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      input { width: 40px; }
+      span { font-weight: bold; color: $c-beige; }
+    }
+  }
+
+  .exhaustion-box {
+    @include ninja-tile;
+    width: 100px;
+    input { width: 40px; }
+  }
+
+  .exhausted {
+    border-color: $c-danger;
+    box-shadow: 0 0 4px rgba($c-danger, 0.6);
+  }
+
+  .potency-box {
+    @include ninja-tile;
+    width: 150px;
+    select { width: 100%; }
+  }
+
+  .ninja-header-actions {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+  }
+}
+
+.ninja-hint {
+  margin: 0;
+  font-size: 11px;
+  font-style: italic;
+  color: $c-beige;
+}
+
+.ninja-warning {
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: $c-white;
+  background: rgba($c-danger, 0.85);
+  border-radius: 4px;
+}
+
+.ninja-meta {
+  font-size: 10px;
+  font-style: italic;
+  color: $c-beige;
+  margin-left: 6px;
+}
+
+.ninja-effective {
+  font-size: 11px;
+  font-weight: bold;
+  color: $c-success;
+}
+
+.ninja-empty {
+  padding: 4px 8px;
+  font-style: italic;
+  color: $c-beige;
+  list-style: none;
+}
+
+.ninja-panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ninja-panel,
+.ninja-section {
+  background: rgba($c-panel, 0.8);
+  border: $border-groove;
+  border-radius: 8px;
+  padding: 8px 10px;
+
+  h3 {
+    margin: 0 0 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $c-primary;
+    border-bottom: 1px solid rgba($c-secondary, 0.8);
+  }
+}
+
+.ninja-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .ninja-surge { text-align: left; }
+}
+
+.ninja-skill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  label { flex: 1; font-weight: bold; }
+  input { width: 36px; flex: 0 0 36px; text-align: center; }
+
+  &.locked { opacity: 0.6; }
+}
+
+.ninja-affinity {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &.granted { color: $c-success; }
+}
+
+.ninja-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h3 { flex: 1; }
+}
+
+.ninja-bloodline-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+}
+
+.ninja-bloodline-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  img { border: none; flex: 0 0 32px; }
+  h4 { margin: 0; font-weight: bold; }
+  .item-controls { margin-left: auto; display: flex; gap: 6px; }
+}
+
+.ninja-bloodline-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ninja-stage-track {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  .ninja-stage-label { margin-right: 4px; }
+}
+
+.ninja-stage-pip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  border: 1px solid rgba($c-secondary, 0.9);
+  background: $c-background;
+
+  &.reached {
+    background: $c-highlight;
+    color: $c-white;
+  }
+}
+
+.ninja-flaws {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+
+  h4 { width: 100%; margin: 0; font-weight: bold; }
+}
+
+.ninja-flaw {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ninja-techniques,
+.ninja-training {
+  padding: 4px 6px;
+
+  .items-list { margin: 0; }
+
+  // Header and row cells share these widths. Row cells carry .item-prop (1px side borders), so
+  // header cells get matching transparent borders to keep the columns lined up.
+  .ninja-col-rank,
+  .ninja-col-element,
+  .ninja-col-cost,
+  .ninja-col-roll,
+  .ninja-col-progress {
+    box-sizing: border-box;
+    padding: 0 4px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ninja-col-rank { flex: 0 0 56px; }
+  .ninja-col-element { flex: 0 0 84px; }
+  .ninja-col-cost { flex: 0 0 70px; }
+  .ninja-col-roll { flex: 0 0 110px; }
+  .ninja-col-progress { flex: 0 0 170px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+  // Fixed width in both header and rows. min-width: 0 stops a flex item growing to fit its
+  // contents (the default), and the base `.item-controls a` margin is replaced by the gap so
+  // four icons fit inside the column.
+  .item-controls {
+    flex: 0 0 110px;
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding-right: 6px;
+
+    a { margin: 0; }
+  }
+
+  .items-header {
+    .ninja-col-rank,
+    .ninja-col-element,
+    .ninja-col-cost,
+    .ninja-col-roll,
+    .ninja-col-progress {
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      font-size: 11px;
+    }
+
+    .item-controls a { white-space: nowrap; }
+  }
+
+  .item-prop { font-size: 11px; }
+}
+
+.ninja-technique {
+  &.unusable {
+    opacity: 0.55;
+
+    h4 { text-decoration: line-through; text-decoration-color: rgba($c-danger, 0.6); }
+  }
+
+  .ninja-toggle-used {
+    margin-left: 6px;
+    color: $c-success;
+
+    &.used { color: $c-danger; }
+  }
+}
+
+.ninja-progress-bar {
+  flex: 1;
+  height: 8px;
+  background: $c-background;
+  border: 1px solid rgba($c-secondary, 0.7);
+  border-radius: 4px;
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 100%;
+    background: $c-success;
+  }
+}
+
+.ninja-learning-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+  font-size: 11px;
+
+  table {
+    width: auto;
+    margin: 0;
+    border-collapse: collapse;
+    background: none;
+    border: none;
+
+    th, td {
+      padding: 1px 8px;
+      text-align: center;
+      border: 1px solid rgba($c-secondary, 0.4);
+    }
+
+    td:first-child { text-align: left; font-weight: bold; }
+  }
+}
+
+// ─── Technique / bloodline item sheets ──────────────────────────────────────
+
+.technique-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.technique-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.technique-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 100px;
+
+  input[type='number'] { width: 70px; }
+  input[type='checkbox'] { margin: 4px 0; }
+
+  &.technique-stat-wide { flex: 1; }
+}
+
+.bloodline-flaws {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+
+  > .resource-label { width: 100%; }
+}
+
+.bloodline-flaw {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "IKYPZE4cruxACH2B",
+  "_key": "!items!IKYPZE4cruxACH2B",
+  "name": "Demonic Instrument",
+  "type": "technique",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action you may play a note on an instrument and all who hear its sound must make a Will roll against your Genjutsu or become Stunned. Creatures that pass their save against this technique are immune to it until their next rest. A creature with greater Arcane Might than you becomes immune to this technique after rolling to resist it, even if they fail their save.</p><p>If the target is Stressed they automatically fail their save against this ability. Creatures without Arcane Might and who are not Touched by Fate automatically fail their save against this ability.</p>",
+    "category": "genjutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 3,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 4,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

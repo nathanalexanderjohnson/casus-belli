@@ -1,0 +1,31 @@
+{
+  "_id": "z9H96Ia5KXsH8oWA",
+  "_key": "!items!z9H96Ia5KXsH8oWA",
+  "name": "Hidden Message",
+  "type": "technique",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>As an action, infuse your Chakra into an object containing a message which can be decoded by another ninja with knowledge of your encoding. You choose the encoding at the time of the message being created. The message lasts for an amount of time decided by you when you create the message, and fades once the time expires. The message may last at most a number of years equal to your Arcane Might. If you are Arcane Might V or greater you may create a message that lasts until the object it is sealed into is destroyed.</p><p>Another ninja without the encoding who discovers the message may attempt to decode it if they are of an Arcane Might equal or greater than the one who created the message. If they are greater they automatically succeed after a day of attempting it, otherwise they must make a contested Ninjutsu roll. On a failure they cannot attempt to decode it again till the next Passage of Time.</p>",
+    "category": "ninjutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 1,
+    "roll": "ninjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

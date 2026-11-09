@@ -1,0 +1,108 @@
+{
+  "id": "casus-belli",
+  "title": "Casus Belli",
+  "description": "The Casus Belli system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "LinkIcefang",
+      "discord": "linkicefang"
+    }
+  ],
+  "url": "https://github.com/nathanalexanderjohnson/casus-belli/",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "Replace this with a link to file issues or tickets",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/casus-belli/assets/casus-belli-icon.png",
+      "thumbnail": "systems/casus-belli/assets/casus-belli-icon.png"
+    }
+  ],
+  "version": "1.0.1",
+  "compatibility": {
+    "minimum": 14,
+    "verified": "14.369"
+  },
+  "esmodules": [
+    "module/casus-belli.mjs"
+  ],
+  "styles": [
+    "css/casus-belli.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "ninja-techniques",
+      "label": "Ninja Techniques",
+      "path": "packs/ninja-techniques",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "ninja-bloodlines",
+      "label": "Ninja Bloodlines",
+      "path": "packs/ninja-bloodlines",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "ninja-bloodline-techniques",
+      "label": "Ninja Bloodline Techniques",
+      "path": "packs/ninja-bloodline-techniques",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "ninja-equipment",
+      "label": "Ninja Equipment",
+      "path": "packs/ninja-equipment",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Ninja",
+      "sorting": "m",
+      "color": "#7b2b27",
+      "packs": [
+        "ninja-techniques",
+        "ninja-bloodlines",
+        "ninja-bloodline-techniques",
+        "ninja-equipment"
+      ]
+    }
+  ],
+  "socket": false,
+  "manifest": "https://github.com/nathanalexanderjohnson/casus-belli/releases/latest/download/system.json",
+  "download": "https://github.com/nathanalexanderjohnson/casus-belli/releases/download/1.0.1/casus-belli.zip",
+  "background": "systems/casus-belli/assets/casus-belli-icon.png",
+  "gridDistance": 1,
+  "gridUnits": "yards",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
+}

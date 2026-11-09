@@ -1,0 +1,121 @@
+<form class='{{cssClass}}' autocomplete='off'>
+  <header class='sheet-header'>
+    <img
+      class='profile-img'
+      src='{{item.img}}'
+      data-edit='img'
+      title='{{item.name}}'
+    />
+    <div class='header-fields'>
+      <h1 class='charname'>
+        <input name='name' type='text' value='{{item.name}}' placeholder='Armor Name' />
+      </h1>
+
+      {{!-- Armor Values + Weight --}}
+      <div class='grid grid-4col armor-values'>
+        <div class='resource'>
+          <label class='resource-label' title='Blunt Armor Value'>AVB</label>
+          <input
+            type='number'
+            name='system.avb'
+            value='{{system.avb}}'
+            min='0'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label' title='Piercing Armor Value'>AVP</label>
+          <input
+            type='number'
+            name='system.avp'
+            value='{{system.avp}}'
+            min='0'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label' title='Slashing Armor Value'>AVS</label>
+          <input
+            type='number'
+            name='system.avs'
+            value='{{system.avs}}'
+            min='0'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>Weight</label>
+          <input
+            type='number'
+            name='system.weight'
+            value='{{system.weight}}'
+            min='0'
+            data-dtype='Number'
+          />
+        </div>
+      </div>
+
+      {{!-- Location Worn + Equipped --}}
+      <div class='armor-equip-row'>
+
+        {{!-- Location Worn --}}
+        <div class='armor-locations'>
+          <label class='location-label'>Location Worn</label>
+          <div class='location-checkboxes'>
+            {{#each config.bodyLocations}}
+              <label class='checkbox-label'>
+                <input
+                  type='checkbox'
+                  name='system.{{this.field}}'
+                  {{#if (lookup ../system this.field)}}checked{{/if}}
+                />
+                {{this.label}}
+              </label>
+            {{/each}}
+          </div>
+        </div>
+
+        {{!-- Equipped --}}
+        <div class='armor-equipped'>
+          <label class='checkbox-label'>
+            <input
+              type='checkbox'
+              name='system.equipped'
+              {{#if system.equipped}}checked{{/if}}
+            />
+            Equipped
+          </label>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  {{! Sheet Tab Navigation }}
+  <nav class='sheet-tabs tabs' data-group='primary'>
+    <a class='item' data-tab='description'>Description</a>
+    <a class='item' data-tab='effects'>Effects</a>
+  </nav>
+
+  {{! Sheet Body }}
+  <section class='sheet-body'>
+
+    {{! Description Tab }}
+    <div class='tab' data-group='primary' data-tab='description'>
+      {{editor
+        enrichedDescription
+        target='system.description'
+        engine='prosemirror'
+        button=true
+        editable=editable
+      }}
+    </div>
+
+    {{! Effects Tab }}
+    <div class='tab effects' data-group='primary' data-tab='effects'>
+      {{> "systems/casus-belli/templates/item/parts/item-effects.hbs"}}
+    </div>
+
+  </section>
+</form>

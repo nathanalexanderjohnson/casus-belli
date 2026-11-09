@@ -1,0 +1,152 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "attributes": {
+          "str": {
+            "value": 2,
+            "min": 1,
+            "max": 14
+          },
+          "agi": {
+            "value": 2,
+            "min": 1,
+            "max": 14
+          },
+          "end": {
+            "value": 2,
+            "min": 1,
+            "max": 14
+          },
+          "wil": {
+            "value": 2,
+            "min": 1,
+            "max": 14
+          },
+          "wit": {
+            "value": 2,
+            "min": 1,
+            "max": 14
+          },
+          "ins": {
+            "value": 2,
+            "min": 1,
+            "max": 14
+          }
+        },
+        "skills": {
+          "athletics": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "unarmed": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "melee": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "ranged": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "stealth": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "survival": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "riding": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "persuasion": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "intimidation": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "subterfuge": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "performance": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "etiquette": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "awareness": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "empathy": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "leadership": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "tactics": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "scholarship": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "stewardship": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "crafting": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          },
+          "medicine": {
+            "value": 0,
+            "min": 0,
+            "max": 14
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"]
+    }, 
+    "npc": {
+      "templates": ["base"]
+    }
+  },
+  "Item": {
+    "types": ["item", "feature", "boon", "maneuver", "wound", "armor", "gadget", "technique", "bloodline"]
+  }
+}
