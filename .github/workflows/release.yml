@@ -1,0 +1,91 @@
+# Build the system and publish a FoundryVTT release.
+#
+# - Pull requests into main: build only, to catch broken SCSS, pack sources or manifests early.
+# - Pushes to main (merged pull requests): build, then publish a GitHub release named after the
+#   "version" in system.json, with casus-belli.zip and system.json attached.
+#
+# Foundry installs from:  https://github.com/<owner>/<repo>/releases/latest/download/system.json
+#
+# To publish a new release, bump "version" in system.json in the pull request. If a release for
+# that version already exists, the merge still builds but publishing is skipped (with a warning).
+name: Build and Release
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run two releases at once; a newer push waits rather than cancelling a half-made release.
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run build
+
+      - name: Build compendium packs
+        run: npm run build:packs
+
+      - name: Stage release
+        id: stage
+        run: npm run package:release
+
+      - name: Zip system
+        working-directory: dist/casus-belli
+        run: zip -r -q "../${{ steps.stage.outputs.zip }}" .
+
+      - name: Check for an existing release
+        id: existing
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.stage.outputs.version }}
+        run: |
+          if gh release view "$VERSION" > /dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Release skipped::Version $VERSION is already released. Bump \"version\" in system.json to publish a new release."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish release
+        if: github.event_name != 'pull_request' && steps.existing.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.stage.outputs.version }}
+          ZIP: ${{ steps.stage.outputs.zip }}
+        run: |
+          gh release create "$VERSION" \
+            "dist/$ZIP" \
+            dist/system.json \
+            --target "$GITHUB_SHA" \
+            --title "Casus Belli $VERSION" \
+            --generate-notes
+
+      - name: Upload build (pull requests)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: casus-belli-${{ steps.stage.outputs.version }}
+          path: dist/${{ steps.stage.outputs.zip }}

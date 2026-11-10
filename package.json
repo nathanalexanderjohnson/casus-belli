@@ -5,7 +5,8 @@
   "scripts": {
     "build": "sass --silence-deprecation=import --silence-deprecation=color-functions src/scss/casus-belli.scss css/casus-belli.css --style=expanded --no-source-map",
     "watch": "sass --silence-deprecation=import --silence-deprecation=color-functions src/scss/casus-belli.scss css/casus-belli.css --style=expanded --source-map --watch",
-    "build:packs": "node tools/build-packs.mjs"
+    "build:packs": "node tools/build-packs.mjs",
+    "package:release": "node tools/package-release.mjs"
   },
   "browserslist": [
     "last 3 versions"
