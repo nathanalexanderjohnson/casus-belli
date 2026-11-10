@@ -4,6 +4,12 @@ import {
   validateNinjaItemUpdate,
 } from '../helpers/ninja.mjs';
 import {
+  MIGRATION_OPTION,
+  SAMURAI_ITEM_TYPES,
+  getSamuraiItemWarning,
+  validateSamuraiItemCreate,
+} from '../helpers/samurai.mjs';
+import {
   MIKO_ITEM_TYPES,
   validateMikoItemCreate,
   validateMikoItemUpdate,
@@ -63,6 +69,17 @@ export class CasusBelliItem extends Item {
         return false;
       }
       const warning = getTechniqueLearningWarning(this.parent, this);
+      if (warning) ui.notifications.info(warning);
+    }
+
+    // Samurai items: Samurai only (migration of old Samurai lists bypasses this).
+    if (this.parent && SAMURAI_ITEM_TYPES.includes(this.type) && !options[MIGRATION_OPTION]) {
+      const error = validateSamuraiItemCreate(this.parent, this);
+      if (error) {
+        ui.notifications.warn(error);
+        return false;
+      }
+      const warning = getSamuraiItemWarning(this.parent, this);
       if (warning) ui.notifications.info(warning);
     }
 
@@ -128,7 +145,7 @@ export class CasusBelliItem extends Item {
    */
   _syncParentNinjaEffects(userId) {
     if (this.type !== 'bloodline' || userId !== game.user.id) return;
-    this.parent?.syncNinjaEffects?.();
+    this.parent?.syncClassEffects?.();
   }
 
   /**

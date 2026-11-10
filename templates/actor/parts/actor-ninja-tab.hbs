@@ -1,7 +1,7 @@
 {{!-- Ninja tab. Context is prepared in CasusBelliActorSheet#_prepareNinjaContext. --}}
 <div class="ninja-tab-content">
 
-  {{!-- ── Header: Arcane Might, Chakra, exhaustion, potency, scene/rest ── --}}
+  {{!-- ── Header: Arcane Might, Chakra, exhaustion, potency ── --}}
   <div class="ninja-header-row">
     <div class="attribute tile arcane-might-box">
       <label for="system.arcaneMight" class="resource-label rollable" data-roll-type="attribute" data-key="arcaneMight" data-label="Ninja Ability" data-default-second="agi" title="Ninja ability roll: Agility + Arcane Might">Arcane Might</label>
@@ -27,11 +27,6 @@
       <select name="system.bloodlinePotency">
         {{selectOptions ninja.potencies selected=system.bloodlinePotency}}
       </select>
-    </div>
-
-    <div class="ninja-header-actions">
-      <button type="button" class="ninja-end-scene" title="Close the Gates, apply end-of-scene effects, and reset once-per-scene techniques"><i class="fas fa-flag-checkered"></i> End Scene</button>
-      <button type="button" class="ninja-full-rest" title="Restore Chakra and reset once-per-rest techniques"><i class="fas fa-bed"></i> Full Rest</button>
     </div>
   </div>
 

@@ -1,0 +1,23 @@
+{
+  "_id": "MIEFVsF4Arbbw85Z",
+  "_key": "!items!MIEFVsF4Arbbw85Z",
+  "name": "Lightning Reflexes",
+  "type": "samuraiAbility",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Add dice equal to your Arcane Might to any roll made to determine initiative. When the GM is determining initiative order your weapon counts as having a reach advantage (even if it does not) against anyone who doesn’t have an ability that improves their initiative order.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

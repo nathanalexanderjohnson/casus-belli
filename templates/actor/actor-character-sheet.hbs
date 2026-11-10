@@ -21,6 +21,11 @@
     </div>
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      {{!-- Shared by every class; each applies its own rules (helpers/scene-rest.mjs). --}}
+      <div class="charname-actions">
+        <button type="button" class="character-end-scene" title="End the scene: reset once-per-scene abilities and apply end-of-scene effects"><i class="fas fa-flag-checkered"></i> End Scene</button>
+        <button type="button" class="character-rest" title="Rest: restore class resources and reset once-per-rest abilities"><i class="fas fa-bed"></i> Rest</button>
+      </div>
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  --}}
@@ -119,11 +124,8 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="features">Skills</a>
-    <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="boons">Boons / Banes</a>
-    <a class="item" data-tab="description">Notes</a>
-    <a class="item" data-tab="effects">Effects</a>
 
+    {{!-- The class tab (only the character's own class is shown) sits between Skills and Items. --}}
     {{#if (equals system.magicType "samurai")}}
     <a class="item" data-tab="samurai">Samurai</a>
     {{/if}}
@@ -133,6 +135,11 @@
     {{#if (equals system.magicType "miko")}}
     <a class="item" data-tab="miko">Miko</a>
     {{/if}}
+
+    <a class="item" data-tab="items">Items</a>
+    <a class="item" data-tab="boons">Boons / Banes</a>
+    <a class="item" data-tab="description">Notes</a>
+    <a class="item" data-tab="effects">Effects</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -272,116 +279,7 @@
 
     {{#if (equals system.magicType "samurai")}}
     <div class="tab samurai flexcol" data-group="primary" data-tab="samurai">
-      <div class="samurai-header-row">
-        <div class="samurai-left-column">
-          <div class="attribute tile arcane-might-box">
-            <label for="system.arcaneMight" class="resource-label rollable" data-roll-type="attribute" data-key="arcaneMight" data-label="Arcane Might">Arcane Might</label>
-            <input type="text" name="system.arcaneMight" value="{{system.arcaneMight}}" data-dtype="Number"/>
-          </div>
-          <div class="tracker-box ephiphanies-box">
-            <label for="system.ephiphanies.value" class="resource-label">Ephiphanies</label>
-            <div class="resource-content">
-              <input type="text" name="system.ephiphanies.value" value="{{system.ephiphanies.value}}" data-dtype="Number"/>
-              <span>/</span>
-              <input type="text" name="system.ephiphanies.max" value="{{system.ephiphanies.max}}" data-dtype="Number" readonly/>
-            </div>
-          </div>
-        </div>
-
-        <div class="samurai-entry-table samurai-kenjutsu-table">
-        <div class="samurai-table-header">
-          <h3>Kenjutsu</h3>
-          <button type="button" class="samurai-add-entry" data-list="kenjutsu" title="Add entry"><i class="fas fa-plus"></i></button>
-        </div>
-
-        {{#each system.kenjutsu as |entry index|}}
-          <div class="samurai-entry" data-list="kenjutsu" data-index="{{index}}">
-            {{#if entry.editing}}
-              <input type="text" name="system.kenjutsu.{{index}}.name" value="{{entry.name}}" placeholder="Name"/>
-              <label>Stamina</label>
-              <input type="text" name="system.kenjutsu.{{index}}.stamina" value="{{entry.stamina}}" data-dtype="Number"/>
-              <label>Description</label>
-              <textarea name="system.kenjutsu.{{index}}.description" placeholder="Description">{{entry.description}}</textarea>
-              <label>Arcane Might III</label>
-              <textarea name="system.kenjutsu.{{index}}.arcaneMightIII" placeholder="Arcane Might III">{{entry.arcaneMightIII}}</textarea>
-              <label>Arcane Might V</label>
-              <textarea name="system.kenjutsu.{{index}}.arcaneMightV" placeholder="Arcane Might V">{{entry.arcaneMightV}}</textarea>
-            {{else}}
-              <div class="samurai-entry-name">{{entry.name}}</div>
-              <div class="samurai-entry-description"><strong>Cost: {{entry.stamina}} Stamina</strong></div>
-              {{#if entry.description}}
-                <div class="samurai-entry-description">{{entry.description}}</div>
-              {{/if}}
-              {{#if (and (gte ../system.arcaneMight 3) entry.arcaneMightIII)}}
-                <div class="samurai-entry-section"><strong>Arcane Might III</strong><div>{{entry.arcaneMightIII}}</div></div>
-              {{/if}}
-              {{#if (and (gte ../system.arcaneMight 5) entry.arcaneMightV)}}
-                <div class="samurai-entry-section"><strong>Arcane Might V</strong><div>{{entry.arcaneMightV}}</div></div>
-              {{/if}}
-            {{/if}}
-            <div class="samurai-entry-actions">
-              <button type="button" class="samurai-ping" data-list="kenjutsu" data-index="{{index}}" title="Ping to chat"><i class="fas fa-comment"></i></button>
-              <button type="button" class="samurai-toggle-edit" data-list="kenjutsu" data-index="{{index}}" title="{{#if entry.editing}}Done{{else}}Edit{{/if}}"><i class="fas {{#if entry.editing}}fa-check{{else}}fa-edit{{/if}}"></i></button>
-              <button type="button" class="samurai-delete" data-list="kenjutsu" data-index="{{index}}" title="Delete"><i class="fas fa-trash"></i></button>
-            </div>
-          </div>
-        {{else}}
-          <p class="samurai-empty">No kenjutsu entries yet.</p>
-        {{/each}}
-        </div>
-      </div>
-
-      <div class="samurai-entries-grid">
-        <div class="samurai-entry-table">
-          <div class="samurai-table-header">
-            <h3>Martial Spirit</h3>
-            <button type="button" class="samurai-add-entry" data-list="martialSpirit" title="Add entry"><i class="fas fa-plus"></i></button>
-          </div>
-          {{#each system.martialSpirit as |entry index|}}
-            <div class="samurai-entry" data-list="martialSpirit" data-index="{{index}}">
-              {{#if entry.editing}}
-                <input type="text" name="system.martialSpirit.{{index}}.name" value="{{entry.name}}" placeholder="Name"/>
-                <textarea name="system.martialSpirit.{{index}}.description" placeholder="Description">{{entry.description}}</textarea>
-              {{else}}
-                <div class="samurai-entry-name">{{entry.name}}</div>
-                <div class="samurai-entry-description">{{entry.description}}</div>
-              {{/if}}
-              <div class="samurai-entry-actions">
-                <button type="button" class="samurai-ping" data-list="martialSpirit" data-index="{{index}}" title="Ping to chat"><i class="fas fa-comment"></i></button>
-                <button type="button" class="samurai-toggle-edit" data-list="martialSpirit" data-index="{{index}}" title="{{#if entry.editing}}Done{{else}}Edit{{/if}}"><i class="fas {{#if entry.editing}}fa-check{{else}}fa-edit{{/if}}"></i></button>
-                <button type="button" class="samurai-delete" data-list="martialSpirit" data-index="{{index}}" title="Delete"><i class="fas fa-trash"></i></button>
-              </div>
-            </div>
-          {{else}}
-            <p class="samurai-empty">No martial spirit entries yet.</p>
-          {{/each}}
-        </div>
-
-        <div class="samurai-entry-table">
-          <div class="samurai-table-header">
-            <h3>Warrior's Presence</h3>
-            <button type="button" class="samurai-add-entry" data-list="warriorsPresence" title="Add entry"><i class="fas fa-plus"></i></button>
-          </div>
-          {{#each system.warriorsPresence as |entry index|}}
-            <div class="samurai-entry" data-list="warriorsPresence" data-index="{{index}}">
-              {{#if entry.editing}}
-                <input type="text" name="system.warriorsPresence.{{index}}.name" value="{{entry.name}}" placeholder="Name"/>
-                <textarea name="system.warriorsPresence.{{index}}.description" placeholder="Description">{{entry.description}}</textarea>
-              {{else}}
-                <div class="samurai-entry-name">{{entry.name}}</div>
-                <div class="samurai-entry-description">{{entry.description}}</div>
-              {{/if}}
-              <div class="samurai-entry-actions">
-                <button type="button" class="samurai-ping" data-list="warriorsPresence" data-index="{{index}}" title="Ping to chat"><i class="fas fa-comment"></i></button>
-                <button type="button" class="samurai-toggle-edit" data-list="warriorsPresence" data-index="{{index}}" title="{{#if entry.editing}}Done{{else}}Edit{{/if}}"><i class="fas {{#if entry.editing}}fa-check{{else}}fa-edit{{/if}}"></i></button>
-                <button type="button" class="samurai-delete" data-list="warriorsPresence" data-index="{{index}}" title="Delete"><i class="fas fa-trash"></i></button>
-              </div>
-            </div>
-          {{else}}
-            <p class="samurai-empty">No warrior's presence entries yet.</p>
-          {{/each}}
-        </div>
-      </div>
+      {{> "systems/casus-belli/templates/actor/parts/actor-samurai-tab.hbs"}}
     </div>
     {{/if}}
 

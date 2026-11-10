@@ -11,23 +11,12 @@
 .miko-empty { @extend .ninja-empty; }
 .miko-progress-bar { @extend .ninja-progress-bar; }
 
-// The tiles are centered; the Rest button sits at the right edge without pulling them off-center.
 .miko-header-row {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.miko-header-actions {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 6px;
 }
 
 .miko-kami-value {
@@ -120,7 +109,39 @@
   .miko-toggle-active.active { color: $c-success; }
 }
 
-// Talisman item sheet: two editors stacked.
+// ─── Samurai tab ─────────────────────────────────────────────────────────────
+// Built from the same pieces as the Miko tab (tiles, panels, fixed-width list columns).
+
+.samurai-tab-content { @extend .ninja-tab-content; }
+.samurai-header-row { @extend .miko-header-row; }
+
+.samurai-stat {
+  margin: 0;
+  font-size: 12px;
+}
+
+.samurai-code {
+  width: 100%;
+  min-height: 48px;
+  resize: vertical;
+  font-size: 12px;
+}
+
+.samurai-infractions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+
+  .miko-subheading { width: 100%; margin-top: 0; }
+}
+
+.samurai-over {
+  border-color: $c-danger;
+  box-shadow: 0 0 4px rgba($c-danger, 0.6);
+}
+
+// Talisman item sheet (and Kenjutsu tiers): editors stacked.
 .talisman-editor {
   min-height: 120px;
   display: flex;

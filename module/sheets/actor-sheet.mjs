@@ -3,13 +3,12 @@ import {
   prepareActiveEffectCategories,
 } from '../helpers/effects.mjs';
 import { formatRollContent, openRollDialog } from '../helpers/rolls.mjs';
+import { endScene, rest } from '../helpers/scene-rest.mjs';
 import {
   bloodlineLabel,
   canDrawFromBeast,
   chakraSurge,
   closeGates,
-  endScene,
-  fullRest,
   getBloodline,
   learningCost,
   openNextGate,
@@ -19,12 +18,20 @@ import {
   useTechnique,
 } from '../helpers/ninja.mjs';
 import {
+  advanceArcaneMight,
+  bushidoInfraction,
+  kenjutsuLevel,
+  samuraiAbilityRoll,
+  samuraiItemStatus,
+  useSamuraiItem,
+} from '../helpers/samurai.mjs';
+import { hasSamuraiSpirit } from '../data/actor-character.mjs';
+import {
   castingRoll,
   etchTalisman,
   getKamiWound,
   reduceKamiWound,
   maintenanceCapacity,
-  mikoRest,
   performRite,
   riteStatus,
   spendRestFavor,
@@ -114,26 +121,7 @@ export class CasusBelliActorSheet extends ActorSheet {
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = actorData.system;
     context.flags = actorData.flags;
-    if (!context.system.ephiphanies) {
-      context.system.ephiphanies = { value: 0, max: 0 };
-    }
-    if (!context.system.martialSpirit) {
-      context.system.martialSpirit = [];
-    }
-    if (!context.system.warriorsPresence) {
-      context.system.warriorsPresence = [];
-    }
-    if (!context.system.kenjutsu) {
-      context.system.kenjutsu = [];
-    }
-    if (context.system.magicType === 'none') {
-      context.system.arcaneMight = 0;
-      context.system.ephiphanies.value = 0;
-      context.system.ephiphanies.max = 0;
-    } else if (context.system.magicType === 'samurai') {
-      context.system.ephiphanies.max = context.system.arcaneMight ?? 0;
-      context.system.ephiphanies.value = Math.max(0, Math.min(context.system.ephiphanies.value ?? 0, context.system.ephiphanies.max));
-    }
+    // Class values (Arcane Might, Epiphanies, ...) are derived in the character data model.
 
     // Adding a pointer to CONFIG.CASUSBELLI
     context.config = CONFIG.CASUSBELLI;
@@ -196,7 +184,84 @@ export class CasusBelliActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     if (this.actor.system.isNinja) context.ninja = this._prepareNinjaContext();
     if (this.actor.system.isMiko) context.miko = this._prepareMikoContext();
+    if (this.actor.system.isSamurai) context.samurai = this._prepareSamuraiContext();
     return context;
+  }
+
+  /**
+   * Build the data for the Samurai tab.
+   * @returns {object}
+   * @private
+   */
+  _prepareSamuraiContext() {
+    const config = CONFIG.CASUSBELLI;
+    const actor = this.actor;
+    const system = actor.system;
+    const arcaneMight = system.arcaneMight ?? 0;
+    const byName = (a, b) => a.name.localeCompare(b.name);
+    const status = (item) => samuraiItemStatus(actor, item);
+
+    const kenjutsu = actor.items.filter((i) => i.type === 'kenjutsu').sort(byName).map((item) => {
+      const level = kenjutsuLevel(actor, item);
+      const s = status(item);
+      return {
+        id: item.id,
+        name: item.name,
+        img: item.img,
+        cost: [item.system.stamina ? `${item.system.stamina} Stamina` : '', item.system.costNote].filter(Boolean).join(', ') || '—',
+        level,
+        capped: item.system.teacherArcaneMight > 0 && item.system.teacherArcaneMight < arcaneMight,
+        tiers: [level >= 3 && item.system.arcaneMightIII ? 'III' : '', level >= 5 && item.system.arcaneMightV ? 'V' : ''].filter(Boolean).join(', ') || '—',
+        prerequisite: item.system.prerequisite,
+        usable: s.usable,
+        reasons: s.reasons.join('; '),
+      };
+    });
+
+    const groups = Object.fromEntries(Object.keys(config.samuraiAbilityCategories).map((k) => [k, []]));
+    for (const item of actor.items.filter((i) => i.type === 'samuraiAbility').sort(byName)) {
+      const sys = item.system;
+      const s = status(item);
+      groups[sys.category]?.push({
+        id: item.id,
+        name: item.name,
+        img: item.img,
+        cost: sys.stamina ? `${sys.stamina} Stamina` : '—',
+        roll: sys.roll ? 'Str + AM' : '—',
+        limited: sys.frequency !== 'atWill',
+        frequency: config.techniqueFrequencies[sys.frequency],
+        used: sys.used,
+        requirement: sys.requirement,
+        usable: s.usable,
+        reasons: s.reasons.join('; '),
+      });
+    }
+
+    // Steel Body: full natural armor on bare locations, half on armored ones (applied in the tracker).
+    const steelBody = 1 + arcaneMight;
+    const epiphanies = system.ephiphanies ?? { value: 0, max: 1 };
+
+    return {
+      onisMight: Math.floor(arcaneMight / 2),
+      steelBody,
+      steelBodyArmored: Math.ceil(steelBody / 2),
+      innerStrength: hasSamuraiSpirit(actor, 'innerStrength') ? 2 * arcaneMight : 0,
+      feelNoPain: hasSamuraiSpirit(actor, 'feelNoPain') ? arcaneMight : 0,
+      epiphanies,
+      canAdvance: (epiphanies.value ?? 0) >= (epiphanies.max ?? 1) && arcaneMight < 10,
+      retainers: system.retainers,
+      hasRetainers: (system.retainers?.max ?? 0) > 0,
+      retainersOver: (system.retainers?.value ?? 0) > (system.retainers?.max ?? 0),
+      bushido: system.bushido,
+      infractions: Object.entries(config.bushidoInfractions).map(([key, i]) => ({ key, label: i.label, formula: i.formula })),
+      kenjutsu,
+      martialSpirits: groups.martialSpirit,
+      knownSpirits: groups.martialSpirit.length,
+      expectedSpirits: arcaneMight,
+      orders: groups.warriorsPresence,
+      dragonBlood: groups.dragonBlood,
+      core: groups.core,
+    };
   }
 
   /**
@@ -518,7 +583,8 @@ export class CasusBelliActorSheet extends ActorSheet {
     };
     const hasAnyEquippedArmor = armors.some((armor) => armor.system.equipped);
     const fullSamuraiBonus = 1 + (this.actor.system.arcaneMight ?? 0);
-    const partialSamuraiBonus = Math.floor(fullSamuraiBonus / 2);
+    // Steel Body on armored locations: half the natural armor, rounded up.
+    const partialSamuraiBonus = Math.ceil(fullSamuraiBonus / 2);
 
     for (const armor of armors) {
       if (!armor.system.equipped) continue;
@@ -656,29 +722,17 @@ export class CasusBelliActorSheet extends ActorSheet {
       item.update({ [`system.${location}`]: !item.system[location] });
     });
 
-    html.on('click', '.samurai-add-entry', (ev) => {
-      const listKey = ev.currentTarget.dataset.list;
-      this._addSamuraiTableEntry(listKey);
+    // End Scene and Rest (sheet header): each class applies its own rules.
+    html.on('click', '.character-end-scene', (ev) => {
+      ev.preventDefault();
+      endScene(this.actor);
+    });
+    html.on('click', '.character-rest', (ev) => {
+      ev.preventDefault();
+      rest(this.actor);
     });
 
-    html.on('click', '.samurai-ping', (ev) => {
-      const listKey = ev.currentTarget.dataset.list;
-      const index = Number(ev.currentTarget.dataset.index);
-      this._pingSamuraiTableEntry(listKey, index);
-    });
-
-    html.on('click', '.samurai-toggle-edit', (ev) => {
-      const listKey = ev.currentTarget.dataset.list;
-      const index = Number(ev.currentTarget.dataset.index);
-      this._toggleSamuraiTableEntryEdit(listKey, index);
-    });
-
-    html.on('click', '.samurai-delete', (ev) => {
-      const listKey = ev.currentTarget.dataset.list;
-      const index = Number(ev.currentTarget.dataset.index);
-      this._deleteSamuraiTableEntry(listKey, index);
-    });
-
+    this._activateSamuraiListeners(html);
     this._activateNinjaListeners(html);
     this._activateMikoListeners(html);
 
@@ -786,16 +840,6 @@ export class CasusBelliActorSheet extends ActorSheet {
       chakraSurge(this.actor, ev.currentTarget.dataset.mode);
     });
 
-    html.on('click', '.ninja-end-scene', (ev) => {
-      ev.preventDefault();
-      endScene(this.actor);
-    });
-
-    html.on('click', '.ninja-full-rest', (ev) => {
-      ev.preventDefault();
-      fullRest(this.actor);
-    });
-
     html.on('click', '.ninja-manifest', (ev) => {
       ev.preventDefault();
       const item = bloodline();
@@ -863,86 +907,33 @@ export class CasusBelliActorSheet extends ActorSheet {
     onItem('.miko-toggle-active', (item) => item.update({ 'system.active': !item.system.active }));
 
     onActor('.miko-casting-roll', (ev) => castingRoll(this.actor, ev.currentTarget.dataset.label || 'Spiritualism'));
-    onActor('.miko-rest', () => mikoRest(this.actor));
     onActor('.miko-rest-favor', (ev) => spendRestFavor(this.actor, ev.currentTarget.dataset.kind));
     onActor('.miko-reduce-kami-wound', () => reduceKamiWound(this.actor));
   }
 
-  async _addSamuraiTableEntry(listKey) {
-    if (!['martialSpirit', 'warriorsPresence', 'kenjutsu'].includes(listKey)) return;
-    const entries = foundry.utils.duplicate(this.actor.system[listKey] ?? []);
-    const baseEntry = listKey === 'kenjutsu'
-      ? { name: '', stamina: 0, description: '', arcaneMightIII: '', arcaneMightV: '', editing: true }
-      : { name: '', description: '', editing: true };
-    entries.push(baseEntry);
-    await this.actor.update({ [`system.${listKey}`]: entries });
-  }
-
-  async _toggleSamuraiTableEntryEdit(listKey, index) {
-    if (!['martialSpirit', 'warriorsPresence', 'kenjutsu'].includes(listKey)) return;
-    const entries = foundry.utils.duplicate(this.actor.system[listKey] ?? []);
-    if (!entries[index]) return;
-    entries[index].editing = !entries[index].editing;
-    await this.actor.update({ [`system.${listKey}`]: entries });
-  }
-
-  async _deleteSamuraiTableEntry(listKey, index) {
-    if (!['martialSpirit', 'warriorsPresence', 'kenjutsu'].includes(listKey)) return;
-    const entries = foundry.utils.duplicate(this.actor.system[listKey] ?? []);
-    entries.splice(index, 1);
-    await this.actor.update({ [`system.${listKey}`]: entries });
-  }
-
-  async _pingSamuraiTableEntry(listKey, index) {
-    if (!['martialSpirit', 'warriorsPresence', 'kenjutsu'].includes(listKey)) return;
-    const entries = this.actor.system[listKey] ?? [];
-    const entry = entries[index];
-    if (!entry) return;
-
-    if (listKey === 'kenjutsu') {
-      const currentStamina = Number(this.actor.system.stamina?.value ?? 0);
-      const arcaneMight = Number(this.actor.system.arcaneMight ?? 0);
-      const staminaCost = Number(entry.stamina ?? 0);
-      const description = (entry.description ?? '').trim();
-      const arcaneThree = (entry.arcaneMightIII ?? '').trim();
-      const arcaneFive = (entry.arcaneMightV ?? '').trim();
-      const blocks = [];
-
-      if (description) blocks.push(`<p>${description}</p>`);
-      if (arcaneMight >= 3 && arcaneThree) blocks.push(`<p><strong>Arcane Might III</strong><br>${arcaneThree}</p>`);
-      if (arcaneMight >= 5 && arcaneFive) blocks.push(`<p><strong>Arcane Might V</strong><br>${arcaneFive}</p>`);
-
-      if (!blocks.length) return;
-
-      await this.actor.update({ 'system.stamina.value': Math.max(0, currentStamina - staminaCost) });
-      await ChatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        content: `
-          <div class="casus-belli-samurai-note">
-            <h3>${entry.name?.trim() || 'Kenjutsu'}</h3>
-            <p><strong>Cost: ${staminaCost} Stamina</strong></p>
-            ${blocks.join('')}
-          </div>
-        `,
-      });
-      return;
-    }
-
-    const title = listKey === 'martialSpirit' ? 'Martial Spirit' : "Warrior's Presence";
-    const name = entry.name?.trim() || 'Untitled';
-    const description = entry.description?.trim() || 'No description provided.';
-
-    await ChatMessage.create({
-      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      content: `
-        <div class="casus-belli-samurai-note">
-          <h3>${title}</h3>
-          <p><strong>${name}</strong></p>
-          <p>${description}</p>
-        </div>
-      `,
-      whisper: this.actor.isOwner ? [] : null,
+  /**
+   * Samurai tab controls (editable sheets only).
+   * @param {jQuery} html
+   * @private
+   */
+  _activateSamuraiListeners(html) {
+    const itemFrom = (ev) => this.actor.items.get(ev.currentTarget.closest('[data-item-id]')?.dataset.itemId);
+    const on = (selector, handler) => html.on('click', selector, (ev) => {
+      ev.preventDefault();
+      handler(ev);
     });
+
+    on('.samurai-use', (ev) => {
+      const item = itemFrom(ev);
+      if (item) useSamuraiItem(item);
+    });
+    on('.samurai-toggle-used', (ev) => {
+      const item = itemFrom(ev);
+      if (item) item.update({ 'system.used': !item.system.used });
+    });
+    on('.samurai-ability-roll', (ev) => samuraiAbilityRoll(this.actor, ev.currentTarget.dataset.label || 'Samurai Ability'));
+    on('.samurai-advance', () => advanceArcaneMight(this.actor));
+    on('.samurai-infraction', (ev) => bushidoInfraction(this.actor, ev.currentTarget.dataset.severity));
   }
 
   /**

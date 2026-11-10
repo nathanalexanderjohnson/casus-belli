@@ -1,0 +1,35 @@
+<form class='{{cssClass}} casus-belli-samurai-ability-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Category</label>
+        <select name='system.category'>{{selectOptions samuraiOptions.categories selected=system.category}}</select>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Stamina Cost</label>
+        <input name='system.stamina' type='number' value='{{system.stamina}}' min='0'/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label' title='Using it calls for a samurai ability roll (Strength + Arcane Might)'>Roll</label>
+        <input name='system.roll' type='checkbox' {{#if system.roll}}checked{{/if}}/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label'>Frequency</label>
+        <select name='system.frequency'>{{selectOptions samuraiOptions.frequencies selected=system.frequency}}</select>
+      </div>
+      <div class='technique-stat technique-stat-wide'>
+        <label class='resource-label'>Requirement</label>
+        <input name='system.requirement' type='text' value='{{system.requirement}}' placeholder='e.g. the Blessing of a Hinotori'/>
+      </div>
+    </div>
+
+    {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+  </section>
+</form>

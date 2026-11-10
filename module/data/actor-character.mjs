@@ -1,6 +1,18 @@
 import CasusBelliActorBase from "./base-actor.mjs";
 
 /**
+ * Whether an actor owns an automated Martial Spirit: a samuraiAbility flagged by the compendium
+ * (`casus-belli.spirit`), or one whose name matches (so a hand-made copy works too).
+ * @param {Actor} actor
+ * @param {string} key  A key of CONFIG.CASUSBELLI.samurai.automatedSpirits
+ */
+export function hasSamuraiSpirit(actor, key) {
+  const name = CONFIG.CASUSBELLI.samurai.automatedSpirits[key]?.toLowerCase();
+  return Boolean(actor?.items?.some((i) => i.type === 'samuraiAbility'
+    && (i.getFlag?.('casus-belli', 'spirit') === key || i.name?.trim().toLowerCase() === name)));
+}
+
+/**
  * Whether an item is the Beloved Above All Inori: a boon flagged by the compendium,
  * or any boon with that exact name (so a hand-made copy works too).
  * @param {Item} item
@@ -77,11 +89,29 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
       max: 10
     });
 
+    // ── Samurai ─────────────────────────────────────────────────────────────
+    // Epiphanies. The field keeps its original (misspelled) key so existing characters keep
+    // their value; `max` is derived: the Epiphanies needed to advance Arcane Might.
     schema.ephiphanies = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
     });
 
+    schema.bushido = new fields.SchemaField({
+      /** The ideals this Samurai follows. */
+      code: new fields.StringField({ required: true, blank: true, initial: '' }),
+      /** Abandoning Bushido keeps the Samurai's powers but loses Bushido's benefits. */
+      abandoned: new fields.BooleanField({ required: true, initial: false })
+    });
+
+    /** Retainers granted a portion of the Samurai's Martial Spirit; max is derived. */
+    schema.retainers = new fields.SchemaField({
+      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
+    // Legacy Samurai lists. Superseded by the kenjutsu and samuraiAbility item types; kept only
+    // so existing characters can be migrated (see helpers/samurai.mjs migrateSamuraiLists).
     schema.martialSpirit = new fields.ArrayField(
       new fields.SchemaField({
         name: new fields.StringField({ required: false, blank: true, initial: '' }),
@@ -232,10 +262,12 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
         this.ephiphanies.max = 0;
       }
     } else {
-      this.arcaneMight = Math.max(0, Math.min(10, this.arcaneMight ?? 0));
+      // There is no Arcane Might 0: every Samurai, Ninja and Miko starts at Arcane Might I.
+      this.arcaneMight = Math.max(1, Math.min(10, this.arcaneMight ?? 1));
       if (this.ephiphanies) {
+        // Advancing a level of Arcane Might takes Epiphanies equal to the current level.
         this.ephiphanies.max = this.magicType === 'samurai' ? this.arcaneMight : 0;
-        this.ephiphanies.value = Math.max(0, Math.min(this.ephiphanies.value ?? 0, this.ephiphanies.max));
+        this.ephiphanies.value = Math.max(0, this.ephiphanies.value ?? 0);
       }
     }
 
@@ -266,6 +298,38 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
 
     this._prepareNinjaData();
     this._prepareMikoData();
+    this._prepareSamuraiData();
+  }
+
+  /** True when the character is a Samurai. */
+  get isSamurai() {
+    return this.magicType === 'samurai';
+  }
+
+  /**
+   * Derived Samurai values: retainer limit, and the Martial Spirits with numeric effects.
+   * (Oni's Might is an Active Effect, so it is already in the attributes by now.)
+   * @private
+   */
+  _prepareSamuraiData() {
+    const config = CONFIG.CASUSBELLI.samurai;
+    const isSamurai = this.isSamurai;
+    const arcaneMight = this.arcaneMight ?? 0;
+
+    if (this.retainers) {
+      this.retainers.max = isSamurai
+        ? (config.retainers.find((tier) => arcaneMight >= tier.arcaneMight)?.count ?? 0)
+        : 0;
+    }
+    if (!isSamurai) return;
+
+    // Inner Strength: +2 × Arcane Might maximum Stamina. Feel No Pain: +Arcane Might maximum Pain.
+    if (hasSamuraiSpirit(this.parent, 'innerStrength') && this.stamina) {
+      this.stamina.max += 2 * arcaneMight;
+    }
+    if (hasSamuraiSpirit(this.parent, 'feelNoPain') && this.pain) {
+      this.pain.max += arcaneMight;
+    }
   }
 
   /** True when the character is a Miko. */

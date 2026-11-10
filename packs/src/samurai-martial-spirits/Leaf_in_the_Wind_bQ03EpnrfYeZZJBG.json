@@ -1,0 +1,23 @@
+{
+  "_id": "bQ03EpnrfYeZZJBG",
+  "_key": "!items!bQ03EpnrfYeZZJBG",
+  "name": "Leaf in the Wind",
+  "type": "samuraiAbility",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>Spend one Stamina as an Instant action and increase your movement speed by your Arcane Might until the end of your turn. Or you may use it to perform a jump increasing your jump distance or height by a number of yards equal to your Arcane Might.</p>",
+    "category": "martialSpirit",
+    "stamina": 1,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

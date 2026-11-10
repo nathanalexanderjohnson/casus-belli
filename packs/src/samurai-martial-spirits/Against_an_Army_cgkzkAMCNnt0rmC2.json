@@ -1,0 +1,23 @@
+{
+  "_id": "cgkzkAMCNnt0rmC2",
+  "_key": "!items!cgkzkAMCNnt0rmC2",
+  "name": "Against an Army",
+  "type": "samuraiAbility",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You may parry with a weapon an additional number of times per turn equal to half your Arcane Might. At Arcane Might IV you may parry an unlimited number of times with a single weapon.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

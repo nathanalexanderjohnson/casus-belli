@@ -1,0 +1,23 @@
+{
+  "_id": "ZJMr6e1QO26A1WOI",
+  "_key": "!items!ZJMr6e1QO26A1WOI",
+  "name": "Defy Death",
+  "type": "samuraiAbility",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": "<p>Once per scene you may decrease the damage of an attack by your Arcane Might. You may choose to use this ability after seeing the damage of the attack.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "scene",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

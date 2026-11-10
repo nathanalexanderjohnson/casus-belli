@@ -1,0 +1,23 @@
+{
+  "_id": "s0DQhH9b9quIUbPB",
+  "_key": "!items!s0DQhH9b9quIUbPB",
+  "name": "Steel Body",
+  "type": "samuraiAbility",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Gain natural armor against all damage types equal to 1 + Arcane Might. While wearing armor, add half the value of the natural armor granted by this ability to each of its armor values. This natural armor has the Hard trait. Samurai may use the Grit maneuver against any damage regardless of their Combatant Rank.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,23 @@
+{
+  "_id": "Zp7FSIS3855dJkNr",
+  "_key": "!items!Zp7FSIS3855dJkNr",
+  "name": "Bloody Slaughter",
+  "type": "samuraiAbility",
+  "img": "icons/svg/blood.svg",
+  "system": {
+    "description": "<p>Each time you kill a living opponent, regain Stamina equal to half your Arcane Might. At Arcane Might II or greater once per scene, immediately after killing an opponent with a melee attack you may perform another melee attack before the end of your turn as if you still had a primary action. At Arcane Might IV, you may benefit from this once per turn, at Arcane Might VI you may perform an extra melee attack action after each kill.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

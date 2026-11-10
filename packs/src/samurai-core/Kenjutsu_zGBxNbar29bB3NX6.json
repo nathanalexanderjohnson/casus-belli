@@ -1,0 +1,23 @@
+{
+  "_id": "zGBxNbar29bB3NX6",
+  "_key": "!items!zGBxNbar29bB3NX6",
+  "name": "Kenjutsu",
+  "type": "samuraiAbility",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Kenjutsu are a special set of Signature Maneuvers that samurai may use. They follow all the normal rules of Signature Maneuvers, except that they progress in power each time you increase your Arcane Might. Each samurai has Kenjutsu specific to their fighting style that progresses as they progress, and they may be taught others through a difficult training Project.</p><p>Kenjutsu which you learn from others cannot progress beyond the Arcane Might that your teacher was at the time of training you, though should they or someone of the same style of greater skill provide you pointers you may improve that Kenjutsu’s level without significant time investment. No Kenjutsu may be performed at a higher level than your Arcane Might even if the one teaching you is at a higher Arcane Might.</p><p>You may select a Kenjutsu from the existing list below or work with the GM to create a custom one.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

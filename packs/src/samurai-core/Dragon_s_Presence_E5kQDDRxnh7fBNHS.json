@@ -1,0 +1,23 @@
+{
+  "_id": "E5kQDDRxnh7fBNHS",
+  "_key": "!items!E5kQDDRxnh7fBNHS",
+  "name": "Dragon’s Presence",
+  "type": "samuraiAbility",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Gain two dice on all Intimidation rolls as if you had spent Tempo on them. Monsters can feel something about your blood is monstrous and may be frightened by it (though if you attack them they will realize you are weaker than they believe and fight back).</p>",
+    "category": "dragonBlood",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

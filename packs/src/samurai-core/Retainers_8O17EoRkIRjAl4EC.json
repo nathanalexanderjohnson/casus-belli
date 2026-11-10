@@ -1,0 +1,23 @@
+{
+  "_id": "8O17EoRkIRjAl4EC",
+  "_key": "!items!8O17EoRkIRjAl4EC",
+  "name": "Retainers",
+  "type": "samuraiAbility",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>A Samurai of Arcane Might II or greater may grant a portion of their Martial Spirit to those that follow them, allowing them to benefit from Oni’s Might and Steel Body as if they possessed Arcane Might I in those abilities. The Samurai may revoke this grant at any time and may bestow it with an action to a willing target. When it is revoked the target suffers 4d4 Stress, unless it is done with appropriate ceremony such as when a warrior retires.</p><p>Retainers may be converted to use the Samurai Retainer unit stats and gain the associated benefits when being led by their Samurai.</p><p>Samurai may maintain ten retainers at Arcane Might II, a hundred at Arcane Might IV and a thousand at Arcane Might VI.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

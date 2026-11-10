@@ -1,0 +1,44 @@
+<form class='{{cssClass}} casus-belli-kenjutsu-sheet' autocomplete='off'>
+  <header class='sheet-header'>
+    <img class='profile-img' src='{{item.img}}' data-edit='img' title='{{item.name}}'/>
+    <div class='header-fields'>
+      <h1 class='charname'><input name='name' type='text' value='{{item.name}}' placeholder='Name'/></h1>
+    </div>
+  </header>
+
+  <section class='sheet-body technique-body'>
+    <div class='technique-stats'>
+      <div class='technique-stat'>
+        <label class='resource-label'>Stamina Cost</label>
+        <input name='system.stamina' type='number' value='{{system.stamina}}' min='0'/>
+      </div>
+      <div class='technique-stat technique-stat-wide'>
+        <label class='resource-label' title='Costs other than Stamina, such as Tempo'>Other Cost</label>
+        <input name='system.costNote' type='text' value='{{system.costNote}}' placeholder='e.g. Tempo'/>
+      </div>
+      <div class='technique-stat technique-stat-wide'>
+        <label class='resource-label'>Prerequisite</label>
+        <input name='system.prerequisite' type='text' value='{{system.prerequisite}}' placeholder='e.g. Vision of Madness'/>
+      </div>
+      <div class='technique-stat'>
+        <label class='resource-label' title="Learned from someone else: it cannot progress beyond their Arcane Might. 0 = your own style">Teacher's AM</label>
+        <input name='system.teacherArcaneMight' type='number' value='{{system.teacherArcaneMight}}' min='0'/>
+      </div>
+    </div>
+
+    <label class='resource-label'>Base</label>
+    <div class='talisman-editor'>
+      {{editor enrichedDescription target='system.description' engine='prosemirror' button=true editable=editable}}
+    </div>
+
+    <label class='resource-label'>Arcane Might III</label>
+    <div class='talisman-editor'>
+      {{editor enrichedArcaneMightIII target='system.arcaneMightIII' engine='prosemirror' button=true editable=editable}}
+    </div>
+
+    <label class='resource-label'>Arcane Might V</label>
+    <div class='talisman-editor'>
+      {{editor enrichedArcaneMightV target='system.arcaneMightV' engine='prosemirror' button=true editable=editable}}
+    </div>
+  </section>
+</form>

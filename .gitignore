@@ -141,3 +141,10 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Compiled compendium packs (LevelDB). Foundry rewrites these files every time it opens a
+# pack, so only the JSON sources in packs/src are tracked. Rebuild them with
+# `npm run build:packs` (with Foundry closed) after cloning and before making a release.
+packs/*
+!packs/src/
+!packs/.gitattributes

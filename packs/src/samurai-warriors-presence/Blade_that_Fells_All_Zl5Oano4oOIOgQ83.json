@@ -1,0 +1,23 @@
+{
+  "_id": "Zl5Oano4oOIOgQ83",
+  "_key": "!items!Zl5Oano4oOIOgQ83",
+  "name": "Blade that Fells All",
+  "type": "samuraiAbility",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>After declaring an attack, increase your squad’s AP by half your Arcane Might. At Arcane Might IV or greater you may use this ability on a company you are leading.</p>",
+    "category": "warriorsPresence",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

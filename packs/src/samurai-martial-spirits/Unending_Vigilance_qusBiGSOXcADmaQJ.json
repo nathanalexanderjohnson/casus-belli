@@ -1,0 +1,23 @@
+{
+  "_id": "qusBiGSOXcADmaQJ",
+  "_key": "!items!qusBiGSOXcADmaQJ",
+  "name": "Unending Vigilance",
+  "type": "samuraiAbility",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>Add dice equal to your Arcane Might when making rolls to detect danger or hidden ambushes. Even when surprised you may act as normal without penalty. For example if an arrow were shot from an undetected position towards you or an ally you would be allowed to take a defensive action.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

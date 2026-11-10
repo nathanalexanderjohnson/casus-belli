@@ -1,0 +1,23 @@
+{
+  "_id": "IC3T4IB2EV7wW5Yj",
+  "_key": "!items!IC3T4IB2EV7wW5Yj",
+  "name": "Gatotsu",
+  "type": "kenjutsu",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Perform a Thrust at Difficulty 6 (regardless of the weapon’s normal Difficulty) with the benefits of Tempo increasing the AP of the strike by half your Arcane Might, and the damage by your Arcane Might. If the target is Off-Balance increase your AP by your full Arcane Might instead of half.</p>",
+    "stamina": 0,
+    "costNote": "Tempo",
+    "arcaneMightIII": "<p>If you kill a target with this attack you may move up to your Speed and perform a second Gatotsu on a different target (you may not benefit from this at the same time as gaining an extra attack from Bloody Slaughter, but you may use Bloody Slaughter if your second attack also kills its opponent).</p>",
+    "arcaneMightV": "<p>If your opponent is not already Off-Balance they become Off-Balance at the start of this maneuver before the attack is made.</p>",
+    "prerequisite": "",
+    "teacherArcaneMight": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -80,7 +80,9 @@
       "bloodline": "Bloodline",
       "talisman": "Talisman",
       "rite": "Rite",
-      "mikoAbility": "Miko Ability"
+      "mikoAbility": "Miko Ability",
+      "kenjutsu": "Kenjutsu",
+      "samuraiAbility": "Samurai Ability"
     }
   }
 }

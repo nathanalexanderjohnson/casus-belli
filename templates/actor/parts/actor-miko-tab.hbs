@@ -1,7 +1,7 @@
 {{!-- Miko tab. Context is prepared in CasusBelliActorSheet#_prepareMikoContext. --}}
 <div class="miko-tab-content">
 
-  {{!-- ── Header: Arcane Might, Spiritualism, Unmei, tradition (centered); Rest on the right ── --}}
+  {{!-- ── Header: Arcane Might, Spiritualism, Unmei, tradition (centered) ── --}}
   <div class="miko-header-row">
     <div class="miko-tile miko-tile-small">
       <label for="system.arcaneMight" class="resource-label">Arcane Might</label>
@@ -34,10 +34,6 @@
       <select name="system.tradition">
         {{selectOptions miko.traditions selected=system.tradition}}
       </select>
-    </div>
-
-    <div class="miko-header-actions">
-      <button type="button" class="miko-rest" title="Restore Unmei and reset once-per-rest Favor uses"><i class="fas fa-bed"></i> Rest</button>
     </div>
   </div>
 

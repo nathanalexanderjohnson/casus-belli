@@ -1,0 +1,23 @@
+{
+  "_id": "f6gVeGwSW7xsUzfI",
+  "_key": "!items!f6gVeGwSW7xsUzfI",
+  "name": "Mantle of Hinotori",
+  "type": "samuraiAbility",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Wreath your flesh, weapon and armor in fire. Any creature touching your flames at the end of your turn suffers fire damage equal to your Arcane Might. Any melee attack you make with an object covered in flames deals fire damage rather than its normal damage.</p><p>At Arcane Might III or greater you may spend three Stamina to add your Arcane Might to any fire damage dealt by a melee attack and you optionally may increase your reach to any length increment up to Extremely Long until the start of your next turn or until you choose to cancel this effect.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": "Requires the Blessing of a Hinotori of Arcane Might III or greater"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

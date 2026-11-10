@@ -1,0 +1,27 @@
+{
+  "_id": "MJGWgP3O0q5233VE",
+  "_key": "!items!MJGWgP3O0q5233VE",
+  "name": "Inner Strength",
+  "type": "samuraiAbility",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<p>Increase your maximum Stamina by twice your Arcane Might.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "casus-belli": {
+      "spirit": "innerStrength"
+    }
+  }
+}

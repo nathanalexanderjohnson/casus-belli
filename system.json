@@ -126,6 +126,50 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "samurai-core",
+      "label": "Samurai Core Rules",
+      "path": "packs/samurai-core",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "samurai-martial-spirits",
+      "label": "Samurai Martial Spirits",
+      "path": "packs/samurai-martial-spirits",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "samurai-kenjutsu",
+      "label": "Samurai Kenjutsu",
+      "path": "packs/samurai-kenjutsu",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "samurai-warriors-presence",
+      "label": "Samurai Warrior's Presence",
+      "path": "packs/samurai-warriors-presence",
+      "type": "Item",
+      "system": "casus-belli",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [
@@ -149,6 +193,17 @@
         "miko-talismans",
         "miko-rites",
         "miko-inori"
+      ]
+    },
+    {
+      "name": "Samurai",
+      "sorting": "m",
+      "color": "#5d4138",
+      "packs": [
+        "samurai-core",
+        "samurai-martial-spirits",
+        "samurai-kenjutsu",
+        "samurai-warriors-presence"
       ]
     }
   ],

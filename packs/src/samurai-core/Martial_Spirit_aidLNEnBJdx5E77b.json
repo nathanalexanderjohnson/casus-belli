@@ -1,0 +1,23 @@
+{
+  "_id": "aidLNEnBJdx5E77b",
+  "_key": "!items!aidLNEnBJdx5E77b",
+  "name": "Martial Spirit",
+  "type": "samuraiAbility",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>While all samurai have the basic powers described in the previous section, only those who attain at least the first rank of Arcane Might gain a Martial Spirit. These are abilities that grant powers not available to other samurai. At your first level of Arcane Might and every level afterwards you gain one Martial Spirit. These may also be granted by the GM as a reward for moments of great valor.</p><p>Martial spirits grow stronger as you do, gaining additional strength or added effects as your Arcane Might increases.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

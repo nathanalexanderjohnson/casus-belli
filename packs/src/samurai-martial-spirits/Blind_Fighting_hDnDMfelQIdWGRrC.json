@@ -1,0 +1,23 @@
+{
+  "_id": "hDnDMfelQIdWGRrC",
+  "_key": "!items!hDnDMfelQIdWGRrC",
+  "name": "Blind Fighting",
+  "type": "samuraiAbility",
+  "img": "icons/svg/blind.svg",
+  "system": {
+    "description": "<p>You can fight targets you cannot see without any penalty and are able to ignore all combat penalties caused by the Obscured trait. If you can hear an opponent’s movement you can figure out their rough position and attack them even if you can’t see them.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
