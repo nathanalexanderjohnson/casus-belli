@@ -94,3 +94,20 @@ npm run build:packs -- samurai-kenjutsu  # only the named packs
 ```
 
 Run this after cloning the repository, after editing anything in `packs/src`, and before zipping a release.
+
+## Releases
+
+Releases are built and published by GitHub Actions (`.github/workflows/release.yml`):
+
+- **Pull requests into `main`** build the CSS, the compendium packs and the release zip, so problems show up before merging. The zip is attached to the workflow run for testing.
+- **Merging into `main`** builds the same way and publishes a GitHub release named after the `version` in `system.json`, with `casus-belli.zip` and `system.json` attached.
+
+To publish a new version, bump `version` in `system.json` in your pull request. If a release for that version already exists, the merge still builds but skips publishing and shows a warning.
+
+Foundry installs and updates the system from this manifest URL:
+
+```
+https://github.com/nathanalexanderjohnson/casus-belli/releases/latest/download/system.json
+```
+
+To check a release locally: `npm run build`, `npm run build:packs`, then `npm run package:release`, which stages the system in `dist/casus-belli/`.
