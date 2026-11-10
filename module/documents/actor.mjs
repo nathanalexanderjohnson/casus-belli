@@ -1,4 +1,4 @@
-import { syncNinjaEffects } from '../helpers/ninja.mjs';
+import { syncClassEffects } from '../helpers/class-effects.mjs';
 import { validateTraditionChange } from '../helpers/miko.mjs';
 
 /**
@@ -43,20 +43,21 @@ export class CasusBelliActor extends Actor {
   /** @inheritDoc */
   _onUpdate(changed, options, userId) {
     super._onUpdate(changed, options, userId);
-    if (userId === game.user.id) this.syncNinjaEffects();
+    if (userId === game.user.id) this.syncClassEffects();
   }
 
   /**
-   * Create or remove the system-managed Active Effects for ninja states (Chakra exhaustion,
-   * open Gates, Jinchuriki flaws). Calls are queued so overlapping updates can't duplicate effects.
+   * Create, update, or remove the system-managed Active Effects for class features (ninja
+   * exhaustion, Gates and Jinchuriki flaws; Samurai Oni's Might). Calls are queued so
+   * overlapping updates can't duplicate effects.
    * @returns {Promise<void>}
    */
-  syncNinjaEffects() {
+  syncClassEffects() {
     if (this.type !== 'character') return Promise.resolve();
-    this._ninjaEffectSync = (this._ninjaEffectSync ?? Promise.resolve())
-      .then(() => syncNinjaEffects(this))
-      .catch((err) => console.error('casus-belli | Failed to sync ninja effects', err));
-    return this._ninjaEffectSync;
+    this._classEffectSync = (this._classEffectSync ?? Promise.resolve())
+      .then(() => syncClassEffects(this))
+      .catch((err) => console.error('casus-belli | Failed to sync class effects', err));
+    return this._classEffectSync;
   }
 
   /**

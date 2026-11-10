@@ -1,0 +1,23 @@
+{
+  "_id": "pHGR1PBgjBs0lNkF",
+  "_key": "!items!pHGR1PBgjBs0lNkF",
+  "name": "Cast Down",
+  "type": "samuraiAbility",
+  "img": "icons/svg/falling.svg",
+  "system": {
+    "description": "<p>As a secondary action, spend three Stamina and strike out at a creature you can see with the force of your Ki and force it to make an Agility + Endurance roll against your Samurai ability roll. On a failure the target’s speed is halved until the end of your next turn and if it is flying it begins a controlled descent, falling up to fifty yards, but not taking damage upon hitting the ground.</p>",
+    "category": "martialSpirit",
+    "stamina": 3,
+    "roll": true,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -80,3 +80,17 @@ This system includes a handful of helper CSS classes to help you lay out your sh
 This repo includes both CSS for the theme and SCSS source files. If you're new to CSS, it's probably easier to just work in those files directly and delete the SCSS directory. If you're interested in using a CSS preprocessor to add support for nesting, variables, and more, you can run `npm install` in this directory to install the dependencies for the scss compiler. After that, just run `npm run build` to compile the SCSS and start a process that watches for new changes.
 
 ![image](http://mattsmith.in/images/casus-belli.png)
+
+## Compendium Packs
+
+The compendium content (ninja, miko and samurai techniques, abilities, and so on) lives as one JSON file per item in `packs/src/<pack-name>/`. Those files are the source of truth and are tracked in git.
+
+Foundry reads compiled LevelDB databases in `packs/<pack-name>/`, which it rewrites every time it opens a pack, so they are not tracked (see `.gitignore`). Build them from the JSON with Foundry closed:
+
+```
+npm install
+npm run build:packs                      # all packs
+npm run build:packs -- samurai-kenjutsu  # only the named packs
+```
+
+Run this after cloning the repository, after editing anything in `packs/src`, and before zipping a release.

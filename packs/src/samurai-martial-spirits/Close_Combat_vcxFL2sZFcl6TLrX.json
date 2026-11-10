@@ -1,0 +1,23 @@
+{
+  "_id": "vcxFL2sZFcl6TLrX",
+  "_key": "!items!vcxFL2sZFcl6TLrX",
+  "name": "Close Combat",
+  "type": "samuraiAbility",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>You may ignore dice penalty inflicted from being below the normal combat length of your weapon, so long as you are not in an enclosed space that constricts the maximum combat length.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

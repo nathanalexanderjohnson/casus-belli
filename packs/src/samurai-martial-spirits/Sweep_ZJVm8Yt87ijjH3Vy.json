@@ -1,0 +1,23 @@
+{
+  "_id": "ZJVm8Yt87ijjH3Vy",
+  "_key": "!items!ZJVm8Yt87ijjH3Vy",
+  "name": "Sweep",
+  "type": "samuraiAbility",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>You may attack an additional number of targets in reach with the Cleave Maneuver equal to half your Arcane Might. At Arcane Might IV you may attack one additional opponent in reach with any melee attack Maneuver.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

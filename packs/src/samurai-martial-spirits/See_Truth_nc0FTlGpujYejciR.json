@@ -1,0 +1,23 @@
+{
+  "_id": "nc0FTlGpujYejciR",
+  "_key": "!items!nc0FTlGpujYejciR",
+  "name": "See Truth",
+  "type": "samuraiAbility",
+  "img": "icons/svg/invisible.svg",
+  "system": {
+    "description": "<p>You are capable of seeing through illusions of an Arcane Might equal or less than yours. You are immune to any conditions inflicted through any ability that uses illusion.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

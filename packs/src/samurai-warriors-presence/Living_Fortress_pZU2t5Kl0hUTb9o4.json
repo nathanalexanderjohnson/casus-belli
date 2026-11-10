@@ -1,0 +1,23 @@
+{
+  "_id": "pZU2t5Kl0hUTb9o4",
+  "_key": "!items!pZU2t5Kl0hUTb9o4",
+  "name": "Living Fortress",
+  "type": "samuraiAbility",
+  "img": "icons/svg/tower.svg",
+  "system": {
+    "description": "<p>After your squad is targeted by a ranged attack you may use this ability to decrease the ranged attack skill of any unit attacking by half your Arcane Might. This effect lasts until the end of the round. At Arcane Might IV you may use this ability on a Company you are leading.</p>",
+    "category": "warriorsPresence",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

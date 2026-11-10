@@ -1,0 +1,23 @@
+{
+  "_id": "MYXeq23prLUOxzR8",
+  "_key": "!items!MYXeq23prLUOxzR8",
+  "name": "Sudden Fear",
+  "type": "samuraiAbility",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>Cause a squad below half Cohesion to be forced to make a Rout test. Subtract a number of dice from their roll equal to your Arcane Might. You may instead use this ability when an enemy unit makes a Rout test to subtract dice from that test equal to your Arcane Might.</p><p>At Arcane Might IV or greater you may use this ability on a Company or up to ten squads at once if they are not grouped into a Company.</p>",
+    "category": "warriorsPresence",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

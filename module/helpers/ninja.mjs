@@ -6,7 +6,6 @@ import { promptTrainingWeek } from './training.mjs';
 import { countSuccesses, formatRollContent, labelForKey, openRollDialog } from './rolls.mjs';
 
 const escape = (value) => Handlebars.escapeExpression(String(value ?? ''));
-const FLAG_SCOPE = 'casus-belli';
 
 /* -------------------------------------------- */
 /*  Lookups                                     */
@@ -643,7 +642,7 @@ async function resetTechniqueUses(actor, frequencies) {
  * @param {Actor} actor
  * @returns {object[]} Effect definitions keyed by `id`
  */
-function desiredNinjaEffects(actor) {
+export function desiredNinjaEffects(actor) {
   const config = CONFIG.CASUSBELLI;
   const system = actor.system;
   if (!system.isNinja) return [];
@@ -715,29 +714,4 @@ function desiredNinjaEffects(actor) {
 
   return effects;
 }
-
-/**
- * Create and delete system-managed effects so they match the actor's current state.
- * Effects a user has disabled stay disabled; only presence is synced.
- * @param {Actor} actor
- */
-export async function syncNinjaEffects(actor) {
-  if (!actor?.isOwner) return;
-  const desired = desiredNinjaEffects(actor);
-  const desiredIds = new Set(desired.map((e) => e.id));
-  const existing = actor.effects.filter((e) => e.getFlag(FLAG_SCOPE, 'ninjaEffect'));
-  const existingIds = new Set(existing.map((e) => e.getFlag(FLAG_SCOPE, 'ninjaEffect')));
-
-  const toDelete = existing.filter((e) => !desiredIds.has(e.getFlag(FLAG_SCOPE, 'ninjaEffect'))).map((e) => e.id);
-  const toCreate = desired.filter((e) => !existingIds.has(e.id)).map((e) => ({
-    name: e.name,
-    img: e.img,
-    description: e.description,
-    transfer: false,
-    system: { changes: e.changes },
-    flags: { [FLAG_SCOPE]: { ninjaEffect: e.id } },
-  }));
-
-  if (toDelete.length) await actor.deleteEmbeddedDocuments('ActiveEffect', toDelete);
-  if (toCreate.length) await actor.createEmbeddedDocuments('ActiveEffect', toCreate);
-}
+// The effects are applied by syncClassEffects in class-effects.mjs.

@@ -1,0 +1,23 @@
+{
+  "_id": "s52RwgCdOLDU3xGo",
+  "_key": "!items!s52RwgCdOLDU3xGo",
+  "name": "Oni’s Hammer",
+  "type": "kenjutsu",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>Perform two Swing maneuvers as part of a single attack. Each attack must be defended against separately.</p>",
+    "stamina": 3,
+    "costNote": "",
+    "arcaneMightIII": "<p>Instead of performing two Swing maneuvers perform one maneuver of your choice and then a Swing maneuver. You must pay any normal costs associated with maneuvers performed as part of this one in addition to its base cost. You cannot perform another Kenjutsu as part of this one.</p>",
+    "arcaneMightV": "<p>Perform two maneuvers of your choice as a single attack.You must pay any normal costs associated with maneuvers performed as part of this one in addition to its base cost. You cannot perform another Kenjutsu as part of this one.</p>",
+    "prerequisite": "",
+    "teacherArcaneMight": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

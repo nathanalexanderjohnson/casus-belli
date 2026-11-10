@@ -1,0 +1,27 @@
+{
+  "_id": "fYPES5tiOrGM576E",
+  "_key": "!items!fYPES5tiOrGM576E",
+  "name": "Feel No Pain",
+  "type": "samuraiAbility",
+  "img": "icons/svg/heal.svg",
+  "system": {
+    "description": "<p>Increase your maximum Pain by your Arcane Might. Add dice equal to your Arcane Might to any roll made to resist pain.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "casus-belli": {
+      "spirit": "feelNoPain"
+    }
+  }
+}

@@ -17,6 +17,7 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/casus-belli/templates/actor/parts/actor-sorcerer-tab.hbs',
     'systems/casus-belli/templates/actor/parts/actor-ninja-tab.hbs',
     'systems/casus-belli/templates/actor/parts/actor-miko-tab.hbs',
+    'systems/casus-belli/templates/actor/parts/actor-samurai-tab.hbs',
     // Dialogs
     'systems/casus-belli/templates/dialogs/spellcast-dialog.hbs',
     // Item partials

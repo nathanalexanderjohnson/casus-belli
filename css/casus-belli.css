@@ -294,6 +294,24 @@
   padding-left: 8px;
   padding-right: 8px;
 }
+.casus-belli .sheet-header .charname-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: -2px 0 6px;
+}
+.casus-belli .sheet-header .charname-actions button {
+  flex: 0 0 auto;
+  width: auto;
+  background: #efe2c4;
+  color: #2b1f1a;
+  border: 1px solid rgba(123, 43, 39, 0.9);
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
 .casus-belli .sheet-header .magic-type select {
   max-width: 25%;
 }
@@ -348,304 +366,6 @@
   font-size: 11px;
   font-weight: bold;
   color: #9a4d47;
-}
-.casus-belli .samurai-header-row {
-  flex: none;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
-  width: 100%;
-  margin-bottom: 4px;
-}
-.casus-belli .samurai-left-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  width: 150px;
-  flex: 0 0 150px;
-}
-.casus-belli .samurai-left-column .arcane-might-box,
-.casus-belli .samurai-left-column .ephiphanies-box,
-.casus-belli .samurai-left-column .attribute.tile,
-.casus-belli .samurai-left-column .tracker-box {
-  width: 68px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: #e4d4af;
-  border: 2px groove #7b2b27;
-  border-radius: 6px;
-  padding: 2px;
-}
-.casus-belli .samurai-left-column .arcane-might-box .resource-label,
-.casus-belli .samurai-left-column .ephiphanies-box .resource-label,
-.casus-belli .samurai-left-column .attribute.tile .resource-label,
-.casus-belli .samurai-left-column .tracker-box .resource-label {
-  font-size: 9px;
-  font-weight: bold;
-  line-height: 1.1;
-  margin-bottom: 2px;
-}
-.casus-belli .samurai-left-column .arcane-might-box input,
-.casus-belli .samurai-left-column .ephiphanies-box input,
-.casus-belli .samurai-left-column .attribute.tile input,
-.casus-belli .samurai-left-column .tracker-box input {
-  width: 44px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  border: 1px solid rgba(123, 43, 39, 0.9);
-  background: #efe2c4;
-  padding: 1px 2px;
-  border-radius: 3px;
-  height: 22px;
-}
-.casus-belli .samurai-left-column .ephiphanies-box,
-.casus-belli .samurai-left-column .tracker-box {
-  width: 110px;
-  height: 50px;
-}
-.casus-belli .samurai-left-column .ephiphanies-box .resource-content,
-.casus-belli .samurai-left-column .tracker-box .resource-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 4px;
-  box-sizing: border-box;
-  gap: 2px;
-}
-.casus-belli .samurai-left-column .ephiphanies-box .resource-content input,
-.casus-belli .samurai-left-column .tracker-box .resource-content input {
-  flex: 1;
-  min-width: 0;
-  text-align: center;
-  font-size: 11px;
-  font-weight: bold;
-  border: 1px solid rgba(123, 43, 39, 0.9);
-  background: #efe2c4;
-  padding: 1px 1px;
-  border-radius: 3px;
-  height: 20px;
-}
-.casus-belli .samurai-left-column .ephiphanies-box .resource-content span,
-.casus-belli .samurai-left-column .tracker-box .resource-content span {
-  font-size: 10px;
-  font-weight: bold;
-  color: #9a4d47;
-}
-.casus-belli .class-tab-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80px;
-  padding: 10px 0;
-}
-.casus-belli .class-tab-placeholder .arcane-might-box,
-.casus-belli .class-tab-placeholder .attribute.tile {
-  width: 68px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: #e4d4af;
-  border: 2px groove #7b2b27;
-  border-radius: 6px;
-  padding: 2px;
-}
-.casus-belli .class-tab-placeholder .arcane-might-box .resource-label,
-.casus-belli .class-tab-placeholder .attribute.tile .resource-label {
-  font-size: 9px;
-  font-weight: bold;
-  line-height: 1.1;
-  margin-bottom: 2px;
-}
-.casus-belli .class-tab-placeholder .arcane-might-box input,
-.casus-belli .class-tab-placeholder .attribute.tile input {
-  width: 44px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  border: 1px solid rgba(123, 43, 39, 0.9);
-  background: #efe2c4;
-  padding: 1px 2px;
-  border-radius: 3px;
-  height: 22px;
-}
-.casus-belli .class-tab-placeholder .tracker-box,
-.casus-belli .class-tab-placeholder .ephiphanies-box {
-  width: 110px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: #e4d4af;
-  border: 2px groove #7b2b27;
-  border-radius: 6px;
-  padding: 2px;
-}
-.casus-belli .class-tab-placeholder .tracker-box .resource-label,
-.casus-belli .class-tab-placeholder .ephiphanies-box .resource-label {
-  font-size: 9px;
-  font-weight: bold;
-  line-height: 1.1;
-  margin-bottom: 2px;
-}
-.casus-belli .class-tab-placeholder .tracker-box .resource-content,
-.casus-belli .class-tab-placeholder .ephiphanies-box .resource-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 4px;
-  box-sizing: border-box;
-  gap: 2px;
-}
-.casus-belli .class-tab-placeholder .tracker-box .resource-content input,
-.casus-belli .class-tab-placeholder .ephiphanies-box .resource-content input {
-  flex: 1;
-  min-width: 0;
-  text-align: center;
-  font-size: 11px;
-  font-weight: bold;
-  border: 1px solid rgba(123, 43, 39, 0.9);
-  background: #efe2c4;
-  padding: 1px 1px;
-  border-radius: 3px;
-  height: 20px;
-}
-.casus-belli .class-tab-placeholder .tracker-box .resource-content span,
-.casus-belli .class-tab-placeholder .ephiphanies-box .resource-content span {
-  font-size: 10px;
-  font-weight: bold;
-  color: #9a4d47;
-}
-.casus-belli .samurai-entries-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  width: 100%;
-  margin-top: 0;
-}
-.casus-belli .samurai-entry-table {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: rgba(228, 212, 175, 0.8);
-  border: 2px groove #7b2b27;
-  border-radius: 8px;
-  padding: 12px;
-  min-height: 160px;
-}
-.casus-belli .samurai-kenjutsu-table {
-  width: 100%;
-  min-height: auto;
-  margin-bottom: 0;
-}
-.casus-belli .samurai-entry-table .samurai-table-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(123, 43, 39, 0.8);
-}
-.casus-belli .samurai-entry-table .samurai-table-header h3 {
-  margin: 0;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #5d4138;
-  text-shadow: 0 0 0.7px rgba(62, 44, 36, 0.35);
-}
-.casus-belli .samurai-entry-table .samurai-table-header button {
-  flex: 0 0 10%;
-  min-width: 28px;
-  max-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #efe2c4;
-  color: #2b1f1a;
-  border: 1px solid rgba(123, 43, 39, 0.9);
-  border-radius: 3px;
-  padding: 3px 4px;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-.casus-belli .samurai-entry-table .samurai-empty {
-  margin: 0;
-  font-style: italic;
-  color: #9a4d47;
-}
-.casus-belli .samurai-entry {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 10px;
-  background: #efe2c4;
-  border: 1px solid rgba(123, 43, 39, 0.7);
-  border-radius: 6px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
-}
-.casus-belli .samurai-entry input,
-.casus-belli .samurai-entry textarea {
-  width: 100%;
-  background: #e4d4af;
-  border: 1px solid rgba(123, 43, 39, 0.8);
-  border-radius: 4px;
-  color: #2b1f1a;
-  padding: 6px 8px;
-  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: 12px;
-}
-.casus-belli .samurai-entry textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-.casus-belli .samurai-entry-name {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #5d4138;
-  text-transform: uppercase;
-}
-.casus-belli .samurai-entry-description {
-  white-space: pre-wrap;
-  color: #2b1f1a;
-  line-height: 1.45;
-  font-size: 12px;
-}
-.casus-belli .samurai-entry-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.casus-belli .samurai-entry-actions button {
-  flex: 1;
-  min-width: 70px;
-  background: #efe2c4;
-  color: #2b1f1a;
-  border: 1px solid rgba(123, 43, 39, 0.9);
-  border-radius: 3px;
-  padding: 4px 6px;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.2;
 }
 .casus-belli .class-selector-wrap {
   display: flex;
@@ -2139,13 +1859,13 @@
 .casus-belli .augments-section .augments-list .augments-footer {
   padding: 4px 2px;
 }
-.casus-belli .ninja-tab-content, .casus-belli .miko-tab-content {
+.casus-belli .ninja-tab-content, .casus-belli .samurai-tab-content, .casus-belli .miko-tab-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   overflow-y: auto;
 }
-.casus-belli .ninja-tab-content button, .casus-belli .miko-tab-content button {
+.casus-belli .ninja-tab-content button, .casus-belli .samurai-tab-content button, .casus-belli .miko-tab-content button {
   background: #efe2c4;
   color: #2b1f1a;
   border: 1px solid rgba(123, 43, 39, 0.9);
@@ -2156,11 +1876,11 @@
   line-height: 1.4;
   width: auto;
 }
-.casus-belli .ninja-tab-content button.active, .casus-belli .miko-tab-content button.active {
+.casus-belli .ninja-tab-content button.active, .casus-belli .samurai-tab-content button.active, .casus-belli .miko-tab-content button.active {
   background: #8d4e48;
   color: #fffaf3;
 }
-.casus-belli .ninja-tab-content button:disabled, .casus-belli .miko-tab-content button:disabled {
+.casus-belli .ninja-tab-content button:disabled, .casus-belli .samurai-tab-content button:disabled, .casus-belli .miko-tab-content button:disabled {
   opacity: 0.5;
 }
 .casus-belli .ninja-header-row {
@@ -2317,11 +2037,6 @@
 }
 .casus-belli .ninja-header-row .potency-box select {
   width: 100%;
-}
-.casus-belli .ninja-header-row .ninja-header-actions {
-  display: flex;
-  gap: 6px;
-  margin-left: auto;
 }
 .casus-belli .ninja-hint, .casus-belli .miko-hint {
   margin: 0;
@@ -2701,21 +2416,12 @@
   align-items: center;
   gap: 4px;
 }
-.casus-belli .miko-header-row {
-  position: relative;
+.casus-belli .miko-header-row, .casus-belli .samurai-header-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-}
-.casus-belli .miko-header-actions {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 6px;
 }
 .casus-belli .miko-kami-value {
   font-size: 13px;
@@ -2832,6 +2538,30 @@
 }
 .casus-belli .miko-list .miko-toggle-active.active {
   color: #476d5d;
+}
+.casus-belli .samurai-stat {
+  margin: 0;
+  font-size: 12px;
+}
+.casus-belli .samurai-code {
+  width: 100%;
+  min-height: 48px;
+  resize: vertical;
+  font-size: 12px;
+}
+.casus-belli .samurai-infractions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.casus-belli .samurai-infractions .miko-subheading {
+  width: 100%;
+  margin-top: 0;
+}
+.casus-belli .samurai-over {
+  border-color: #7b2b27;
+  box-shadow: 0 0 4px rgba(123, 43, 39, 0.6);
 }
 .casus-belli .talisman-editor {
   min-height: 120px;

@@ -1,0 +1,23 @@
+{
+  "_id": "SmARAMH8y2pbbVFM",
+  "_key": "!items!SmARAMH8y2pbbVFM",
+  "name": "Battojutsu",
+  "type": "kenjutsu",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>As an action you may draw your sword and perform a Swing with the benefit of Tempo, increase the damage of the Swing by your Arcane Might.</p>",
+    "stamina": 3,
+    "costNote": "",
+    "arcaneMightIII": "<p>If you successfully land the attack, gain Tempo.</p>",
+    "arcaneMightV": "<p>You may perform a Cleave rather than a Swing as part of your Battojutsu</p>",
+    "prerequisite": "",
+    "teacherArcaneMight": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

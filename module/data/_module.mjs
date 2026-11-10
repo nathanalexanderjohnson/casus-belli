@@ -17,3 +17,5 @@ export {default as CasusBelliBloodline} from "./item-bloodline.mjs";
 export {default as CasusBelliTalisman} from "./item-talisman.mjs";
 export {default as CasusBelliRite} from "./item-rite.mjs";
 export {default as CasusBelliMikoAbility} from "./item-mikoAbility.mjs";
+export {default as CasusBelliKenjutsu} from "./item-kenjutsu.mjs";
+export {default as CasusBelliSamuraiAbility} from "./item-samuraiAbility.mjs";

@@ -1,0 +1,23 @@
+{
+  "_id": "RDFwAju9OANGzUmg",
+  "_key": "!items!RDFwAju9OANGzUmg",
+  "name": "Yokai’s Gaze",
+  "type": "samuraiAbility",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>As an action spend three Stamina and gaze upon a creature visible to you within twenty yards and make a Samurai ability roll against a pure Will roll. On a win, characters of equal Arcane Might to you are Frightened. Should you score a critical win characters of equal Arcane Might at Terrified. Characters of greater Arcane Might count their level of success as one greater, only becoming Frightened should you score a critical win. Characters of lesser Arcane Might who you win this test against are either Terrified or rendered completely unable to move. In all cases this effect lasts for a minute, or till you are no longer in their presence. Creatures that have successfully resisted this ability are immune to it until their next rest.</p><p>At Arcane Might IV or greater you may use this ability on ten targets at once and creatures without an Arcane Might or a Will score of four or higher automatically fail their save. At Arcane Might VI you may use it on up to a hundred targets at once.</p>",
+    "category": "martialSpirit",
+    "stamina": 3,
+    "roll": true,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": "Requires the Blessing of a Yokai of Arcane Might III or greater"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

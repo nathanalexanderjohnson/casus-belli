@@ -1,0 +1,23 @@
+{
+  "_id": "TqfCsXlvCl6YKUUs",
+  "_key": "!items!TqfCsXlvCl6YKUUs",
+  "name": "Arts of a Samurai",
+  "type": "samuraiAbility",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>While the abilities of a samurai are varied and differ between individual followers of Bushido, there are a set of core abilities available to all true samurai described below. In addition all Samurai gain the Battlemaster boon without needing to purchase it during character creation and may use bows with Strength rather than Agility (though they still do not add their attribute to the damage).</p><p>Arcane Might is a measure of your supernatural power within the world of Casus Belli. As you grow in strength, it increases and can be used to measure the relative strength of two practitioners of different magic systems. As a samurai whenever an ability calls for a samurai ability roll, make a Strength + Arcane Might roll for the ability.</p><p>Certain powers improve as your Arcane Might increases and certain abilities have a reduced or no effect against creatures that are of a higher Arcane Might than yours and/or an increased effect against those with lower Arcane Might.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

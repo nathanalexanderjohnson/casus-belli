@@ -147,6 +147,6 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "boon", "maneuver", "wound", "armor", "gadget", "technique", "bloodline", "talisman", "rite", "mikoAbility"]
+    "types": ["item", "feature", "boon", "maneuver", "wound", "armor", "gadget", "technique", "bloodline", "talisman", "rite", "mikoAbility", "kenjutsu", "samuraiAbility"]
   }
 }

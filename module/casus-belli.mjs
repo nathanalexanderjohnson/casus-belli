@@ -7,6 +7,7 @@ import { CasusBelliItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { CASUSBELLI } from './helpers/config.mjs';
+import { migrateWorldSamuraiLists } from './helpers/samurai.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -60,7 +61,9 @@ Hooks.once('init', function () {
     bloodline: models.CasusBelliBloodline,
     talisman: models.CasusBelliTalisman,
     rite: models.CasusBelliRite,
-    mikoAbility: models.CasusBelliMikoAbility
+    mikoAbility: models.CasusBelliMikoAbility,
+    kenjutsu: models.CasusBelliKenjutsu,
+    samuraiAbility: models.CasusBelliSamuraiAbility
   };
   CONFIG.Item.typeLabels = {
     item: 'Item',
@@ -74,7 +77,9 @@ Hooks.once('init', function () {
     bloodline: 'Bloodline',
     talisman: 'Talisman',
     rite: 'Rite',
-    mikoAbility: 'Miko Ability'
+    mikoAbility: 'Miko Ability',
+    kenjutsu: 'Kenjutsu',
+    samuraiAbility: 'Samurai Ability'
   };
 
   // Set type-specific default icons so items don't use the bag icon.
@@ -89,6 +94,8 @@ Hooks.once('init', function () {
     talisman: 'icons/svg/book.svg',
     rite: 'icons/svg/sun.svg',
     mikoAbility: 'icons/svg/angel.svg',
+    kenjutsu: 'icons/svg/sword.svg',
+    samuraiAbility: 'icons/svg/combat.svg',
   });
 
   // Active Effects are never copied to the Actor,
@@ -255,6 +262,15 @@ Handlebars.registerHelper('capitalize', function (str) {
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
+
+  // Move old Samurai lists (Kenjutsu, Martial Spirit, Warrior's Presence) into items.
+  // Only one GM does this, so the items aren't created twice.
+  // Then bring every character's class Active Effects (e.g. Oni's Might) up to date.
+  if (game.user === game.users.activeGM) {
+    migrateWorldSamuraiLists().then(() => {
+      for (const actor of game.actors.filter((a) => a.type === 'character')) actor.syncClassEffects();
+    });
+  }
 });
 
 /* -------------------------------------------- */

@@ -1,0 +1,23 @@
+{
+  "_id": "aVrlkPoF0MrOFmlZ",
+  "_key": "!items!aVrlkPoF0MrOFmlZ",
+  "name": "Bushido",
+  "type": "samuraiAbility",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A Samurai who does not follow a code is worth less than a peasant. When creating your character you must decide what ideals he follows. Most characters in this setting will follow a code that emphasizes some or all the eight virtues of Bushido. Should you fail to live up to your chosen path the GM may inflict Stress upon your character based on the severity of the infraction. Gain 1d4 Stress for a minor infraction, 2d4 for a moderate one and 4d4 for a major infraction. A character may choose to abandon their path and one may still have the powers of a Samurai without following Bushido, but doing so causes that character to lose all benefits listed in this section.</p><p>Bushido does not simply limit your character’s actions without granting anything in return. Whenever a magical ability would compel your character to violate a tenet of their code you may spend a point of Luck to end the effect. You may also spend a point of Luck to end any fear effect that would prevent you from fulfilling Bushido.</p><p>When you complete a significant task that embodies your ideal or have a major arc where your character lives up to his ideal, despite difficulty, the GM may grant you an Epiphany.</p><p>During moments of significant tension where you lay your life on the line to live up to your path and ideals the GM may choose to allow your character to ignore all Pain for the scene and restore their Luck to maximum.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

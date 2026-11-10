@@ -144,6 +144,24 @@ export class CasusBelliItemSheet extends ItemSheet {
       context.enrichedOfuda = await enrich(this.item.system.ofuda);
     }
 
+    // Samurai item options, and the two extra Kenjutsu tier texts
+    if (this.item.type === 'samuraiAbility') {
+      context.samuraiOptions = {
+        categories: CONFIG.CASUSBELLI.samuraiAbilityCategories,
+        frequencies: CONFIG.CASUSBELLI.techniqueFrequencies,
+      };
+    }
+    if (this.item.type === 'kenjutsu') {
+      const enrich = (text) => TextEditor.enrichHTML(text ?? '', {
+        secrets: this.document.isOwner,
+        async: true,
+        rollData: this.item.getRollData(),
+        relativeTo: this.item,
+      });
+      context.enrichedArcaneMightIII = await enrich(this.item.system.arcaneMightIII);
+      context.enrichedArcaneMightV = await enrich(this.item.system.arcaneMightV);
+    }
+
     // Inject derived total complexity for gadget items
     if (this.item.type === 'gadget') {
       context.system.totalComplexity = this.item.system.totalComplexity;

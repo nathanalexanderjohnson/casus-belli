@@ -1,0 +1,23 @@
+{
+  "_id": "uNak1PStARwZfyWL",
+  "_key": "!items!uNak1PStARwZfyWL",
+  "name": "Kill. Kill. Kill.",
+  "type": "samuraiAbility",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": "<p>After making an attack with your squad that destroys or routs a unit you may make another attack against a different unit that you are able to reach. If you are leading your Retainers you may ignore cross attack restrictions for this second attack.</p><p>At Arcane Might IV or greater you may use this on a company and may perform a Charge as part of this order.</p>",
+    "category": "warriorsPresence",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

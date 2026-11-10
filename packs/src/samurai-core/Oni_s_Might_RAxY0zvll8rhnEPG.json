@@ -1,0 +1,23 @@
+{
+  "_id": "RAxY0zvll8rhnEPG",
+  "_key": "!items!RAxY0zvll8rhnEPG",
+  "name": "Oni’s Might",
+  "type": "samuraiAbility",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Increase your Strength and Endurance score and maximum by an amount equal to half your Arcane Might. Ignore these added levels when determining the XP cost to improve these attributes. Whenever performing an attack any weapon you wield or any unarmed attack benefits from the Brutal tag, allowing you to add your entire Strength value to the damage of a melee or throwing attack.</p><p>You may Parry bolts, arrows and other such projectiles. You may not parry bullets or other attacks that would be impossible to parry.</p><p>If a target is immune to physical damage, you may infuse your sword with Ki to allow you to damage it. When doing so count its armor as five greater against your physical damage.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

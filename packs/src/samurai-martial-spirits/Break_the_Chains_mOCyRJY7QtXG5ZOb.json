@@ -1,0 +1,23 @@
+{
+  "_id": "mOCyRJY7QtXG5ZOb",
+  "_key": "!items!mOCyRJY7QtXG5ZOb",
+  "name": "Break the Chains",
+  "type": "samuraiAbility",
+  "img": "icons/svg/net.svg",
+  "system": {
+    "description": "<p>At the cost of three Stamina you may end a magical effect on yourself that is of equal or lesser Arcane Might. You may also end any non-magical effect that inflicts a progression level of the Stunned, Terrified or Vulnerable conditions at the same cost.</p>",
+    "category": "martialSpirit",
+    "stamina": 3,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

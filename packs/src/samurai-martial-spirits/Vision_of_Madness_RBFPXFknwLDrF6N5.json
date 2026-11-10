@@ -1,0 +1,23 @@
+{
+  "_id": "RBFPXFknwLDrF6N5",
+  "_key": "!items!RBFPXFknwLDrF6N5",
+  "name": "Vision of Madness",
+  "type": "samuraiAbility",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>As an action spend three Stamina to target a creature within five yards who you have eye contact with. You may transfer a portion of the madness within you into the target, forcing a pure Will roll against your samurai ability roll and on a failure if they are not already Stressed they suffer Stress equal to twice your Arcane Might, this added Stress cannot take them beyond twice their Stress maximum. If they are already Stressed or the added Stress would have taken them above twice their Stress maximum, they become overwhelmed and suffer the Madness condition for a turn and have a critical psychic wound inflicted upon them. Creatures that have successfully resisted this ability are immune to it until their next rest.</p>",
+    "category": "martialSpirit",
+    "stamina": 3,
+    "roll": true,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": "Requires the Blessing of a Kyokotsu of Arcane Might III or greater"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

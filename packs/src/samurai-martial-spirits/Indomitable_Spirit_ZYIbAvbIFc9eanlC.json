@@ -1,0 +1,23 @@
+{
+  "_id": "ZYIbAvbIFc9eanlC",
+  "_key": "!items!ZYIbAvbIFc9eanlC",
+  "name": "Indomitable Spirit",
+  "type": "samuraiAbility",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<p>Whenever you make a roll to resist a magical effect you may replace one element of the roll with your Arcane Might.</p>",
+    "category": "martialSpirit",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

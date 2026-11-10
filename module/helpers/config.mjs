@@ -311,3 +311,37 @@ CASUSBELLI.miko = {
     { arcaneMight: 1, capacity: 1 },
   ],
 };
+
+/* -------------------------------------------- */
+/*  Samurai                                     */
+/* -------------------------------------------- */
+
+/** Samurai ability categories. Core abilities are reference cards; their rules are automatic. */
+CASUSBELLI.samuraiAbilityCategories = {
+  core: 'Core',
+  martialSpirit: 'Martial Spirit',
+  warriorsPresence: "Warrior's Presence",
+  dragonBlood: 'Dragon Blood',
+};
+
+/** Bushido infractions and the Stress they inflict. */
+CASUSBELLI.bushidoInfractions = {
+  minor: { label: 'Minor', formula: '1d4' },
+  moderate: { label: 'Moderate', formula: '2d4' },
+  major: { label: 'Major', formula: '4d4' },
+};
+
+/** Samurai rules constants. */
+CASUSBELLI.samurai = {
+  /** Retainers a Samurai may maintain, by minimum Arcane Might (highest match wins). */
+  retainers: [
+    { arcaneMight: 6, count: 1000 },
+    { arcaneMight: 4, count: 100 },
+    { arcaneMight: 2, count: 10 },
+  ],
+  /** Martial Spirits whose numeric effects are automated, matched by name (or compendium flag). */
+  automatedSpirits: {
+    innerStrength: 'Inner Strength',
+    feelNoPain: 'Feel No Pain',
+  },
+};

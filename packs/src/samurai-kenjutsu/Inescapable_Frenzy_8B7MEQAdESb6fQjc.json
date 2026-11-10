@@ -1,0 +1,23 @@
+{
+  "_id": "8B7MEQAdESb6fQjc",
+  "_key": "!items!8B7MEQAdESb6fQjc",
+  "name": "Inescapable Frenzy",
+  "type": "kenjutsu",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>Perform a Grab maneuver ignoring any range penalties, on a successful strike perform Vision of Madness upon the target. After resolving the ability you may choose to retain the grapple or throw the target a distance up to your throwing range. Should they collide with an object or creature, both targets take damage equal to your Strength and must make a Strength + Agility roll against your Arcane Might or be knocked prone. Normal grapple and throwing restrictions apply when attempting to do this upon a creature larger than yourself. Creatures that are two sizes larger than the throw target automatically succeed their save to avoid being knocked down.</p><p>After successfully resolving this ability and inflict Stress with it you may either decrease your Stress by half the Stress inflicted or if you follow the Demonic Path you may elect to transfer a point of Rage to your target (even if they cannot normally suffer Rage). Characters who gain Rage and are not normally able to gain it lose one point per rest.</p>",
+    "stamina": 3,
+    "costNote": "",
+    "arcaneMightIII": "<p>On a successful Grab the target automatically fails its roll to resist Vision of Madness.</p>",
+    "arcaneMightV": "<p>Should you successfully inflict the Madness condition as part of this ability, it lasts for a minute rather than its normal duration.</p>",
+    "prerequisite": "Vision of Madness",
+    "teacherArcaneMight": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

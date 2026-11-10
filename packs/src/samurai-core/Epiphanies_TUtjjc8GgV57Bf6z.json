@@ -1,0 +1,23 @@
+{
+  "_id": "TUtjjc8GgV57Bf6z",
+  "_key": "!items!TUtjjc8GgV57Bf6z",
+  "name": "Epiphanies",
+  "type": "samuraiAbility",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "description": "<p>Epiphanies allow a samurai to increase their strength and eventually Arcane Might. In order to advance a level in Arcane Might you must gain a number of Epiphanys equal to your current level. Epiphanies may be gained by coming to understandings about yourself and the world around you, living up to your personal code of Bushido or gaining access to certain powerful artifacts.</p><p>Regardless of their personal code, harrowing battles and grave danger help all samurai improve their skills, for example defeating an opponent of equal Arcane Might while they are at their best in single combat would grant almost all samurai a point of Epiphany. Likewise winning a glorious victory while outnumbered ten to one without significant strategic advantage would likely gain two or more points of Epiphany.</p><p>The stronger you grow in Arcane Might the more difficult gaining Epiphany becomes. Epiphany is granted solely at the GM’s discretion. As a guideline the GM should be slightly more generous if a player hasn’t gained Epiphany in a long time and more strict if they’ve already gained multiple points recently.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

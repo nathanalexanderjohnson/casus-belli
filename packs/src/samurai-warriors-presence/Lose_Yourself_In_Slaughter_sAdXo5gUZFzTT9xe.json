@@ -1,0 +1,23 @@
+{
+  "_id": "sAdXo5gUZFzTT9xe",
+  "_key": "!items!sAdXo5gUZFzTT9xe",
+  "name": "Lose Yourself In Slaughter",
+  "type": "samuraiAbility",
+  "img": "icons/svg/blood.svg",
+  "system": {
+    "description": "<p>After routing or destroying a unit increase your squad’s Cohesion by twice your Arcane Might. Double this effect if used on your Retainers. At Arcane Might IV or greater you may use this on a company you are leading.</p>",
+    "category": "warriorsPresence",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

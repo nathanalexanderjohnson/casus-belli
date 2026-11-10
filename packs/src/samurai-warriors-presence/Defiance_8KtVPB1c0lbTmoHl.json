@@ -1,0 +1,23 @@
+{
+  "_id": "8KtVPB1c0lbTmoHl",
+  "_key": "!items!8KtVPB1c0lbTmoHl",
+  "name": "Defiance",
+  "type": "samuraiAbility",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>After being targeted for an attack, grant your squad a Feel No Pain value of six. If you use this ability on your Retainers, grant them a Feel No Pain value of four. At Arcane Might IV or greater you may use this ability on a company you are leading.</p>",
+    "category": "warriorsPresence",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

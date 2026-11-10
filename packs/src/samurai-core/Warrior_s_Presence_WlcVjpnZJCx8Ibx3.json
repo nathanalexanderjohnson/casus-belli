@@ -1,0 +1,23 @@
+{
+  "_id": "WlcVjpnZJCx8Ibx3",
+  "_key": "!items!WlcVjpnZJCx8Ibx3",
+  "name": "Warrior's Presence",
+  "type": "samuraiAbility",
+  "img": "icons/svg/tower.svg",
+  "system": {
+    "description": "<p>Samurai gain access to a number of special orders that may be used during battle. You may never use more than one order from this list per turn and beneficial effects may only be used on the unit you are personally leading. Certain of these abilities grant additional bonuses should you use them on your retainers.</p>",
+    "category": "core",
+    "stamina": 0,
+    "roll": false,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
