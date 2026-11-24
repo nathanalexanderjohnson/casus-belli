@@ -20,7 +20,7 @@
       "thumbnail": "systems/casus-belli/assets/casus-belli-icon.png"
     }
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": {
     "minimum": 14,
     "verified": "14.369"
@@ -221,7 +221,7 @@
   ],
   "socket": false,
   "manifest": "https://github.com/nathanalexanderjohnson/casus-belli/releases/latest/download/system.json",
-  "download": "https://github.com/nathanalexanderjohnson/casus-belli/releases/download/1.0.1/casus-belli.zip",
+  "download": "https://github.com/nathanalexanderjohnson/casus-belli/releases/download/1.0.2/casus-belli.zip",
   "background": "systems/casus-belli/assets/casus-belli-icon.png",
   "gridDistance": 1,
   "gridUnits": "yards",
