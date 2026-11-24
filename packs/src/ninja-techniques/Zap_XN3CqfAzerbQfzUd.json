@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/lightning.svg",
   "system": {
-    "description": "<p>As an action, make a Ninjutsu attack roll against a target within 5 yards. On a success the target becomes Off-Balance until the end of your next turn.</p>",
+    "description": "<p>As an action, make a Ninjutsu attack roll against a target within twenty yards. On a success the target becomes Off-Balance until the end of your next turn.</p>",
     "category": "ninjutsu",
     "rank": "D",
     "element": "lightning",

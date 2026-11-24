@@ -46,7 +46,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -57,7 +58,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -68,7 +70,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -79,7 +82,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -90,7 +94,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -101,7 +106,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -112,7 +118,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -123,7 +130,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -134,7 +142,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -145,7 +154,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -156,7 +166,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -167,7 +178,8 @@
       "type": "Item",
       "system": "casus-belli",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     }

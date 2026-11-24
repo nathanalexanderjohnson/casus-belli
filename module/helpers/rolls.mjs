@@ -59,7 +59,7 @@ export function formatRollContent(roll, tn = null, { minSuccesses = 0, bonusSucc
     ? `<div class="foresight-note">Includes ${bonusSuccesses} automatic success${bonusSuccesses > 1 ? 'es' : ''}${bonusAreTens ? ' (counted as natural 10s)' : ''}</div>`
     : '';
   const foresightHtml = minSuccesses > rolled
-    ? `<div class="foresight-note">Foresight: raised from ${rolled} to ${minSuccesses} (half the pool)</div>`
+    ? `<div class="foresight-note">Foresight: raised from ${rolled} to ${minSuccesses} (the pool's average)</div>`
     : '';
 
   return `
@@ -72,6 +72,20 @@ export function formatRollContent(roll, tn = null, { minSuccesses = 0, bonusSucc
       ${foresightHtml}
     </div>
   `;
+}
+
+/**
+ * The average number of successes for a dice pool at a target number: each d10 succeeds on
+ * TN through 10, a (11 − TN) in 10 chance. Rounded up, the system default.
+ * (Crit bonuses are not counted.)
+ * @param {number} dice
+ * @param {number} tn
+ * @returns {number}
+ */
+export function averageSuccesses(dice, tn) {
+  // Integer math: dice * 0.3 would be 3.0000000000000004 and round up to 4.
+  const successFaces = Math.max(0, Math.min(10, 11 - tn));
+  return Math.ceil((dice * successFaces) / 10);
 }
 
 /**
@@ -205,10 +219,7 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
         <p class="hint">Chakra: ${system.chakra?.value ?? 0} / ${system.chakra?.max ?? 0}. Surge applies to physical attributes, Awareness, and ninja skills.</p>`;
     if (sharinganActive) {
       ninjaHtml += `
-        <div class="form-group">
-          <label><input type="checkbox" name="sharinganDie"/> Sharingan: +1 surge die (+1 Chakra)</label>
-        </div>
-        <p class="hint">Sharingan: surging on sight-based Awareness rolls costs no Chakra.</p>`;
+        <p class="hint">Sharingan: a Chakra Surge gains one extra die, and surging on sight-based Awareness rolls costs no Chakra.</p>`;
     }
     if (canBeast) {
       ninjaHtml += `
@@ -223,7 +234,7 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
     if (foresight) {
       ninjaHtml += `
         <div class="form-group">
-          <label><input type="checkbox" name="foresight" checked/> Third Tomoe foresight (at least half the pool in successes)</label>
+          <label><input type="checkbox" name="foresight" checked/> Third Tomoe foresight (at least the pool's average successes)</label>
         </div>`;
     }
     if (['athletics', 'unarmed'].includes(key) && taijutsu > 0) {
@@ -334,9 +345,10 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
           ui.notifications.warn('Chakra Surge only applies to physical attributes, Awareness, and ninja skills. Rolling without it.');
         } else {
           const freeSight = sharinganActive && keys.includes('awareness');
-          const sharinganDie = sharinganActive && checked('sharinganDie');
+          // First Tomoe: every Chakra Surge gains an additional die, at no extra cost.
+          const sharinganDie = sharinganActive;
           const reckless = canBeast ? Math.max(0, Math.min(arcaneMight, parseInt(field('recklessDice').val()) || 0)) : 0;
-          const cost = (freeSight ? 0 : config.chakra.surgeCost) + (sharinganDie ? 1 : 0) + (reckless * 2);
+          const cost = (freeSight ? 0 : config.chakra.surgeCost) + (reckless * 2);
           const ok = await ninja.spendChakra(actor, cost, { label: 'Chakra Surge', fromBeast: canBeast && checked('fromBeast') });
           if (!ok) return;
           const bonus = arcaneMight + (sharinganDie ? 1 : 0) + reckless;
@@ -368,7 +380,7 @@ export async function openRollDialog(actor, { key, value, label, defaultSecond =
       }
     }
 
-    const minSuccesses = foresight && checked('foresight') ? Math.floor(totalDice / 2) : 0;
+    const minSuccesses = foresight && checked('foresight') ? averageSuccesses(totalDice, tn) : 0;
     const extraContent = notes.length
       ? `<div class="casus-belli-ninja-note">${notes.map((n) => `<p>${n}</p>`).join('')}</div>`
       : '';

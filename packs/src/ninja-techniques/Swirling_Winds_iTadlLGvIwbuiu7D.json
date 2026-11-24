@@ -9,7 +9,7 @@
     "category": "ninjutsu",
     "rank": "A",
     "element": "wind",
-    "cost": 3,
+    "cost": 2,
     "roll": "none",
     "frequency": "atWill",
     "used": false,

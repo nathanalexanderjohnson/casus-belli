@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/wing.svg",
   "system": {
-    "description": "<p>As an action, perform a ranged attack with your Ninjutsu with a Range value of twenty against up to two targets within one yard of each other. On a successful hit deal 8 + Arcane Might slashing damage to both targets.</p>",
+    "description": "<p>As an action, perform a ranged attack with your Ninjutsu with a Range value of twenty against up to two targets within one yard of each other. On a successful hit deal 9 + Arcane Might slashing damage to both targets.</p>",
     "category": "ninjutsu",
     "rank": "B",
     "element": "wind",

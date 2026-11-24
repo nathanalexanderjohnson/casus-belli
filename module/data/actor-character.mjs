@@ -39,7 +39,7 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
     });
 
     schema.reputation = new fields.SchemaField({
-      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: -20 })
     });
 
     schema.pain = new fields.SchemaField({
@@ -88,6 +88,13 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
       min: 0,
       max: 10
     });
+
+    /**
+     * Added to Arcane Might after Active Effects (e.g. -1 from the Sealed Power flaw).
+     * Effects must target this, not `arcaneMight`: Foundry drops effect-controlled fields from
+     * sheet submissions, which would stop the player from editing Arcane Might.
+     */
+    schema.arcaneMightModifier = new fields.NumberField({ ...requiredInteger, initial: 0 });
 
     // ── Samurai ─────────────────────────────────────────────────────────────
     // Epiphanies. The field keeps its original (misspelled) key so existing characters keep
@@ -236,11 +243,15 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
   }
 
   prepareDerivedData() {
-    // Active Effects (e.g. halving from Chakra exhaustion) may leave fractional values; round down.
+    // Active Effects (e.g. halving from Chakra exhaustion) may leave fractional values.
+    // Casus Belli rounds up unless a rule says otherwise.
     for (const key in this.attributes) {
-      this.attributes[key].value = Math.floor(this.attributes[key].value ?? 0);
+      this.attributes[key].value = Math.ceil(this.attributes[key].value ?? 0);
     }
-    this.arcaneMight = Math.floor(this.arcaneMight ?? 0);
+    // The Arcane Might the player entered, kept for the sheet's input (the effective value below
+    // includes modifiers, and saving that back would compound them).
+    this.arcaneMightBase = this.arcaneMight ?? 0;
+    this.arcaneMight = Math.ceil((this.arcaneMight ?? 0) + (this.arcaneMightModifier ?? 0));
 
     // Loop through attributes, and add their modifiers to our sheet output.
     for (const key in this.attributes) {
@@ -257,6 +268,7 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
 
     if (this.magicType === 'none') {
       this.arcaneMight = 0;
+      this.arcaneMightBase = 0;
       if (this.ephiphanies) {
         this.ephiphanies.value = 0;
         this.ephiphanies.max = 0;
@@ -264,6 +276,7 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
     } else {
       // There is no Arcane Might 0: every Samurai, Ninja and Miko starts at Arcane Might I.
       this.arcaneMight = Math.max(1, Math.min(10, this.arcaneMight ?? 1));
+      this.arcaneMightBase = Math.max(1, Math.min(10, this.arcaneMightBase ?? 1));
       if (this.ephiphanies) {
         // Advancing a level of Arcane Might takes Epiphanies equal to the current level.
         this.ephiphanies.max = this.magicType === 'samurai' ? this.arcaneMight : 0;
@@ -346,7 +359,7 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
     const isMiko = this.isMiko;
     const arcaneMight = this.arcaneMight ?? 0;
 
-    // Beloved Above All: no Unmei and a single Talisman; nothing can raise either.
+    // Beloved Above All: no Unmei and Talismans equal to half Arcane Might (rounded up); nothing can raise either.
     // Extra Unmei and Talismans are paid for with the Kami's wound instead (see helpers/miko.mjs).
     this.belovedAboveAll = isMiko && Boolean(this.parent?.items?.some((i) => isBelovedAboveAll(i)));
 
@@ -367,7 +380,7 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
 
     // Ofuda that may be etched at once: 1 + Arcane Might, plus Inori bonuses.
     if (!isMiko) this.talismanSlots = 0;
-    else if (this.belovedAboveAll) this.talismanSlots = 1;
+    else if (this.belovedAboveAll) this.talismanSlots = Math.ceil(arcaneMight / 2);
     else this.talismanSlots = Math.max(0, 1 + arcaneMight + (this.talismanSlotBonus ?? 0));
 
     // Kannagara maintenance capacity.
@@ -416,7 +429,7 @@ export default class CasusBelliCharacter extends CasusBelliActorBase {
 
     // Weakened Body halves stamina.
     if (bloodline?.hasFlaw('weakenedBody') && this.stamina) {
-      this.stamina.max = Math.floor(this.stamina.max / 2);
+      this.stamina.max = Math.ceil(this.stamina.max / 2);
     }
 
     // Chakra maximum.

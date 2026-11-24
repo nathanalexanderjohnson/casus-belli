@@ -6,7 +6,7 @@
   "img": "icons/svg/target.svg",
   "system": {
     "description": "",
-    "omamori": "<p>Enchant a target of your choice with this ability, lasting till the end of their next turn. Add one to the damage dealt of their next physical attack. You may cast this on yourself as part of a Spirit Strike.</p>",
+    "omamori": "<p>Enchant a target of your choice with this ability, lasting till the end of their next turn. They may add half your Arcane Might to the damage of their next physical attack. You may cast this on yourself as part of a Spirit Strike.</p>",
     "ofuda": "<p>Enchant a target of your choice with this Talisman, lasting for a minute. If your target successfully lands a physical attack, you may add half your Arcane Might to the damage dealt once per turn. You may cast this ability on yourself as part of a Spirit Strike.</p>",
     "omamoriRoll": false,
     "ofudaRoll": false,

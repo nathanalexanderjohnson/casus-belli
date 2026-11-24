@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/lightning.svg",
   "system": {
-    "description": "<p>As an action you can fire a bolt of lightning towards a target within 20 yards. On a successful hit deal 3 + Arcane Might electric damage.</p>",
+    "description": "<p>As an action you can fire a bolt of lightning towards a target within 20 yards. On a successful hit deal 4 + Arcane Might electric damage and the target becomes Off-Balance until the end of your next turn.</p>",
     "category": "ninjutsu",
     "rank": "C",
     "element": "lightning",

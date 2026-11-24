@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/wing.svg",
   "system": {
-    "description": "<p>As an action, enhance yourself with the element of wind, allowing you to Chakra Surge to increase your movement speed without paying the normal Chakra cost. This effect lasts for ten minutes.</p>",
+    "description": "<p>As an action, enhance yourself with the element of wind, allowing you to Chakra Surge to increase your movement speed without paying the normal Chakra cost. This effect lasts for an hour.</p>",
     "category": "ninjutsu",
     "rank": "C",
     "element": "wind",

@@ -1,0 +1,23 @@
+{
+  "_id": "e9WTnhFbDSdCKi4n",
+  "_key": "!items!e9WTnhFbDSdCKi4n",
+  "name": "Raiju’s Fury",
+  "type": "samuraiAbility",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>As an action and at the cost of three Stamina, coat your body with lightning and surge forward ten yards, forcing a basic Agility + Endurance roll against your Samurai ability roll and dealing 4 + Arcane Might lightning damage on all targets you pass through.</p><p>If you possess the Raikojin Kenjutsu at the end of this movement you may as a secondary action utilize that Kenjutsu to perform an attack against the final target you damaged with this ability.</p><p>Due to the supernatural nature and speed of this movement you may freely use it to exit a bout, however if you use this ability to flee in dishonor the blessing of the Raiju within you will revolt against your cowardice and you will lose the use of this ability forever.</p>",
+    "category": "martialSpirit",
+    "stamina": 3,
+    "roll": true,
+    "frequency": "atWill",
+    "used": false,
+    "requirement": "Requires the Blessing of a Raiju of Arcane Might III or greater"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1350,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

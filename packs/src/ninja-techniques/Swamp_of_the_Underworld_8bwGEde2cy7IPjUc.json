@@ -9,7 +9,7 @@
     "category": "ninjutsu",
     "rank": "A",
     "element": "earth",
-    "cost": 3,
+    "cost": 2,
     "roll": "ninjutsu",
     "frequency": "atWill",
     "used": false,

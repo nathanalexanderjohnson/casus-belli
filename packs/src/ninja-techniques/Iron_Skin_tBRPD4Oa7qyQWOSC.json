@@ -1,0 +1,31 @@
+{
+  "_id": "tBRPD4Oa7qyQWOSC",
+  "_key": "!items!tBRPD4Oa7qyQWOSC",
+  "name": "Iron Skin",
+  "type": "technique",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Gain natural armor against slashing, piercing and blunt damage attacks equal to half the armor value added by your Chakra Surge (before any other modifiers are applied). This armor stacks with armor granted through Chakra Surge.</p>",
+    "category": "taijutsu",
+    "rank": "D",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3150,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

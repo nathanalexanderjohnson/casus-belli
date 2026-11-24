@@ -122,6 +122,9 @@ export class CasusBelliActorSheet extends ActorSheet {
     context.system = actorData.system;
     context.flags = actorData.flags;
     // Class values (Arcane Might, Epiphanies, ...) are derived in the character data model.
+    // Arcane Might inputs edit the entered value; show the effective one when flaws change it.
+    context.arcaneMightModified = actorData.type === 'character'
+      && context.system.arcaneMight !== context.system.arcaneMightBase;
 
     // Adding a pointer to CONFIG.CASUSBELLI
     context.config = CONFIG.CASUSBELLI;
@@ -242,7 +245,7 @@ export class CasusBelliActorSheet extends ActorSheet {
     const epiphanies = system.ephiphanies ?? { value: 0, max: 1 };
 
     return {
-      onisMight: Math.floor(arcaneMight / 2),
+      onisMight: Math.ceil(arcaneMight / 2),
       steelBody,
       steelBodyArmored: Math.ceil(steelBody / 2),
       innerStrength: hasSamuraiSpirit(actor, 'innerStrength') ? 2 * arcaneMight : 0,
@@ -873,11 +876,7 @@ export class CasusBelliActorSheet extends ActorSheet {
       const flaws = new Set(item.system.flaws ?? []);
       if (ev.currentTarget.checked) flaws.add(flaw);
       else flaws.delete(flaw);
-      if (!flaws.size) {
-        ui.notifications.warn('A Jinchuriki must have at least one flaw.');
-        ev.currentTarget.checked = true;
-        return;
-      }
+      // A Jinchuriki starts with at least one flaw, but the creature may remove them all later.
       item.update({ 'system.flaws': [...flaws] });
     });
   }

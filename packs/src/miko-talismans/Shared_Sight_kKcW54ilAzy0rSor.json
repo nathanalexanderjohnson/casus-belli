@@ -1,0 +1,24 @@
+{
+  "_id": "kKcW54ilAzy0rSor",
+  "_key": "!items!kKcW54ilAzy0rSor",
+  "name": "Shared Sight",
+  "type": "talisman",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "",
+    "omamori": "<p>Give this Talisman to another creature, until your next rest you can as an action see through their eyes instead of your own.</p>",
+    "ofuda": "<p>Look into a reflection or clear pool of water. As an action you may select a location you are generally aware of within a 1000 yards * Arcane Might and cause it to appear in the reflection. If you have a Connection to your target and are a Miasma Miko you can also view the location of your target regardless of the distance and become aware of their general location and direction.</p>",
+    "omamoriRoll": false,
+    "ofudaRoll": false,
+    "prepared": 0,
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 750,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

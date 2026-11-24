@@ -5,7 +5,8 @@
   <div class="ninja-header-row">
     <div class="attribute tile arcane-might-box">
       <label for="system.arcaneMight" class="resource-label rollable" data-roll-type="attribute" data-key="arcaneMight" data-label="Ninja Ability" data-default-second="agi" title="Ninja ability roll: Agility + Arcane Might">Arcane Might</label>
-      <input type="text" name="system.arcaneMight" value="{{system.arcaneMight}}" data-dtype="Number"/>
+      <input type="text" name="system.arcaneMight" value="{{system.arcaneMightBase}}" data-dtype="Number"/>
+      {{#if arcaneMightModified}}<span class="arcane-might-effective" title="Effective Arcane Might after flaws and effects">({{system.arcaneMight}})</span>{{/if}}
     </div>
 
     <div class="tracker-box chakra-box {{#if ninja.exhausted}}exhausted{{/if}}">
@@ -68,6 +69,7 @@
           {{#if affinity.granted}}<span class="ninja-effective" title="Granted by Divine Lineage">(Divine Lineage)</span>{{/if}}
         </label>
       {{/each}}
+      <p class="ninja-hint">One affinity to start (two at Arcane Might III or greater). Each new affinity is trained like a B rank technique.</p>
     </div>
 
     <div class="ninja-panel">
@@ -133,7 +135,7 @@
 
         {{#if bl.isJinchuriki}}
           {{#if bl.needsFlaw}}
-            <p class="ninja-warning"><i class="fas fa-exclamation-triangle"></i> Choose at least one flaw.</p>
+            <p class="ninja-hint">No flaws. A new Jinchuriki starts with at least one; the creature within may remove them later.</p>
           {{/if}}
           {{#if bl.drewChakra}}
             <p class="ninja-warning"><i class="fas fa-fire"></i> Chakra was drawn from the creature this scene: a Critical internal injury follows at the end of the scene.</p>

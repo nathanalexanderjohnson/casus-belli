@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/blood.svg",
   "system": {
-    "description": "<p>While this Gate is open you may ignore all Pain, as you are already in so much agony further injury does not faze you.</p>",
+    "description": "<p>While this Gate is open you may ignore all Pain, as you are already in so much agony further injury does not faze you. Ignore any penalties inflicted by injuries.</p>",
     "category": "bloodline",
     "rank": "S",
     "element": "none",

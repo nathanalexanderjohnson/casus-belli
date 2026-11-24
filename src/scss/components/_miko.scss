@@ -19,6 +19,21 @@
   flex-wrap: wrap;
 }
 
+// Effective Arcane Might (e.g. lowered by Sealed Power), in the corner of the Arcane Might tile.
+.miko-tile,
+.ninja-header-row .arcane-might-box {
+  position: relative;
+}
+
+.arcane-might-effective {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  color: $c-danger;
+}
+
 .miko-kami-value {
   font-size: 13px;
   font-weight: bold;

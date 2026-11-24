@@ -221,7 +221,10 @@ CASUSBELLI.eightGates = [
   'Gate of Limit',
 ];
 
-/** Jinchuriki flaws (at least one must be chosen; more may be gained through roleplay). */
+/**
+ * Jinchuriki flaws. A new Jinchuriki starts with at least one; more may be gained through
+ * roleplay, and the creature within may remove them (so zero flaws is allowed).
+ */
 CASUSBELLI.jinchurikiFlaws = {
   sealedPower: {
     label: 'Sealed Power',
@@ -259,6 +262,8 @@ CASUSBELLI.physicalAttributes = ['str', 'agi', 'end'];
 /** Chakra rules constants. */
 CASUSBELLI.chakra = {
   surgeCost: 2,
+  /** Chakra Surge armor is this plus Arcane Might. */
+  surgeArmorBase: 3,
   /** Successes needed on the roll made when spending Chakra you don't have. */
   exhaustionDifficulty: 3,
   /** Default target number for system-made rolls. */

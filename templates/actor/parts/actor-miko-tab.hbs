@@ -5,7 +5,8 @@
   <div class="miko-header-row">
     <div class="miko-tile miko-tile-small">
       <label for="system.arcaneMight" class="resource-label">Arcane Might</label>
-      <input type="text" name="system.arcaneMight" value="{{system.arcaneMight}}" data-dtype="Number"/>
+      <input type="text" name="system.arcaneMight" value="{{system.arcaneMightBase}}" data-dtype="Number"/>
+      {{#if arcaneMightModified}}<span class="arcane-might-effective" title="Effective Arcane Might after flaws and effects">({{system.arcaneMight}})</span>{{/if}}
     </div>
 
     <div class="miko-tile miko-tile-small">
@@ -57,7 +58,7 @@
       <h3>Talisman Slots</h3>
       <p class="miko-count {{#if miko.slotsOver}}over{{/if}}"><strong>{{miko.slots.used}}</strong> / {{miko.slots.max}} in use</p>
       {{#if miko.beloved}}
-        <p class="miko-hint">Beloved Above All: one Talisman. Each one beyond it costs 1 Pain and 1 Stress, and can be etched after a minute of downtime.</p>
+        <p class="miko-hint">Beloved Above All: Talismans equal to half your Arcane Might. Each one beyond that costs 1 Pain and 1 Stress, and can be etched after a minute of downtime.</p>
       {{else}}
       <div class="miko-inline-field">
         <label for="system.talismanSlotBonus" title="Extra slots from Inori such as Talisman Master">Bonus slots</label>

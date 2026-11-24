@@ -5,7 +5,8 @@
   <div class="samurai-header-row">
     <div class="miko-tile miko-tile-small">
       <label for="system.arcaneMight" class="resource-label rollable samurai-ability-roll" data-label="Samurai Ability" title="Samurai ability roll: Strength + Arcane Might">Arcane Might</label>
-      <input type="text" name="system.arcaneMight" value="{{system.arcaneMight}}" data-dtype="Number"/>
+      <input type="text" name="system.arcaneMight" value="{{system.arcaneMightBase}}" data-dtype="Number"/>
+      {{#if arcaneMightModified}}<span class="arcane-might-effective" title="Effective Arcane Might after flaws and effects">({{system.arcaneMight}})</span>{{/if}}
     </div>
 
     <div class="miko-tile miko-tile-pair" title="Epiphanies needed to advance equal your current Arcane Might">

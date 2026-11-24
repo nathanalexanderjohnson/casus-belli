@@ -5,9 +5,9 @@
   "type": "samuraiAbility",
   "img": "icons/svg/fire.svg",
   "system": {
-    "description": "<p>Wreath your flesh, weapon and armor in fire. Any creature touching your flames at the end of your turn suffers fire damage equal to your Arcane Might. Any melee attack you make with an object covered in flames deals fire damage rather than its normal damage.</p><p>At Arcane Might III or greater you may spend three Stamina to add your Arcane Might to any fire damage dealt by a melee attack and you optionally may increase your reach to any length increment up to Extremely Long until the start of your next turn or until you choose to cancel this effect.</p>",
+    "description": "<p>As an Instant Action and at the cost of one Stamina you may wreath your flesh, weapon and armor in fire until the end of the scene or you choose to end this ability. Any creature touching your flames at the end of your turn suffers fire damage equal to your Arcane Might. Any melee attack you make with an object covered in flames deals fire damage rather than its normal damage.</p><p>At Arcane Might III or greater when this ability is active you may spend three Stamina to add your Arcane Might to any fire damage dealt by a melee attack and you optionally may increase your reach to any length increment up to Extremely Long until the start of your next turn or until you choose to cancel this effect.</p>",
     "category": "martialSpirit",
-    "stamina": 0,
+    "stamina": 1,
     "roll": false,
     "frequency": "atWill",
     "used": false,

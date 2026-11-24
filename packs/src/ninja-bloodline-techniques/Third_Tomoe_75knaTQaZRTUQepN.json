@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/eye.svg",
   "system": {
-    "description": "<p>Your ability to glimpse into the future grows ever stronger. Whenever you make a physical or ninja skill roll that would benefit from foresight, you cannot roll fewer successes than half your dice pool (rounded down).</p>",
+    "description": "<p>Your ability to glimpse into the future grows ever stronger. Whenever you make a physical or ninja skill roll that would benefit from foresight, you cannot roll fewer successes than your average number of successes for the dice pool.</p>",
     "category": "bloodline",
     "rank": "S",
     "element": "none",

@@ -102,7 +102,7 @@ async function claimTalismanSlot(actor, name) {
   }
   const ok = await Dialog.confirm({
     title: 'Beloved Above All',
-    content: `<p>Preparing ${escape(name)} beyond your single Talisman draws on the Kami's power: +1 Pain and +1 Stress.</p><p>Continue?</p>`,
+    content: `<p>Preparing ${escape(name)} beyond your Talisman limit draws on the Kami's power: +1 Pain and +1 Stress.</p><p>Continue?</p>`,
     options: { classes: ['casus-belli', 'casus-belli-roll-dialog'] },
   });
   return ok ? 'kami' : null;

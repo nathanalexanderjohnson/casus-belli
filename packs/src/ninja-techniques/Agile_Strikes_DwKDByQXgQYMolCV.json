@@ -5,9 +5,9 @@
   "type": "technique",
   "img": "icons/svg/combat.svg",
   "system": {
-    "description": "<p>You may use Agility rather than Strength when determining the damage modifier of melee attacks, so long as you use Agility for the attack roll.</p>",
+    "description": "<p>You may use Agility rather than Strength when determining the damage modifier of melee or thrown attacks, so long as you use Agility for the attack roll.</p>",
     "category": "taijutsu",
-    "rank": "B",
+    "rank": "C",
     "element": "none",
     "cost": 0,
     "roll": "none",
@@ -23,7 +23,7 @@
   },
   "effects": [],
   "folder": null,
-  "sort": 4100,
+  "sort": 3550,
   "ownership": {
     "default": 0
   },

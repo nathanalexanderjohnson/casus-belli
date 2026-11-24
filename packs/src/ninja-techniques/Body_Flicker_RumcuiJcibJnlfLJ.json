@@ -1,0 +1,31 @@
+{
+  "_id": "RumcuiJcibJnlfLJ",
+  "_key": "!items!RumcuiJcibJnlfLJ",
+  "name": "Body Flicker",
+  "type": "technique",
+  "img": "icons/svg/wingfoot.svg",
+  "system": {
+    "description": "<p>As an Instant action on your turn or as a Reaction to successfully dodging an attack, you may choose to move a number of yards equal to your Arcane Might in an instant and should you be in a bout at the end of the movement you may select the combat length of the bout up to a minimum distance of Short.</p><p>You may also use this ability as a Reaction to another creature of equal or lesser Arcane Might to yours attempting an ability that changed the Combat Length with supernatural speed such as this one. Make a contested Taijutsu roll against their ability roll and on a success you may deny them the ability to change the Combat Length. Creatures with Arcane Might less than yours automatically fail their roll against you.</p>",
+    "category": "taijutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 2,
+    "roll": "taijutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4560,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

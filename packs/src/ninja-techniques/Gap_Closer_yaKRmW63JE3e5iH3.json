@@ -1,0 +1,31 @@
+{
+  "_id": "yaKRmW63JE3e5iH3",
+  "_key": "!items!yaKRmW63JE3e5iH3",
+  "name": "Gap Closer",
+  "type": "technique",
+  "img": "icons/svg/wingfoot.svg",
+  "system": {
+    "description": "<p>When you successfully reduce the combat distance during a Bout you may choose to reduce it by one more length level (up to a maximum of Short).</p>",
+    "category": "taijutsu",
+    "rank": "C",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4050,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

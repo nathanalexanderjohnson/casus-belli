@@ -1,0 +1,31 @@
+{
+  "_id": "8EKimYYkIUq3dCqp",
+  "_key": "!items!8EKimYYkIUq3dCqp",
+  "name": "Ninja’s Fury",
+  "type": "technique",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Add the Brutal tag to melee and thrown weapon attacks. Increase your unarmed strike’s damage by two.</p>",
+    "category": "taijutsu",
+    "rank": "A",
+    "element": "none",
+    "cost": 0,
+    "roll": "none",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4550,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

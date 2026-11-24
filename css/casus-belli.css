@@ -2423,6 +2423,18 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+.casus-belli .miko-tile,
+.casus-belli .ninja-header-row .arcane-might-box {
+  position: relative;
+}
+.casus-belli .arcane-might-effective {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #7b2b27;
+}
 .casus-belli .miko-kami-value {
   font-size: 13px;
   font-weight: bold;

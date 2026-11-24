@@ -9,7 +9,7 @@
     "category": "ninjutsu",
     "rank": "B",
     "element": "water",
-    "cost": 2,
+    "cost": 1,
     "roll": "ninjutsu",
     "frequency": "atWill",
     "used": false,

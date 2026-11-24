@@ -317,9 +317,14 @@ export async function spendChakra(actor, amount, { label = 'Chakra', fromBeast =
 export async function chakraSurge(actor, mode) {
   const arcaneMight = actor.system.arcaneMight ?? 0;
   const effects = {
-    speed: { title: 'Chakra Surge: Speed', text: `Movement speed increased by ${arcaneMight} until the end of the turn.` },
+    speed: {
+      title: 'Chakra Surge: Speed',
+      text: arcaneMight >= 2
+        ? `Movement speed increased by ${arcaneMight} for the rest of the scene, and Chakra Surged jumps cost no Chakra for the rest of the scene.`
+        : `Movement speed increased by ${arcaneMight} until the end of the turn.`,
+    },
     jump: { title: 'Chakra Surge: Jump', text: `Jump distance or height increased by ${arcaneMight} yards.` },
-    armor: { title: 'Chakra Surge: Armor', text: `Natural armor ${1 + arcaneMight} against all damage types until the attack is resolved.` },
+    armor: { title: 'Chakra Surge: Armor', text: `Natural armor ${CONFIG.CASUSBELLI.chakra.surgeArmorBase + arcaneMight} against all damage types until the attack is resolved.` },
   };
   const effect = effects[mode];
   if (!effect) return;
@@ -491,7 +496,7 @@ export async function openNextGate(actor) {
     await actor.update({ 'system.stamina.value': actor.system.stamina?.max ?? 0 });
     notes.push('Stamina restored to maximum. Strength and Agility +1.');
   }
-  if (next === 4) notes.push('Ignore all Pain while this Gate is open.');
+  if (next === 4) notes.push('Ignore all Pain, and any penalties inflicted by injuries, while this Gate is open.');
   if (next === 5) notes.push('Strength and Agility +1 more. Every movement is as the Front Lotus.');
 
   await ChatMessage.create({
@@ -605,7 +610,7 @@ export async function fullRest(actor) {
 
   const system = actor.system;
   const chakra = system.chakra ?? { value: 0, max: 0 };
-  const restored = Math.floor(chakra.max * percent / 100);
+  const restored = Math.ceil(chakra.max * percent / 100);
   const value = system.isExhausted ? 0 : Math.min(chakra.max, chakra.value + restored);
   await actor.update({ 'system.chakra.value': value });
 
@@ -698,7 +703,8 @@ export function desiredNinjaEffects(actor) {
         name: 'Sealed Power',
         img: 'icons/svg/padlock.svg',
         description: config.jinchurikiFlaws.sealedPower.description,
-        changes: [{ key: 'system.arcaneMight', type: 'add', value: -1, phase: 'initial' }],
+        // Targets the modifier, not arcaneMight itself, so Arcane Might stays editable.
+        changes: [{ key: 'system.arcaneMightModifier', type: 'add', value: -1, phase: 'initial' }],
       });
     }
     if (bloodline.hasFlaw('wrackedByPain')) {

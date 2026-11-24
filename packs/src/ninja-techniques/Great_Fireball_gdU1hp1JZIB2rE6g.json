@@ -5,11 +5,11 @@
   "type": "technique",
   "img": "icons/svg/fire.svg",
   "system": {
-    "description": "<p>As an action you may fire a large ball of fire towards a target within 20 yards that detonates once it reaches its target. The target must make a basic Endurance + Agility roll against your Ninjutsu. This ability deals a base damage of 6 + Arcane Might fire damage to all targets within a radius up to your Arcane Might.</p>",
+    "description": "<p>As an action you may fire a large ball of fire towards a target within 20 yards that detonates once it reaches its target. The target must make a basic Endurance + Agility roll against your Ninjutsu. This ability deals a base damage of 7 + Arcane Might fire damage to all targets within a radius up to your Arcane Might.</p>",
     "category": "ninjutsu",
     "rank": "B",
     "element": "fire",
-    "cost": 3,
+    "cost": 4,
     "roll": "ninjutsu",
     "frequency": "atWill",
     "used": false,

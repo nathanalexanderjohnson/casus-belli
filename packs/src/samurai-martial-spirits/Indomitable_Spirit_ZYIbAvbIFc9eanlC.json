@@ -5,10 +5,10 @@
   "type": "samuraiAbility",
   "img": "icons/svg/aura.svg",
   "system": {
-    "description": "<p>Whenever you make a roll to resist a magical effect you may replace one element of the roll with your Arcane Might.</p>",
+    "description": "<p>Whenever you make a roll to resist a magical effect you resist it with a Samurai ability roll at the cost of two Stamina. You may also at the same cost use Parry to defend against a magical effect that has a projectile, such as a stream of fire or other such ability that you can perceive and cut.</p>",
     "category": "martialSpirit",
-    "stamina": 0,
-    "roll": false,
+    "stamina": 2,
+    "roll": true,
     "frequency": "atWill",
     "used": false,
     "requirement": ""

@@ -7,7 +7,7 @@
   "system": {
     "description": "<p>At the cost of two Stamina you may perform a Kick or Punch as a secondary action, or if your primary action was to perform a throwing attack you may perform another throwing attack with the same projectile type as the first.</p>",
     "category": "taijutsu",
-    "rank": "A",
+    "rank": "B",
     "element": "none",
     "cost": 0,
     "roll": "none",
@@ -23,7 +23,7 @@
   },
   "effects": [],
   "folder": null,
-  "sort": 4400,
+  "sort": 4350,
   "ownership": {
     "default": 0
   },

@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/eye.svg",
   "system": {
-    "description": "<p>While the Sharingan is active you gain the benefits of Chakra Surge on Initiative rolls and Awareness rolls that rely on sight without needing to spend Chakra. You may spend an extra point of Chakra when you Chakra Surge to gain an additional die.</p><p>You are able to visually see Chakra and other forms of magic so long as you have the Sharingan active and may use it to detect hidden foes or gain insight about techniques so long as you possess enough knowledge to identify them. You are also able to detect movements with great detail, allowing you to read lips or copy another user's motions with precision.</p>",
+    "description": "<p>While the Sharingan is active you gain the benefits of Chakra Surge on Initiative rolls and Awareness rolls that rely on sight without needing to spend Chakra. When you Chakra Surge, gain an additional die.</p><p>You are able to visually see Chakra and other forms of magic so long as you have the Sharingan active and may use it to detect hidden foes or gain insight about techniques so long as you possess enough knowledge to identify them. You are also able to detect movements with great detail, allowing you to read lips or copy another user's motions with precision.</p>",
     "category": "bloodline",
     "rank": "S",
     "element": "none",

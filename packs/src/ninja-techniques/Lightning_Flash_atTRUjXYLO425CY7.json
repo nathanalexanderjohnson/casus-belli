@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/lightning.svg",
   "system": {
-    "description": "<p>As a secondary action, infuse a thrown Shuriken with lightning Chakra and deal an additional three electric damage on a successful hit.</p>",
+    "description": "<p>As a secondary action infuse a thrown Shuriken or weapon with lightning Chakra and deal an additional three electric damage on a successful hit. This enhancement ends on a successful hit or at the end of your turn. You cannot benefit from more than one elemental enhancement on the same weapon.</p>",
     "category": "ninjutsu",
     "rank": "B",
     "element": "lightning",

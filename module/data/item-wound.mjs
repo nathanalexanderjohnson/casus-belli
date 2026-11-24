@@ -29,7 +29,8 @@ export default class CasusBelliWound extends CasusBelliItemBase {
     }[severity] ?? 0;
 
     if (Number.isInteger(this.fixedPain)) this.pain = this.fixedPain;
-    else this.pain = this.treated ? Math.max(1, Math.floor(basePain / 2)) : basePain;
+    // Treatment halves Pain, rounding up (the system default).
+    else this.pain = this.treated ? Math.max(1, Math.ceil(basePain / 2)) : basePain;
 
     // Bleeding is suppressed once a wound is treated.
     const bleeding = this.bleeding && !this.treated;

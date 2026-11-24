@@ -1,0 +1,23 @@
+{
+  "_id": "vwvuvW0LuqJshPOH",
+  "_key": "!items!vwvuvW0LuqJshPOH",
+  "name": "Raikojin",
+  "type": "kenjutsu",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Raise your sword towards the sky and call down the wrath of the storms upon your opponent. Make a Slash or Thrust attack against a target within twenty yards (ignoring any penalties from the target being beyond your weapon length) and cause lightning to fall from the skies to strike down your opponent. On a successful strike deal lightning damage equal to the normal damage your Swing or Thrust would’ve dealt.</p>",
+    "stamina": 3,
+    "costNote": "",
+    "arcaneMightIII": "<p>Your target becomes Off-Balance on a successful strike.</p>",
+    "arcaneMightV": "<p>When using this ability you may strike a number of opponents within range of this ability equal to the number that you would’ve been able to strike in melee with the Cleave maneuver.</p>",
+    "prerequisite": "Raiju’s Fury",
+    "teacherArcaneMight": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

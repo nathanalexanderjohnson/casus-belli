@@ -9,7 +9,7 @@
     "category": "genjutsu",
     "rank": "B",
     "element": "none",
-    "cost": 3,
+    "cost": 2,
     "roll": "genjutsu",
     "frequency": "atWill",
     "used": false,

@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/fire.svg",
   "system": {
-    "description": "<p>As an action you can fire a burst of flame towards a target within 10 yards. On a successful hit deal 6 + Arcane Might fire damage.</p>",
+    "description": "<p>As an action you can fire a burst of flame towards a target within twenty yards. On a successful hit deal 7 + Arcane Might fire damage.</p>",
     "category": "ninjutsu",
     "rank": "C",
     "element": "fire",

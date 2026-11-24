@@ -5,7 +5,7 @@
   "type": "technique",
   "img": "icons/svg/wing.svg",
   "system": {
-    "description": "<p>As an action you may release a burst of air against all targets. The target makes a Strength + Endurance roll against your Ninjutsu and on a failure is thrown back a number of yards up to your Arcane Might and knocked prone.</p>",
+    "description": "<p>As an action you may release a burst of air against all targets within one yard of you. The targets make a Strength + Endurance roll against your Ninjutsu and on a failure are thrown back a number of yards up to your Arcane Might and are knocked prone, taking blunt damage equal to 3 + Arcane Might.</p>",
     "category": "ninjutsu",
     "rank": "C",
     "element": "wind",

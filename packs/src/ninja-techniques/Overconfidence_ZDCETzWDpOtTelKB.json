@@ -1,0 +1,31 @@
+{
+  "_id": "ZDCETzWDpOtTelKB",
+  "_key": "!items!ZDCETzWDpOtTelKB",
+  "name": "Overconfidence",
+  "type": "technique",
+  "img": "icons/svg/invisible.svg",
+  "system": {
+    "description": "<p>As an action attempt to weave an illusion of invisibility over a target within ten yards. On a failure the creature is Off-Balance for a minute. If the target is Stressed they automatically fail their save against this ability. Creatures that have successfully resisted this ability are immune to it until their next rest.</p>",
+    "category": "genjutsu",
+    "rank": "B",
+    "element": "none",
+    "cost": 2,
+    "roll": "genjutsu",
+    "frequency": "atWill",
+    "used": false,
+    "bloodline": "",
+    "variant": "",
+    "requiredStage": 0,
+    "minArcaneMight": 0,
+    "prerequisite": "",
+    "learned": true,
+    "progress": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5750,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -5,7 +5,7 @@
   "type": "boon",
   "img": "icons/svg/regen.svg",
   "system": {
-    "description": "<p>Begin the game with one extra known Talisman and increase the maximum number of Talismans you can prepare by one.</p>",
+    "description": "<p>Begin the game with two extra known Talisman and increase the maximum number of Talismans you can prepare by two.</p>",
     "type": "boon",
     "cost": 1
   },
